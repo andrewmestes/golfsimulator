@@ -33,28 +33,36 @@
    ============================================================ */
 
 :root{
-  /* ground — spruce black, biased green not neutral */
-  --ink:      #0B1613;
-  --ink-2:    #101F1B;
-  --ink-3:    #162A25;
-  --line:     #23403A;
-  --line-soft:#1A312B;
+  /* ground — deep fairway shadow. Unmistakably green, not a neutral black. */
+  --ink:      #06180F;
+  --ink-2:    #0B2417;
+  --ink-3:    #10301F;
+  --line:     #1F4A31;
+  --line-soft:#173A26;
+
+  /* turf — real fairway green, used across whole surfaces so the page
+     reads as golf before it reads as anything else */
+  --turf:     #135E38;
+  --turf-2:   #0E4A2C;
+  --turf-3:   #177044;
+  --grass:    #46B072;
 
   /* daylight */
-  --bone:     #F3EFE6;
-  --bone-2:   #E7E0D1;
-  --bone-3:   #D6CDBA;
-  --on-bone:  #14231E;
-  --on-bone-2:#4E5F58;
+  --bone:     #F2F1E4;
+  --bone-2:   #E5E4D2;
+  --bone-3:   #D2D2BC;
+  --on-bone:  #10241A;
+  --on-bone-2:#4A5C51;
 
   /* type on dark */
-  --on-ink:   #EFEBE1;
-  --sage:     #A2B7A9;
-  --sage-dim: #718A7C;
+  --on-ink:   #EFF3EA;
+  --sage:     #A8C4B0;
+  --sage-dim: #7BA087;
 
-  /* accent — Front Range dusk */
+  /* accent — Front Range dusk. Now earns its keep on CTAs only, so the
+     green carries the category and the orange only carries the energy. */
   --apricot:  #E97F3C;
-  --apricot-lo:#C4601F;
+  --apricot-lo:#B85718;
   --apricot-glow: rgba(233,127,60,.20);
 
   /* data only */
@@ -179,7 +187,7 @@ a{ color:inherit; }
 .mark .tail{
   font-family:var(--disp); font-stretch:70%; font-weight:700;
   text-transform:uppercase; letter-spacing:.18em;
-  font-size:.6rem; color:var(--apricot); padding-bottom:.1rem;
+  font-size:.6rem; color:var(--grass); padding-bottom:.1rem;
 }
 
 .navlinks{ display:flex; gap:1.75rem; align-items:center; }
@@ -214,11 +222,31 @@ a{ color:inherit; }
 @media (prefers-reduced-motion: reduce){ .rv{ opacity:1; transform:none; transition:none; } }
 
 /* ============ HERO ============ */
-.hero{ position:relative; padding-block:clamp(3rem,6vw,5.5rem) clamp(3.5rem,7vw,6rem); overflow:hidden; }
-.hero::before{
-  content:''; position:absolute; inset:-30% -10% auto -10%; height:80%;
-  background:radial-gradient(60% 60% at 30% 20%, var(--apricot-glow), transparent 70%);
-  pointer-events:none;
+.hero{ position:relative; padding-block:clamp(3rem,6vw,5.5rem) clamp(3.5rem,7vw,6rem); overflow:hidden; isolation:isolate; }
+/* the real bay, doing the work a stock illustration cannot */
+.hero-bg{
+  position:absolute; inset:0; z-index:-2;
+  background:url("img/bay.jpg") center 46% / cover no-repeat;
+  filter:saturate(.85) contrast(1.04) brightness(1.28);
+}
+/* scrim: opaque green under the type on the left, clearing hard toward the
+   right so the bay itself is legible rather than merely atmospheric */
+.hero-scrim{
+  position:absolute; inset:0; z-index:-1; pointer-events:none;
+  background:
+    linear-gradient(100deg, var(--ink) 0%, rgba(6,24,15,.95) 33%, rgba(6,24,15,.7) 52%, rgba(6,24,15,.22) 100%),
+    linear-gradient(180deg, rgba(6,24,15,.78) 0%, transparent 24%, transparent 60%, var(--ink) 100%),
+    radial-gradient(58% 62% at 24% 26%, var(--apricot-glow), transparent 70%);
+}
+/* stacked layout: no left column to protect, so scrim vertically only */
+@media (max-width: 979px){
+  /* let the bay read behind the display type up top, then go solid before
+     the body copy and buttons — a ghost button over the lit screen loses */
+  .hero-scrim{
+    background:
+      linear-gradient(180deg, rgba(6,24,15,.5) 0px, rgba(6,24,15,.74) 320px, rgba(6,24,15,.96) 480px, var(--ink) 600px),
+      radial-gradient(70% 50% at 30% 22%, var(--apricot-glow), transparent 70%);
+  }
 }
 .hero-grid{
   position:relative; display:grid; gap:clamp(2.5rem,5vw,4rem);
@@ -227,8 +255,8 @@ a{ color:inherit; }
 }
 @media (min-width: 980px){ .hero-grid{ grid-template-columns:1.02fr .98fr; } }
 
-.eyebrow{ display:flex; align-items:center; gap:.7rem; color:var(--apricot); margin-bottom:1.5rem; }
-.eyebrow::before{ content:''; width:34px; height:1px; background:var(--apricot); flex:none; }
+.eyebrow{ display:flex; align-items:center; gap:.7rem; color:var(--grass); margin-bottom:1.5rem; }
+.eyebrow::before{ content:''; width:34px; height:1px; background:var(--grass); flex:none; }
 
 h1.display{ font-size:var(--hero); margin-bottom:1.4rem; }
 h1.display em{ font-style:normal; color:var(--apricot); }
@@ -246,7 +274,7 @@ h1.display em{ font-style:normal; color:var(--apricot); }
   color:var(--sage-dim); font-size:var(--step--1);
 }
 .hero-micro span{ display:flex; align-items:center; gap:.5rem; }
-.hero-micro span::before{ content:''; width:5px; height:5px; background:var(--apricot); border-radius:50%; flex:none; }
+.hero-micro span::before{ content:''; width:5px; height:5px; background:var(--grass); border-radius:50%; flex:none; }
 
 /* --- monitor --- */
 .monitor{
@@ -290,7 +318,17 @@ h1.display em{ font-style:normal; color:var(--apricot); }
 .monitor-foot b{ color:var(--sage); font-weight:400; }
 
 /* ============ SPEC BAR ============ */
-.specbar{ border-block:1px solid var(--line-soft); background:var(--ink-2); }
+.specbar{
+  background:linear-gradient(170deg, var(--turf) 0%, var(--turf-2) 100%);
+  position:relative;
+}
+/* These two must out-specify `.spec p` / `.spec .big s` below, which would
+   otherwise put sage-on-turf text at roughly 3:1. Keep the extra class. */
+.specbar .spec{ border-color:rgba(255,255,255,.14); }
+.specbar .spec p{ color:#D3E8DA; }
+.specbar .spec .big{ color:#FFF; }
+/* apricot lands at 2.82:1 on turf — fails even the large-text bar */
+.specbar .spec .big s{ color:var(--signal); }
 .specbar-grid{ display:grid; grid-template-columns:repeat(2,1fr); }
 @media (min-width: 820px){ .specbar-grid{ grid-template-columns:repeat(4,1fr); } }
 .spec{ padding:clamp(1.6rem,3vw,2.4rem) var(--gut); border-right:1px solid var(--line-soft); border-bottom:1px solid var(--line-soft); }
@@ -313,15 +351,31 @@ section{ padding-block:var(--pad-sec); }
 
 .fmt{
   border:1px solid var(--line); background:var(--ink-2);
-  padding:clamp(1.6rem,3vw,2.4rem); border-radius:3px;
-  display:flex; flex-direction:column; gap:1.4rem;
+  border-radius:3px; overflow:hidden;
+  display:flex; flex-direction:column;
   transition:border-color .25s ease, transform .25s ease;
 }
-.fmt:hover{ border-color:var(--apricot); transform:translateY(-3px); }
+.fmt:hover{ border-color:var(--grass); transform:translateY(-3px); }
 @media (prefers-reduced-motion: reduce){ .fmt:hover{ transform:none; } }
+.fmt-media{ position:relative; aspect-ratio:16/10; overflow:hidden; background:var(--ink-3); }
+.fmt-media img{
+  width:100%; height:100%; object-fit:cover; display:block;
+  filter:saturate(.82) contrast(1.05);
+  transition:transform .7s cubic-bezier(.2,.7,.3,1);
+}
+.fmt:hover .fmt-media img{ transform:scale(1.045); }
+@media (prefers-reduced-motion: reduce){ .fmt:hover .fmt-media img{ transform:none; } }
+.fmt-media::after{
+  content:''; position:absolute; inset:0; pointer-events:none;
+  background:linear-gradient(180deg, rgba(6,24,15,.15) 0%, transparent 38%, rgba(11,36,23,.92) 100%);
+}
+.fmt-body{
+  padding:clamp(1.5rem,3vw,2.2rem);
+  display:flex; flex-direction:column; gap:1.35rem; flex:1;
+}
 .fmt-top{ display:flex; align-items:flex-start; justify-content:space-between; gap:1rem; }
 .fmt h3{ font-family:var(--disp); font-stretch:112%; font-weight:800; font-size:var(--step-3); margin:0 0 .5rem; letter-spacing:-.02em; }
-.fmt .kicker{ color:var(--apricot); }
+.fmt .kicker{ color:var(--grass); }
 .fmt p{ margin:0; color:var(--sage); font-size:var(--step--1); line-height:1.6; }
 .fmt-num{ font-family:var(--mono); font-size:.7rem; color:var(--sage-dim); border:1px solid var(--line); padding:.3rem .5rem; border-radius:2px; flex:none; }
 
@@ -348,7 +402,7 @@ section{ padding-block:var(--pad-sec); }
   letter-spacing:.1em; font-size:.7rem; color:var(--sage-dim);
   padding:.7rem 1.1rem; transition:background .2s ease, color .2s ease;
 }
-.seg button[aria-pressed="true"]{ background:var(--apricot); color:#160B03; }
+.seg button[aria-pressed="true"]{ background:var(--turf-3); color:#FFF; }
 
 .chips{ display:flex; flex-wrap:wrap; gap:.45rem; margin-bottom:1.9rem; }
 .chip{
@@ -357,7 +411,7 @@ section{ padding-block:var(--pad-sec); }
   font-family:var(--sans); font-size:.78rem; padding:.42rem .8rem; border-radius:99px;
   transition:border-color .2s ease, color .2s ease;
 }
-.chip:hover{ border-color:var(--apricot); color:var(--apricot); }
+.chip:hover{ border-color:var(--grass); color:var(--grass); }
 
 .sliders{ display:grid; gap:1.5rem; }
 .slider label{ display:flex; justify-content:space-between; align-items:baseline; margin-bottom:.55rem; }
@@ -369,20 +423,20 @@ section{ padding-block:var(--pad-sec); }
 }
 .slider input[type=range]::-webkit-slider-thumb{
   -webkit-appearance:none; appearance:none; width:20px; height:20px; border-radius:50%;
-  background:var(--apricot); border:3px solid var(--ink-2); cursor:grab;
-  box-shadow:0 0 0 1px var(--apricot);
+  background:var(--grass); border:3px solid var(--ink-2); cursor:grab;
+  box-shadow:0 0 0 1px var(--grass);
 }
 .slider input[type=range]::-moz-range-thumb{
-  width:16px; height:16px; border-radius:50%; background:var(--apricot);
-  border:3px solid var(--ink-2); cursor:grab; box-shadow:0 0 0 1px var(--apricot);
+  width:16px; height:16px; border-radius:50%; background:var(--grass);
+  border:3px solid var(--ink-2); cursor:grab; box-shadow:0 0 0 1px var(--grass);
 }
 
 .verdict{
   border:1px solid var(--line); border-radius:3px; background:var(--ink);
   padding:clamp(1.5rem,3vw,2.2rem); position:relative; overflow:hidden;
 }
-.verdict::before{ content:''; position:absolute; inset:0 auto 0 0; width:3px; background:var(--vc, var(--apricot)); }
-.verdict .label{ color:var(--vc, var(--apricot)); margin-bottom:1rem; display:block; }
+.verdict::before{ content:''; position:absolute; inset:0 auto 0 0; width:3px; background:var(--vc, var(--grass)); }
+.verdict .label{ color:var(--vc, var(--grass)); margin-bottom:1rem; display:block; }
 .verdict h3{ font-family:var(--disp); font-stretch:112%; font-weight:800; font-size:var(--step-3); margin:0 0 .8rem; line-height:1.05; letter-spacing:-.02em; }
 .verdict p{ margin:0 0 1.4rem; color:var(--sage); font-size:var(--step--1); }
 .verdict .vspecs{ border-top:1px solid var(--line-soft); padding-top:1rem; display:grid; gap:.55rem; }
@@ -394,16 +448,41 @@ section{ padding-block:var(--pad-sec); }
 .events{ display:grid; gap:1.1rem; grid-template-columns:1fr; }
 @media (min-width: 720px){ .events{ grid-template-columns:1fr 1fr; } }
 @media (min-width: 1080px){ .events{ grid-template-columns:repeat(4,1fr); } }
+/* Photo cards. The stock comes from four different shoots, so a hard
+   greyscale + turf-green `color` blend forces them into one palette —
+   hovering relaxes the treatment and lets the real colour back in. */
 .ev{
-  border:1px solid var(--line-soft); background:var(--ink-2); border-radius:3px;
-  padding:clamp(1.4rem,2.6vw,1.9rem); display:flex; flex-direction:column; gap:.85rem;
-  transition:border-color .25s ease, background .25s ease;
+  position:relative; isolation:isolate; overflow:hidden; border-radius:3px;
+  border:1px solid var(--line-soft); background:var(--ink-2);
+  min-height:clamp(340px, 42vw, 400px);
+  padding:clamp(1.4rem,2.6vw,1.9rem);
+  display:flex; flex-direction:column; justify-content:flex-end; gap:.7rem;
+  transition:border-color .25s ease, transform .25s ease;
 }
-.ev:hover{ border-color:var(--apricot); background:var(--ink-3); }
-.ev .label{ color:var(--apricot); font-size:.62rem; }
+.ev:hover{ border-color:var(--grass); transform:translateY(-3px); }
+@media (prefers-reduced-motion: reduce){ .ev:hover{ transform:none; } }
+.ev-img{
+  position:absolute; inset:0; z-index:-3; width:100%; height:100%;
+  object-fit:cover; display:block;
+  filter:grayscale(1) contrast(1.12) brightness(.78);
+  transition:transform .8s cubic-bezier(.2,.7,.3,1), filter .45s ease;
+}
+.ev:hover .ev-img{ filter:grayscale(.35) contrast(1.06) brightness(.85); transform:scale(1.05); }
+@media (prefers-reduced-motion: reduce){ .ev:hover .ev-img{ transform:none; } }
+.ev-duo{
+  position:absolute; inset:0; z-index:-2; pointer-events:none;
+  background:var(--turf); mix-blend-mode:color; opacity:.9;
+  transition:opacity .45s ease;
+}
+.ev:hover .ev-duo{ opacity:.55; }
+.ev-shade{
+  position:absolute; inset:0; z-index:-1; pointer-events:none;
+  background:linear-gradient(180deg, rgba(6,24,15,.2) 0%, rgba(6,24,15,.72) 52%, rgba(6,24,15,.96) 100%);
+}
+.ev .label{ color:var(--signal); font-size:.62rem; }
 .ev h3{ font-family:var(--disp); font-stretch:112%; font-weight:800; font-size:var(--step-2); margin:0; line-height:1.05; letter-spacing:-.02em; }
-.ev p{ margin:0; color:var(--sage); font-size:var(--step--1); line-height:1.58; }
-.ev .hook{ margin-top:auto; padding-top:.9rem; border-top:1px solid var(--line-soft); color:var(--sage-dim); font-size:.75rem; font-family:var(--mono); letter-spacing:-.02em; }
+.ev p{ margin:0; color:#CBDDD0; font-size:var(--step--1); line-height:1.58; }
+.ev .hook{ padding-top:.9rem; border-top:1px solid rgba(255,255,255,.16); color:var(--sage-dim); font-size:.75rem; font-family:var(--mono); letter-spacing:-.02em; }
 
 /* ============ STEPS ============ */
 .steps{ display:grid; gap:0; grid-template-columns:1fr; border-top:1px solid var(--line-soft); }
@@ -414,16 +493,47 @@ section{ padding-block:var(--pad-sec); }
   .step:first-child{ padding-left:0; }
   .step:last-child{ border-right:0; padding-right:0; }
 }
-.step .n{ font-family:var(--mono); font-weight:700; font-size:.8rem; color:var(--apricot); display:block; margin-bottom:1rem; letter-spacing:-.02em; }
+.step .n{ font-family:var(--mono); font-weight:700; font-size:.8rem; color:var(--grass); display:block; margin-bottom:1rem; letter-spacing:-.02em; }
 .step h3{ font-family:var(--disp); font-stretch:112%; font-weight:800; font-size:var(--step-2); margin:0 0 .7rem; letter-spacing:-.02em; line-height:1.1; }
 .step p{ margin:0; color:var(--sage); font-size:var(--step--1); }
+
+/* ============ FULL-BLEED BAND ============ */
+.band{
+  position:relative; isolation:isolate; overflow:hidden;
+  padding-block:clamp(5rem,11vw,9rem);
+}
+.band-img{
+  position:absolute; inset:0; z-index:-3; width:100%; height:100%;
+  object-fit:cover; object-position:center 58%; display:block;
+  filter:saturate(.95) contrast(1.05) brightness(1.06);
+}
+/* light hand here: a `color` blend keeps the image's luminosity, and the
+   fairway is luminance-flat, so a heavy shade on top erases it entirely */
+.band-duo{ position:absolute; inset:0; z-index:-2; background:var(--turf); mix-blend-mode:color; opacity:.4; pointer-events:none; }
+.band-shade{
+  position:absolute; inset:0; z-index:-1; pointer-events:none;
+  background:
+    linear-gradient(95deg, rgba(6,24,15,.95) 0%, rgba(6,24,15,.88) 40%, rgba(6,24,15,.45) 64%, rgba(6,24,15,.18) 100%),
+    linear-gradient(180deg, rgba(6,24,15,.6) 0%, transparent 28%, transparent 70%, rgba(6,24,15,.85) 100%);
+}
+@media (max-width: 860px){
+  .band-shade{ background:linear-gradient(180deg, rgba(6,24,15,.86) 0%, rgba(6,24,15,.9) 60%, var(--ink) 100%); }
+}
+.band-inner{ max-width:840px; }
+.band .label{ color:var(--signal); margin-bottom:1.3rem; }
+.band h2{ font-size:var(--step-5); margin:0 0 1.3rem; max-width:19ch; }
+.band p{ color:#D2E6D8; margin:0; max-width:52ch; font-size:clamp(1.0625rem,1.5vw,1.15rem); }
+.band-stats{ display:flex; flex-wrap:wrap; gap:2.5rem; margin-top:2.6rem; padding-top:2rem; border-top:1px solid rgba(255,255,255,.2); }
+.band-stats div{ display:grid; gap:.3rem; }
+.band-stats .n{ font-family:var(--mono); font-weight:700; font-size:clamp(1.5rem,3vw,2rem); color:var(--signal); letter-spacing:-.06em; line-height:1; }
+.band-stats .t{ font-size:var(--step--1); color:#BDD4C4; }
 
 /* ============ PACKAGES (bone) ============ */
 .bone{ background:var(--bone); color:var(--on-bone); }
 .bone .sec-head h2{ color:var(--on-bone); }
 .bone .sec-head p{ color:var(--on-bone-2); }
-.bone .eyebrow{ color:var(--apricot-lo); }
-.bone .eyebrow::before{ background:var(--apricot-lo); }
+.bone .eyebrow{ color:var(--turf); }
+.bone .eyebrow::before{ background:var(--turf); }
 
 .cards{ display:grid; gap:1.1rem; grid-template-columns:1fr; align-items:stretch; }
 @media (min-width: 900px){ .cards{ grid-template-columns:repeat(3,1fr); } }
@@ -447,7 +557,7 @@ section{ padding-block:var(--pad-sec); }
 .price .per{ font-size:.78rem; color:var(--on-bone-2); }
 .incl{ list-style:none; margin:0; padding:0; display:grid; gap:.6rem; }
 .incl li{ display:flex; gap:.65rem; font-size:var(--step--1); line-height:1.5; color:var(--on-bone); }
-.incl li::before{ content:''; flex:none; width:7px; height:7px; margin-top:.5rem; background:var(--apricot-lo); border-radius:50%; }
+.incl li::before{ content:''; flex:none; width:7px; height:7px; margin-top:.5rem; background:var(--turf); border-radius:50%; }
 .card .btn{ margin-top:auto; }
 
 .addons{ margin-top:2.5rem; border-top:1px solid var(--bone-3); padding-top:2rem; }
@@ -466,8 +576,8 @@ section{ padding-block:var(--pad-sec); }
 .town{ display:flex; justify-content:space-between; align-items:baseline; gap:1rem; padding:.7rem 0; border-bottom:1px solid var(--line-soft); }
 .town .nm{ font-size:var(--step--1); }
 .town .di{ font-family:var(--mono); font-size:.75rem; color:var(--sage-dim); letter-spacing:-.03em; }
-.town.home .nm{ color:var(--apricot); font-weight:600; }
-.town.home .di{ color:var(--apricot); }
+.town.home .nm{ color:var(--grass); font-weight:600; }
+.town.home .di{ color:var(--grass); }
 
 /* ============ REVIEW PLACEHOLDER ============ */
 .reviews{ background:var(--ink-2); border-block:1px solid var(--line-soft); }
@@ -496,14 +606,14 @@ summary{
   letter-spacing:-.015em; transition:color .2s ease;
 }
 summary::-webkit-details-marker{ display:none; }
-summary:hover{ color:var(--apricot); }
+summary:hover{ color:var(--grass); }
 summary::after{
-  content:''; position:absolute; right:.5rem; top:50%; width:12px; height:2px;
-  background:var(--apricot); transform:translateY(-50%);
+  content:''; position:absolute; right:8px; top:50%; width:12px; height:2px;
+  background:var(--grass); transform:translateY(-50%);
 }
 summary::before{
-  content:''; position:absolute; right:1rem; top:50%; width:2px; height:12px;
-  background:var(--apricot); transform:translateY(-50%); transition:opacity .2s ease;
+  content:''; position:absolute; right:13px; top:50%; width:2px; height:12px;
+  background:var(--grass); transform:translateY(-50%); transition:opacity .2s ease;
 }
 details[open] summary::before{ opacity:0; }
 details p{ margin:0 0 1.5rem; color:var(--sage); max-width:66ch; font-size:var(--step--1); }
@@ -513,6 +623,8 @@ details p{ margin:0 0 1.5rem; color:var(--sage); max-width:66ch; font-size:var(-
 .book-grid{ display:grid; gap:clamp(2.5rem,5vw,4rem); grid-template-columns:1fr; align-items:start; }
 @media (min-width: 940px){ .book-grid{ grid-template-columns:.9fr 1.1fr; } }
 .book h2{ font-size:var(--step-5); margin:0 0 1.2rem; }
+.book-img{ width:100%; height:auto; aspect-ratio:16/10; object-fit:cover; object-position:center 62%;
+  border-radius:3px; display:block; margin:0 0 2rem; }
 .book .lead{ color:var(--on-bone-2); margin:0 0 2rem; max-width:42ch; }
 .contact-line{ display:flex; flex-direction:column; gap:.3rem; padding:1rem 0; border-top:1px solid var(--bone-3); }
 .contact-line .label{ color:var(--on-bone-2); font-size:.6rem; }
@@ -529,7 +641,7 @@ form{ display:grid; gap:1rem; }
   padding:.8rem .9rem; width:100%;
 }
 .field textarea{ resize:vertical; min-height:110px; }
-.field input:focus, .field select:focus, .field textarea:focus{ border-color:var(--apricot-lo); outline:none; box-shadow:0 0 0 3px rgba(196,96,31,.16); }
+.field input:focus, .field select:focus, .field textarea:focus{ border-color:var(--turf); outline:none; box-shadow:0 0 0 3px rgba(19,94,56,.18); }
 .form-note{ color:var(--on-bone-2); font-size:var(--step--1); margin:0; }
 .confirm{
   border:1px solid var(--on-bone); background:#FBF9F4; border-radius:2px;
@@ -547,7 +659,7 @@ footer{ padding-block:clamp(3rem,5vw,4.5rem) 2.5rem; border-top:1px solid var(--
 .foot-col{ display:grid; gap:.6rem; align-content:start; }
 .foot-col .label{ color:var(--sage-dim); margin-bottom:.3rem; }
 .foot-col a, .foot-col span{ color:var(--sage); text-decoration:none; font-size:var(--step--1); }
-.foot-col a:hover{ color:var(--apricot); }
+.foot-col a:hover{ color:var(--grass); }
 .foot-base{ display:flex; flex-wrap:wrap; gap:1rem; justify-content:space-between; border-top:1px solid var(--line-soft); padding-top:1.5rem; color:var(--sage-dim); font-size:var(--step--2); font-family:var(--mono); }
 </style>
 
@@ -593,6 +705,8 @@ footer{ padding-block:clamp(3rem,5vw,4.5rem) 2.5rem; border-top:1px solid var(--
 
   <!-- ================= HERO ================= -->
   <header class="hero">
+    <div class="hero-bg" role="img" aria-label="A golf simulator bay: dark enclosure, hitting turf, and a course projected on the impact screen."></div>
+    <div class="hero-scrim"></div>
     <div class="wrap hero-grid">
       <div>
         <p class="label eyebrow">Loveland, Colorado — Mobile Simulator Golf</p>
@@ -667,48 +781,60 @@ footer{ padding-block:clamp(3rem,5vw,4.5rem) 2.5rem; border-top:1px solid var(--
 
       <div class="formats">
         <article class="fmt rv">
-          <div class="fmt-top">
-            <div>
-              <p class="label kicker">Indoors</p>
-              <h3>The Bay</h3>
-            </div>
-            <span class="fmt-num">01</span>
+          <div class="fmt-media">
+            <img src="img/bay.jpg" width="1920" height="1280" loading="lazy" decoding="async"
+                 alt="An indoor golf simulator bay with a course projected on the impact screen and a bag of clubs on the turf.">
           </div>
-          <p>A free-standing enclosure, impact screen, hitting turf and full lighting rig that
-             we build inside your space and strike the same night. Ballrooms, gyms, lobbies,
-             shops, event barns.</p>
-          <ul class="specs">
-            <li><span class="k">Footprint</span><span class="v">13′ W × 15′ D</span></li>
-            <li><span class="k">Ceiling needed</span><span class="v">10′ min</span></li>
-            <li><span class="k">Power</span><span class="v">1 × 110V outlet</span></li>
-            <li><span class="k">Build time</span><span class="v">75–90 min</span></li>
-          </ul>
-          <div class="fits">
-            <span>Hotel ballrooms</span><span>Church gyms</span><span>Office lobbies</span>
-            <span>Event barns</span><span>Warehouses</span>
+          <div class="fmt-body">
+            <div class="fmt-top">
+              <div>
+                <p class="label kicker">Indoors</p>
+                <h3>The Bay</h3>
+              </div>
+              <span class="fmt-num">01</span>
+            </div>
+            <p>A free-standing enclosure, impact screen, hitting turf and full lighting rig that
+               we build inside your space and strike the same night. Ballrooms, gyms, lobbies,
+               shops, event barns.</p>
+            <ul class="specs">
+              <li><span class="k">Footprint</span><span class="v">13′ W × 15′ D</span></li>
+              <li><span class="k">Ceiling needed</span><span class="v">10′ min</span></li>
+              <li><span class="k">Power</span><span class="v">1 × 110V outlet</span></li>
+              <li><span class="k">Build time</span><span class="v">75–90 min</span></li>
+            </ul>
+            <div class="fits">
+              <span>Hotel ballrooms</span><span>Church gyms</span><span>Office lobbies</span>
+              <span>Event barns</span><span>Warehouses</span>
+            </div>
           </div>
         </article>
 
         <article class="fmt rv">
-          <div class="fmt-top">
-            <div>
-              <p class="label kicker">Outdoors</p>
-              <h3>The Rig</h3>
-            </div>
-            <span class="fmt-num">02</span>
+          <div class="fmt-media">
+            <img src="img/fairway.jpg" width="1920" height="1280" loading="lazy" decoding="async"
+                 alt="A golfer finishing a swing on an open fairway in low evening light.">
           </div>
-          <p>The simulator lives in a climate-controlled trailer. It parks, levels, opens, and
-             it is a golf bay fifteen minutes later — in July heat or a February wind, which in
-             Colorado is the whole point.</p>
-          <ul class="specs">
-            <li><span class="k">Pavement needed</span><span class="v">45′ × 20′</span></li>
-            <li><span class="k">Overhead clear</span><span class="v">14′ min</span></li>
-            <li><span class="k">Power</span><span class="v">Onboard — none needed</span></li>
-            <li><span class="k">Build time</span><span class="v">15 min</span></li>
-          </ul>
-          <div class="fits">
-            <span>Festivals</span><span>Tailgates</span><span>Dealership lots</span>
-            <span>Tournaments</span><span>Neighborhood blocks</span>
+          <div class="fmt-body">
+            <div class="fmt-top">
+              <div>
+                <p class="label kicker">Outdoors</p>
+                <h3>The Rig</h3>
+              </div>
+              <span class="fmt-num">02</span>
+            </div>
+            <p>The simulator lives in a climate-controlled trailer. It parks, levels, opens, and
+               it is a golf bay fifteen minutes later — in July heat or a February wind, which in
+               Colorado is the whole point.</p>
+            <ul class="specs">
+              <li><span class="k">Pavement needed</span><span class="v">45′ × 20′</span></li>
+              <li><span class="k">Overhead clear</span><span class="v">14′ min</span></li>
+              <li><span class="k">Power</span><span class="v">Onboard — none needed</span></li>
+              <li><span class="k">Build time</span><span class="v">15 min</span></li>
+            </ul>
+            <div class="fits">
+              <span>Festivals</span><span>Tailgates</span><span>Dealership lots</span>
+              <span>Tournaments</span><span>Neighborhood blocks</span>
+            </div>
           </div>
         </article>
       </div>
@@ -782,6 +908,9 @@ footer{ padding-block:clamp(3rem,5vw,4.5rem) 2.5rem; border-top:1px solid var(--
 
       <div class="events">
         <article class="ev rv">
+          <img class="ev-img" src="img/ev-corporate.jpg" width="900" height="600" loading="lazy" decoding="async" alt="Colleagues raising glasses together at an indoor company party.">
+          <span class="ev-duo" aria-hidden="true"></span>
+          <span class="ev-shade" aria-hidden="true"></span>
           <p class="label">01 — Corporate</p>
           <h3>Company parties &amp; client days</h3>
           <p>Closest-to-the-pin bracket with your logo on the screen and the leaderboard.
@@ -790,6 +919,9 @@ footer{ padding-block:clamp(3rem,5vw,4.5rem) 2.5rem; border-top:1px solid var(--
         </article>
 
         <article class="ev rv">
+          <img class="ev-img" src="img/ev-wedding.jpg" width="900" height="600" loading="lazy" decoding="async" alt="Guests celebrating on the floor at an indoor wedding reception.">
+          <span class="ev-duo" aria-hidden="true"></span>
+          <span class="ev-shade" aria-hidden="true"></span>
           <p class="label">02 — Weddings</p>
           <h3>Receptions &amp; the night before</h3>
           <p>Solves cocktail hour and solves the guests who don't dance. Longest-drive
@@ -798,6 +930,9 @@ footer{ padding-block:clamp(3rem,5vw,4.5rem) 2.5rem; border-top:1px solid var(--
         </article>
 
         <article class="ev rv">
+          <img class="ev-img" src="img/ev-fundraiser.jpg" width="900" height="600" loading="lazy" decoding="async" alt="Guests holding sparklers at an evening charity event.">
+          <span class="ev-duo" aria-hidden="true"></span>
+          <span class="ev-shade" aria-hidden="true"></span>
           <p class="label">03 — Fundraising</p>
           <h3>Charity nights &amp; tournaments</h3>
           <p>A hole-in-one contest that doesn't need a golf course, a tee time, or good
@@ -806,6 +941,9 @@ footer{ padding-block:clamp(3rem,5vw,4.5rem) 2.5rem; border-top:1px solid var(--
         </article>
 
         <article class="ev rv">
+          <img class="ev-img" src="img/ev-private.jpg" width="900" height="600" loading="lazy" decoding="async" alt="A group of friends talking and laughing at an indoor party.">
+          <span class="ev-duo" aria-hidden="true"></span>
+          <span class="ev-shade" aria-hidden="true"></span>
           <p class="label">04 — Private</p>
           <h3>Birthdays, grads &amp; backyards</h3>
           <p>Graduation parties, milestone birthdays, guys' weekends, the driveway in
@@ -841,6 +979,38 @@ footer{ padding-block:clamp(3rem,5vw,4.5rem) 2.5rem; border-top:1px solid var(--
           <h3>We run it while you host</h3>
           <p>A host manages the rotation, teaches the first-timers, keeps the leaderboard
              honest, and settles the arguments. You go be at your own party.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FULL-BLEED BAND ================= -->
+  <section class="band">
+    <img class="band-img" src="img/fairway.jpg" width="1920" height="1280" loading="lazy" decoding="async"
+         alt="A golfer finishing a swing on an open fairway in low evening light.">
+    <span class="band-duo" aria-hidden="true"></span>
+    <span class="band-shade" aria-hidden="true"></span>
+    <div class="wrap">
+      <div class="band-inner rv">
+        <p class="label">The season nobody plans for</p>
+        <h2 class="display">Colorado golf is a five-month sport. Your calendar isn't.</h2>
+        <p>Which is why the busiest thing we own is a trailer in February. Holiday parties,
+           winter weddings, sales kickoffs, February fundraisers — the months nobody in this
+           state can get on a course are the months this books out first. Reserve the room,
+           and we will bring the fairway to it.</p>
+        <div class="band-stats">
+          <div>
+            <span class="n">Nov–Feb</span>
+            <span class="t">Books first, six to eight weeks out</span>
+          </div>
+          <div>
+            <span class="n">72°</span>
+            <span class="t">Inside the trailer, whatever it is outside</span>
+          </div>
+          <div>
+            <span class="n">12</span>
+            <span class="t">Months a year we are taking dates</span>
+          </div>
         </div>
       </div>
     </div>
@@ -1057,6 +1227,9 @@ footer{ padding-block:clamp(3rem,5vw,4.5rem) 2.5rem; border-top:1px solid var(--
         <h2 class="display">Tell us the day and<br>the room.</h2>
         <p class="lead">We'll come back inside one business day with whether the date is open,
            which setup fits your space, and a flat number — no phone tag required.</p>
+
+        <img class="book-img" src="img/turf.jpg" width="1000" height="1333" loading="lazy" decoding="async"
+             alt="A wedge resting behind a golf ball on bright hitting turf.">
 
         <div class="contact-line">
           <span class="label">Call or text</span>
