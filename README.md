@@ -78,10 +78,16 @@ hotlinked.
 | --- | --- | --- |
 | `bay.jpg` | 31212256 | Hero |
 | `turf.jpg` | 34710413 | Setup figure |
-| `ev-corporate.jpg` | 6405751 | Events |
-| `ev-wedding.jpg` | 10408275 | Events |
-| `ev-fundraiser.jpg` | 6405786 | Events |
-| `ev-private.jpg` | 6405661 | Events |
+| `og.jpg` | (built from bay.jpg) | Share card |
+| `ev-corporate.jpg` | 20762259 | Events — group of golfers |
+| `ev-wedding.jpg` | 9207391 | Events — couple on a fairway |
+| `ev-fundraiser.jpg` | 6370135 | Events — trophy celebration |
+| `ev-private.jpg` | 6542457 | Events — high five on the green |
+
+**Every event photo has golf in it.** The first set was generic party stock —
+champagne toasts, sparklers, novelty glasses — with no golf anywhere, so the
+section read as a nightclub. If you swap one, keep clubs, a course or a
+clubhouse in frame.
 
 **No colour cast on people.** An earlier draft ran these through a turf-green
 `mix-blend-mode: color` duotone to unify four different shoots. It unified them
@@ -118,6 +124,21 @@ draft was dark throughout and read as heavy.
 `--turf #14663D` carries the category. `--apricot #D9661F` is CTAs, the accent
 word in the headline, and the draft notice. `--signal` chartreuse is data-only:
 launch-monitor numerals and the stat-band units. It is not a brand colour.
+
+## Tone: this is a party upgrade, not a rental company
+
+The primary sale is *make your event better by hiring a high-end simulator*. It
+is easy to drift into logistics — specs, footprints, hours — and end up sounding
+like a plant-hire firm. Guard against it.
+
+The band exists to carry that feeling: "By hour two, there's a line", followed by
+the closest-to-the-pin winner who has never held a club and the CFO tied with the
+new hire. The rational argument (4 players / 5 hours versus 50+ / 1 hour) sits
+underneath it as support, not as the lead.
+
+Section headings should promise something, not describe the product. "What are
+you throwing?" replaced "Four rooms, four different jobs", which nobody could
+parse on a first read.
 
 ## The copy is written for instant recognition
 
