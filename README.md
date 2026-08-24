@@ -20,11 +20,16 @@ The brand name appears in exactly **three** places, by design:
 the flag) that also nods to Colorado altitude. It has **not** been checked for
 trademark or domain availability.
 
-## It's one unit, not two
+## The business model, stated plainly
 
-Earlier drafts modelled this on Dryvebox — a trailer *plus* an indoor pop-up.
-That's wrong for an inflatable. There is **one** unit; it goes indoors or
-outdoors. If you find copy implying two formats, it's a leftover.
+They own **one** inflatable simulator. They are hired to bring it, set it up, run
+it for the event, and take it away. They do **not** sell or lease systems, and
+there is no second format — earlier drafts copied Dryvebox's trailer-plus-pop-up
+model, which is wrong here. Any copy implying two units, a purchase, or an
+unstaffed drop-off is a leftover and should go.
+
+The single mention of "trailer" (in the setup section) is deliberate contrast
+against trailer operators, not a description of this rig.
 
 Specs used throughout, from what the category actually advertises:
 
@@ -48,21 +53,26 @@ numbers; the real ones are the client's to set.
 `<symbol id="rig">` near the top of `<body>`, used twice (hero and the setup
 figure) via `<use href="#rig">`. Edit it once.
 
+It is drawn from a reference photo the client supplied, so keep these true:
+
+- **It is black**, not white. Matte dark vinyl with welded seams.
+- **It is a cube you walk into**, drawn in three-quarter perspective — a top
+  slab, a right wall receding, and an open front. An earlier draft drew a flat
+  white front-facing arch, which read as a picture frame.
+- **The golfer stands inside, silhouetted against the lit screen.** Against the
+  dark side wall they vanish. Scale is what stops the whole thing reading as a
+  television.
+- **Green turf wraps the front and right**, extending past the unit.
+
+A halo ellipse sits behind the box so a black object still reads on the dark
+hero. Remove it and the hero illustration disappears.
+
 **Why an illustration and not a photo:** there is no photograph of an inflatable
 golf simulator in any free-licensed library. Openverse returns nothing; Pexels
-"inflatable screen" is all outdoor cinemas. Competitors' own photos are
-copyrighted and are also *their* equipment. The illustration is legally clean and
-clearly reads as a diagram rather than a fake photo. It carries a caption saying
-the client's rig photos replace it.
-
-Three things stop it reading as a television, and they matter if you edit it:
-
-- **The golfer.** Scale is what makes it a room you stand in rather than a screen
-  you watch. It paints *after* the frame and mat — draw it earlier and the tubes
-  cover its legs.
-- **The projector and light cone.** Says projection rig, not TV.
-- **The screen fills the whole back wall.** A screen inset in a bezel reads as a
-  monitor. No bezel.
+"inflatable screen" is all outdoor cinemas. Competitors' photos are copyrighted
+and are also *their* equipment. The illustration is legally clean and reads as a
+diagram, not a fake photo. It carries a caption saying the client's own rig
+photos replace it.
 
 ## Photography — where it came from
 
