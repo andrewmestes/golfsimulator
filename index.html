@@ -4,21 +4,21 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Mobile Golf Simulator Rentals in Northern Colorado | Pin High Golf Co.</title>
-<meta name="description" content="A tour-grade golf simulator delivered and run for your event — corporate parties, weddings, fundraisers and private parties across Loveland, Fort Collins, Greeley and the Front Range. Setup in under 90 minutes.">
+<title>Inflatable Golf Simulator Rental — Northern Colorado | Pin High Golf Co.</title>
+<meta name="description" content="An inflatable golf simulator we deliver, set up and run for your event — indoors or outdoors. Corporate parties, weddings, fundraisers and backyards across Loveland, Fort Collins, Greeley and the Front Range.">
 
 <!-- Concept draft: keep this until the real brand, pricing and photography land. -->
 <meta name="robots" content="noindex, nofollow">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Bring the back nine indoors.">
-<meta property="og:description" content="A tour-grade golf simulator delivered and run for your event — corporate parties, weddings, fundraisers and private parties across Loveland, Fort Collins, Greeley and the Front Range. Setup in under 90 minutes.">
+<meta property="og:title" content="A golf course that fits in a van.">
+<meta property="og:description" content="An inflatable golf simulator we deliver, set up and run for your event — indoors or outdoors, anywhere in Northern Colorado.">
 <meta property="og:site_name" content="Pin High Golf Co.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Bring the back nine indoors.">
-<meta name="twitter:description" content="A tour-grade golf simulator delivered and run for your event — corporate parties, weddings, fundraisers and private parties across Loveland, Fort Collins, Greeley and the Front Range. Setup in under 90 minutes.">
+<meta name="twitter:title" content="A golf course that fits in a van.">
+<meta name="twitter:description" content="An inflatable golf simulator we deliver, set up and run for your event — indoors or outdoors, anywhere in Northern Colorado.">
 
-<meta name="theme-color" content="#0B1613">
+<meta name="theme-color" content="#0C1F14">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>%E2%9B%B3</text></svg>">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,51 +27,46 @@
 
 <style>
 /* ============================================================
-   PIN HIGH GOLF CO. — concept one-pager
-   Single committed visual world (dusk / launch-monitor), so no
-   theme swap: every colour below is painted explicitly.
+   PIN HIGH GOLF CO. — inflatable golf simulator, concept one-pager
+   Paper-first: the page is light, with the hero and two bands
+   held back as dark moments. Single committed look, so every
+   colour is painted explicitly and there is no theme swap.
    ============================================================ */
 
 :root{
-  /* ground — deep fairway shadow. Unmistakably green, not a neutral black. */
-  --ink:      #06180F;
-  --ink-2:    #0B2417;
-  --ink-3:    #10301F;
-  --line:     #1F4A31;
-  --line-soft:#173A26;
+  /* paper — the page's default ground */
+  --paper:    #F7F5EE;
+  --paper-2:  #EFECE1;
+  --paper-3:  #DFDACB;
+  --card:     #FFFFFF;
+  --on-paper: #15281C;
+  --on-paper-2:#53665B;
 
-  /* turf — real fairway green, used across whole surfaces so the page
-     reads as golf before it reads as anything else */
-  --turf:     #135E38;
-  --turf-2:   #0E4A2C;
-  --turf-3:   #177044;
-  --grass:    #46B072;
+  /* ink — dark moments only */
+  --ink:      #0C1F14;
+  --ink-2:    #12301E;
+  --ink-line: #24513A;
+  --on-ink:   #F0F4EB;
+  --sage:     #A9C5B2;
+  --sage-dim: #82A78E;
 
-  /* daylight */
-  --bone:     #F2F1E4;
-  --bone-2:   #E5E4D2;
-  --bone-3:   #D2D2BC;
-  --on-bone:  #10241A;
-  --on-bone-2:#4A5C51;
+  /* turf — the category colour, on surfaces and never on skin */
+  --turf:     #14663D;
+  --turf-2:   #0F4E2E;
+  --turf-3:   #1A7A49;
+  --grass:    #3FA268;
 
-  /* type on dark */
-  --on-ink:   #EFF3EA;
-  --sage:     #A8C4B0;
-  --sage-dim: #7BA087;
+  /* accent — kept for CTAs and one word in the headline */
+  --apricot:  #D9661F;
+  --apricot-2:#E9873F;
 
-  /* accent — Front Range dusk. Now earns its keep on CTAs only, so the
-     green carries the category and the orange only carries the energy. */
-  --apricot:  #E97F3C;
-  --apricot-lo:#B85718;
-  --apricot-glow: rgba(233,127,60,.20);
-
-  /* data only */
+  /* data only — launch-monitor numerals on dark */
   --signal:   #C9F24D;
 
-  /* semantics, distinct from the accent */
-  --yes:      #C9F24D;
-  --caution:  #E8B23C;
-  --alt:      #85AECB;
+  /* semantics */
+  --yes:      #1A7A49;
+  --caution:  #B47407;
+  --alt:      #2C6E93;
 
   --step--2: .6875rem;
   --step--1: .8125rem;
@@ -79,11 +74,10 @@
   --step-1:  1.25rem;
   --step-2:  1.5rem;
   --step-3:  1.9375rem;
-  --step-4:  clamp(1.9rem, 3.4vw, 2.6rem);
-  --step-5:  clamp(2.3rem, 5vw, 3.6rem);
-  --hero:    clamp(2.9rem, 8.2vw, 6rem);
+  --step-5:  clamp(2.2rem, 4.6vw, 3.4rem);
+  --hero:    clamp(2.7rem, 7.2vw, 5.4rem);
 
-  --pad-sec: clamp(4.5rem, 9vw, 8.5rem);
+  --pad-sec: clamp(4rem, 8vw, 7rem);
   --gut:     clamp(1.25rem, 4vw, 2.75rem);
 
   --sans: 'Instrument Sans', system-ui, -apple-system, 'Segoe UI', Helvetica, sans-serif;
@@ -92,111 +86,80 @@
 }
 
 *, *::before, *::after{ box-sizing:border-box; }
-
 html{ scroll-behavior:smooth; }
 @media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } }
 
 body{
   margin:0;
-  background:var(--ink);
-  color:var(--on-ink);
+  background:var(--paper);
+  color:var(--on-paper);
   font-family:var(--sans);
   font-size:var(--step-0);
   line-height:1.62;
   -webkit-font-smoothing:antialiased;
   overflow-x:hidden;
 }
-
 img{ max-width:100%; display:block; }
-
 a{ color:inherit; }
-
-:focus-visible{
-  outline:2px solid var(--apricot);
-  outline-offset:3px;
-  border-radius:2px;
-}
+:focus-visible{ outline:2px solid var(--apricot); outline-offset:3px; border-radius:2px; }
 
 /* ---------- type roles ---------- */
 .display{
-  font-family:var(--disp);
-  font-stretch:118%;
-  font-weight:800;
-  line-height:.94;
-  letter-spacing:-.022em;
-  text-wrap:balance;
-  margin:0;
+  font-family:var(--disp); font-stretch:118%; font-weight:800;
+  line-height:.96; letter-spacing:-.022em; text-wrap:balance; margin:0;
 }
 .label{
-  font-family:var(--disp);
-  font-stretch:70%;
-  font-weight:700;
-  text-transform:uppercase;
-  letter-spacing:.15em;
-  font-size:var(--step--1);
-  line-height:1.2;
+  font-family:var(--disp); font-stretch:70%; font-weight:700;
+  text-transform:uppercase; letter-spacing:.15em;
+  font-size:var(--step--1); line-height:1.2;
 }
-.num{
-  font-family:var(--mono);
-  font-variant-numeric:tabular-nums;
-  letter-spacing:-.04em;
-}
-
-.wrap{
-  width:100%;
-  max-width:1220px;
-  margin-inline:auto;
-  padding-inline:var(--gut);
-}
-.prose{ max-width:60ch; }
+.wrap{ width:100%; max-width:1220px; margin-inline:auto; padding-inline:var(--gut); }
 
 /* ---------- draft strip ---------- */
 .draftbar{
-  background:var(--ink-3);
-  border-bottom:1px solid var(--line-soft);
-  color:var(--sage);
-  font-family:var(--mono);
-  font-size:var(--step--2);
-  letter-spacing:.02em;
-  text-align:center;
-  padding:.6rem var(--gut);
+  background:var(--ink); color:var(--sage);
+  font-family:var(--mono); font-size:var(--step--2);
+  text-align:center; padding:.6rem var(--gut);
 }
-.draftbar b{ color:var(--apricot); font-weight:400; }
+.draftbar b{ color:var(--apricot-2); font-weight:400; }
 
 /* ---------- nav ---------- */
 .nav{
   position:sticky; top:0; z-index:60;
   display:flex; align-items:center; gap:2rem;
   padding:1rem var(--gut);
-  background:rgba(11,22,19,.72);
-  backdrop-filter:blur(14px) saturate(140%);
-  -webkit-backdrop-filter:blur(14px) saturate(140%);
+  background:var(--ink);
   border-bottom:1px solid transparent;
-  transition:border-color .3s ease, background .3s ease;
+  transition:background .3s ease, border-color .3s ease;
 }
-.nav.stuck{ border-bottom-color:var(--line-soft); background:rgba(11,22,19,.92); }
-
-.mark{
-  display:flex; align-items:baseline; gap:.5rem;
-  text-decoration:none; margin-right:auto;
+/* dark over the hero, paper once you leave it */
+.nav.stuck{
+  background:rgba(247,245,238,.94);
+  backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+  border-bottom-color:var(--paper-3);
 }
+.mark{ display:flex; align-items:baseline; gap:.5rem; text-decoration:none; margin-right:auto; }
 .mark .wordmark{
   font-family:var(--disp); font-stretch:118%; font-weight:900;
   font-size:1.18rem; letter-spacing:-.03em; text-transform:uppercase;
+  color:var(--on-ink); transition:color .3s ease;
 }
 .mark .tail{
   font-family:var(--disp); font-stretch:70%; font-weight:700;
   text-transform:uppercase; letter-spacing:.18em;
-  font-size:.6rem; color:var(--grass); padding-bottom:.1rem;
+  font-size:.6rem; color:var(--grass); padding-bottom:.1rem; transition:color .3s ease;
 }
-
+.nav.stuck .mark .wordmark{ color:var(--on-paper); }
+.nav.stuck .mark .tail{ color:var(--turf); }
 .navlinks{ display:flex; gap:1.75rem; align-items:center; }
 .navlinks a{
   text-decoration:none; color:var(--sage); font-size:var(--step--1);
-  font-weight:500; letter-spacing:.01em; transition:color .2s ease;
+  font-weight:500; transition:color .2s ease;
 }
 .navlinks a:hover{ color:var(--on-ink); }
-@media (max-width: 900px){ .navlinks{ display:none; } }
+.nav.stuck .navlinks a{ color:var(--on-paper-2); }
+.nav.stuck .navlinks a:hover{ color:var(--turf); }
+@media (max-width: 860px){ .navlinks{ display:none; } }
 
 /* ---------- buttons ---------- */
 .btn{
@@ -207,12 +170,14 @@ a{ color:inherit; }
   padding:.85rem 1.4rem; border-radius:2px; border:1px solid transparent;
   transition:transform .18s ease, background .2s ease, color .2s ease, border-color .2s ease;
 }
-.btn-primary{ background:var(--apricot); color:#160B03; }
-.btn-primary:hover{ background:#F79451; transform:translateY(-2px); }
-.btn-ghost{ border-color:var(--line); color:var(--on-ink); background:transparent; }
-.btn-ghost:hover{ border-color:var(--apricot); color:var(--apricot); }
-.btn-bone{ background:var(--on-bone); color:var(--bone); }
-.btn-bone:hover{ background:var(--apricot-lo); color:#fff; transform:translateY(-2px); }
+.btn-primary{ background:var(--apricot); color:#FFF; }
+.btn-primary:hover{ background:var(--apricot-2); transform:translateY(-2px); }
+.btn-ghost-dark{ border-color:rgba(255,255,255,.34); color:var(--on-ink); }
+.btn-ghost-dark:hover{ border-color:var(--signal); color:var(--signal); }
+.btn-turf{ background:var(--turf); color:#FFF; }
+.btn-turf:hover{ background:var(--turf-3); transform:translateY(-2px); }
+.btn-outline{ border-color:var(--paper-3); color:var(--on-paper); }
+.btn-outline:hover{ border-color:var(--turf); color:var(--turf); }
 .btn-lg{ padding:1.05rem 1.9rem; font-size:var(--step-0); letter-spacing:.05em; }
 @media (prefers-reduced-motion: reduce){ .btn:hover{ transform:none; } }
 
@@ -221,466 +186,477 @@ a{ color:inherit; }
 .rv.in{ opacity:1; transform:none; }
 @media (prefers-reduced-motion: reduce){ .rv{ opacity:1; transform:none; transition:none; } }
 
-/* ============ HERO ============ */
-.hero{ position:relative; padding-block:clamp(3rem,6vw,5.5rem) clamp(3.5rem,7vw,6rem); overflow:hidden; isolation:isolate; }
-/* the real bay, doing the work a stock illustration cannot */
-.hero-bg{
-  position:absolute; inset:0; z-index:-2;
-  background:url("img/bay.jpg") center 46% / cover no-repeat;
-  filter:saturate(.85) contrast(1.04) brightness(1.28);
+/* ============ HERO (dark) ============ */
+.hero{
+  position:relative; background:var(--ink); color:var(--on-ink);
+  padding-bottom:clamp(3rem,6vw,5rem); overflow:hidden;
 }
-/* scrim: opaque green under the type on the left, clearing hard toward the
-   right so the bay itself is legible rather than merely atmospheric */
-.hero-scrim{
-  position:absolute; inset:0; z-index:-1; pointer-events:none;
+.hero::before{
+  content:''; position:absolute; inset:0; pointer-events:none;
   background:
-    linear-gradient(100deg, var(--ink) 0%, rgba(6,24,15,.95) 33%, rgba(6,24,15,.7) 52%, rgba(6,24,15,.22) 100%),
-    linear-gradient(180deg, rgba(6,24,15,.78) 0%, transparent 24%, transparent 60%, var(--ink) 100%),
-    radial-gradient(58% 62% at 24% 26%, var(--apricot-glow), transparent 70%);
-}
-/* stacked layout: no left column to protect, so scrim vertically only */
-@media (max-width: 979px){
-  /* let the bay read behind the display type up top, then go solid before
-     the body copy and buttons — a ghost button over the lit screen loses */
-  .hero-scrim{
-    background:
-      linear-gradient(180deg, rgba(6,24,15,.5) 0px, rgba(6,24,15,.74) 320px, rgba(6,24,15,.96) 480px, var(--ink) 600px),
-      radial-gradient(70% 50% at 30% 22%, var(--apricot-glow), transparent 70%);
-  }
+    radial-gradient(70% 60% at 78% 40%, rgba(26,122,73,.34), transparent 68%),
+    radial-gradient(50% 50% at 16% 22%, rgba(217,102,31,.16), transparent 70%);
 }
 .hero-grid{
-  position:relative; display:grid; gap:clamp(2.5rem,5vw,4rem);
-  grid-template-columns:1fr;
-  align-items:center;
+  position:relative; display:grid; gap:clamp(2rem,4vw,3.5rem);
+  grid-template-columns:1fr; align-items:center;
+  padding-top:clamp(2.5rem,5vw,4rem);
 }
-@media (min-width: 980px){ .hero-grid{ grid-template-columns:1.02fr .98fr; } }
+@media (min-width: 980px){ .hero-grid{ grid-template-columns:.92fr 1.08fr; } }
 
-.eyebrow{ display:flex; align-items:center; gap:.7rem; color:var(--grass); margin-bottom:1.5rem; }
+.eyebrow{ display:flex; align-items:center; gap:.7rem; color:var(--grass); margin-bottom:1.4rem; }
 .eyebrow::before{ content:''; width:34px; height:1px; background:var(--grass); flex:none; }
 
-h1.display{ font-size:var(--hero); margin-bottom:1.4rem; }
-h1.display em{ font-style:normal; color:var(--apricot); }
-
-.hero-sub{ color:var(--sage); font-size:clamp(1.0625rem,1.6vw,1.2rem); max-width:46ch; margin:0 0 2.1rem; }
-
-.hero-cta{ display:flex; flex-wrap:wrap; gap:.85rem; margin-bottom:1.9rem; }
-@media (max-width: 560px){
-  .hero-cta .btn{ flex:1 1 100%; }
-  .draftbar b{ display:block; }
-}
-
-.hero-micro{
-  display:flex; flex-wrap:wrap; gap:.55rem 1.4rem;
-  color:var(--sage-dim); font-size:var(--step--1);
-}
+h1.display{ font-size:var(--hero); margin-bottom:1.3rem; }
+h1.display em{ font-style:normal; color:var(--apricot-2); }
+.hero-sub{ color:var(--sage); font-size:clamp(1.0625rem,1.6vw,1.18rem); max-width:44ch; margin:0 0 2rem; }
+.hero-cta{ display:flex; flex-wrap:wrap; gap:.85rem; margin-bottom:1.8rem; }
+@media (max-width: 560px){ .hero-cta .btn{ flex:1 1 100%; } .draftbar b{ display:block; } }
+.hero-micro{ display:flex; flex-wrap:wrap; gap:.55rem 1.4rem; color:var(--sage-dim); font-size:var(--step--1); }
 .hero-micro span{ display:flex; align-items:center; gap:.5rem; }
 .hero-micro span::before{ content:''; width:5px; height:5px; background:var(--grass); border-radius:50%; flex:none; }
 
-/* --- monitor --- */
+/* --- hero stage: illustration behind, launch monitor in front --- */
+.stage{ position:relative; }
+.stage-rig{ width:100%; height:auto; display:block; }
 .monitor{
-  background:linear-gradient(180deg, var(--ink-2), #0C1A16);
-  border:1px solid var(--line); border-radius:4px;
-  overflow:hidden;
-  box-shadow:0 40px 80px -40px rgba(0,0,0,.9), inset 0 1px 0 rgba(255,255,255,.03);
+  position:relative; margin:-8% auto 0; width:min(100%, 460px);
+  background:rgba(8,24,15,.93);
+  border:1px solid var(--ink-line); border-radius:4px; overflow:hidden;
+  box-shadow:0 30px 70px -30px rgba(0,0,0,.85);
+  backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
 }
+@media (min-width: 980px){ .monitor{ margin:-9% 0 0 auto; } }
 .monitor-top{
   display:flex; align-items:center; justify-content:space-between; gap:1rem;
-  padding:.75rem 1rem; border-bottom:1px solid var(--line-soft);
-  background:rgba(255,255,255,.014);
+  padding:.7rem .9rem; border-bottom:1px solid var(--ink-line);
 }
-.monitor-top .label{ color:var(--sage-dim); font-size:.62rem; }
-.live{ display:flex; align-items:center; gap:.45rem; color:var(--signal); font-size:.62rem; }
+.monitor-top .label{ color:var(--sage-dim); font-size:.6rem; }
+.live{ display:flex; align-items:center; gap:.45rem; color:var(--signal); font-size:.6rem; }
 .live i{ width:6px; height:6px; border-radius:50%; background:var(--signal); display:block; animation:pulse 2.4s ease-in-out infinite; }
-@keyframes pulse{ 0%,100%{ opacity:1 } 50%{ opacity:.28 } }
+@keyframes pulse{ 0%,100%{opacity:1} 50%{opacity:.28} }
 @media (prefers-reduced-motion: reduce){ .live i{ animation:none; } }
-
-#flight{ display:block; width:100%; height:auto; background:transparent; }
-
-.readout{
-  display:grid; grid-template-columns:repeat(4,1fr);
-  border-top:1px solid var(--line-soft);
-}
-.readout div{ padding:.9rem .75rem 1rem; border-right:1px solid var(--line-soft); }
+#flight{ display:block; width:100%; height:auto; }
+.readout{ display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid var(--ink-line); }
+.readout div{ padding:.8rem .6rem .9rem; border-right:1px solid var(--ink-line); }
 .readout div:last-child{ border-right:0; }
-@media (max-width: 480px){
+@media (max-width: 460px){
   .readout{ grid-template-columns:1fr 1fr; }
   .readout div:nth-child(2n){ border-right:0; }
-  .readout div:nth-child(-n+2){ border-bottom:1px solid var(--line-soft); }
+  .readout div:nth-child(-n+2){ border-bottom:1px solid var(--ink-line); }
 }
-.readout .label{ color:var(--sage-dim); font-size:.55rem; letter-spacing:.13em; display:block; margin-bottom:.4rem; }
-.readout .val{ font-family:var(--mono); font-weight:700; font-size:clamp(.95rem,2.1vw,1.25rem); color:var(--signal); font-variant-numeric:tabular-nums; letter-spacing:-.05em; }
-.readout .unit{ font-family:var(--sans); font-size:.62rem; color:var(--sage-dim); margin-left:.2rem; letter-spacing:0; }
+.readout .label{ color:var(--sage-dim); font-size:.53rem; letter-spacing:.12em; display:block; margin-bottom:.35rem; }
+.readout .val{ font-family:var(--mono); font-weight:700; font-size:clamp(.9rem,2vw,1.15rem); color:var(--signal); font-variant-numeric:tabular-nums; letter-spacing:-.05em; }
+.readout .unit{ font-family:var(--sans); font-size:.6rem; color:var(--sage-dim); margin-left:.2rem; letter-spacing:0; }
 
-.monitor-foot{
-  padding:.7rem 1rem; border-top:1px solid var(--line-soft);
-  color:var(--sage-dim); font-size:var(--step--2); font-family:var(--mono);
-}
-.monitor-foot b{ color:var(--sage); font-weight:400; }
-
-/* ============ SPEC BAR ============ */
-.specbar{
-  background:linear-gradient(170deg, var(--turf) 0%, var(--turf-2) 100%);
-  position:relative;
-}
-/* These two must out-specify `.spec p` / `.spec .big s` below, which would
-   otherwise put sage-on-turf text at roughly 3:1. Keep the extra class. */
-.specbar .spec{ border-color:rgba(255,255,255,.14); }
-.specbar .spec p{ color:#D3E8DA; }
-.specbar .spec .big{ color:#FFF; }
-/* apricot lands at 2.82:1 on turf — fails even the large-text bar */
-.specbar .spec .big s{ color:var(--signal); }
+/* ============ SPEC BAR (turf) ============ */
+.specbar{ background:linear-gradient(170deg, var(--turf) 0%, var(--turf-2) 100%); }
 .specbar-grid{ display:grid; grid-template-columns:repeat(2,1fr); }
 @media (min-width: 820px){ .specbar-grid{ grid-template-columns:repeat(4,1fr); } }
-.spec{ padding:clamp(1.6rem,3vw,2.4rem) var(--gut); border-right:1px solid var(--line-soft); border-bottom:1px solid var(--line-soft); }
+.spec{ padding:clamp(1.5rem,3vw,2.2rem) var(--gut); border-right:1px solid rgba(255,255,255,.15); border-bottom:1px solid rgba(255,255,255,.15); }
 @media (min-width: 820px){ .spec{ border-bottom:0; } .spec:last-child{ border-right:0; } }
 @media (max-width: 819px){ .spec:nth-child(2n){ border-right:0; } .spec:nth-child(n+3){ border-bottom:0; } }
-.spec .big{ font-family:var(--mono); font-weight:700; font-size:clamp(1.7rem,3.6vw,2.35rem); letter-spacing:-.06em; color:var(--on-ink); display:block; line-height:1; }
-.spec .big s{ text-decoration:none; color:var(--apricot); }
-.spec p{ margin:.7rem 0 0; color:var(--sage); font-size:var(--step--1); line-height:1.45; max-width:24ch; }
+/* these must out-specify nothing else, but keep the extra class as a guard */
+.specbar .spec .big{ font-family:var(--mono); font-weight:700; font-size:clamp(1.6rem,3.4vw,2.2rem); letter-spacing:-.06em; color:#FFF; display:block; line-height:1; }
+.specbar .spec .big s{ text-decoration:none; color:var(--signal); }
+.specbar .spec p{ margin:.65rem 0 0; color:#D5E9DC; font-size:var(--step--1); line-height:1.45; max-width:24ch; }
 
-/* ============ generic section ============ */
-section{ padding-block:var(--pad-sec); }
-.sec-head{ margin-bottom:clamp(2.5rem,5vw,3.75rem); }
-.sec-head .eyebrow{ margin-bottom:1.1rem; }
-.sec-head h2{ font-size:var(--step-5); margin-bottom:1rem; }
-.sec-head p{ color:var(--sage); margin:0; max-width:56ch; }
 
-/* ============ FORMATS ============ */
-.formats{ display:grid; gap:1.25rem; grid-template-columns:1fr; }
-@media (min-width: 860px){ .formats{ grid-template-columns:1fr 1fr; } }
-
-.fmt{
-  border:1px solid var(--line); background:var(--ink-2);
-  border-radius:3px; overflow:hidden;
-  display:flex; flex-direction:column;
-  transition:border-color .25s ease, transform .25s ease;
+/* ============ COURSE TICKER ============
+   The joke is the collision: a legendary course against an ordinary room.
+   Courses named here are ones that actually exist in simulator libraries. */
+.ticker{
+  background:var(--ink); color:var(--on-ink);
+  padding-block:clamp(1.6rem,3vw,2.4rem);
+  overflow:hidden; position:relative;
 }
-.fmt:hover{ border-color:var(--grass); transform:translateY(-3px); }
-@media (prefers-reduced-motion: reduce){ .fmt:hover{ transform:none; } }
-.fmt-media{ position:relative; aspect-ratio:16/10; overflow:hidden; background:var(--ink-3); }
-.fmt-media img{
-  width:100%; height:100%; object-fit:cover; display:block;
-  filter:saturate(.82) contrast(1.05);
+.ticker::before, .ticker::after{
+  content:''; position:absolute; top:0; bottom:0; width:min(22vw,220px); z-index:2; pointer-events:none;
+}
+.ticker::before{ left:0;  background:linear-gradient(90deg, var(--ink) 12%, rgba(12,31,20,.86) 46%, transparent); }
+.ticker::after{  right:0; background:linear-gradient(270deg, var(--ink) 12%, rgba(12,31,20,.86) 46%, transparent); }
+.ticker-lead{
+  text-align:center; color:var(--grass); margin:0 0 clamp(1rem,2vw,1.5rem);
+  position:relative; z-index:3;
+}
+.ticker-row{ display:flex; width:max-content; }
+.ticker-row + .ticker-row{ margin-top:.6rem; }
+.ticker-row.fwd{ animation:tickL 46s linear infinite; }
+.ticker-row.rev{ animation:tickR 52s linear infinite; }
+.ticker:hover .ticker-row{ animation-play-state:paused; }
+@keyframes tickL{ from{ transform:translateX(0);     } to{ transform:translateX(-50%); } }
+@keyframes tickR{ from{ transform:translateX(-50%);  } to{ transform:translateX(0);    } }
+.ticker-track{ display:flex; align-items:center; gap:clamp(1.5rem,3vw,2.75rem); padding-right:clamp(1.5rem,3vw,2.75rem); }
+.tick{
+  font-family:var(--disp); font-stretch:104%; font-weight:500;
+  font-size:clamp(1.05rem,2.4vw,1.75rem); letter-spacing:-.02em;
+  white-space:nowrap; color:var(--sage);
+}
+.tick b{ font-weight:800; color:var(--on-ink); }
+.tick.alt b{ color:var(--signal); }
+.tick-sep{ color:var(--apricot-2); font-size:.9rem; flex:none; }
+@media (prefers-reduced-motion: reduce){
+  .ticker-row{ animation:none; }
+  .ticker-inner{ overflow-x:auto; }
+}
+
+/* ============ sections on paper ============ */
+section{ padding-block:var(--pad-sec); }
+.sec-head{ margin-bottom:clamp(2.2rem,4.5vw,3.4rem); }
+.sec-head .eyebrow{ color:var(--turf); margin-bottom:1rem; }
+.sec-head .eyebrow::before{ background:var(--turf); }
+.sec-head h2{ font-size:var(--step-5); margin-bottom:.9rem; }
+.sec-head p{ color:var(--on-paper-2); margin:0; max-width:56ch; }
+.alt-ground{ background:var(--paper-2); }
+
+/* ============ THE SETUP ============ */
+.setup-grid{ display:grid; gap:clamp(2rem,4vw,3.5rem); grid-template-columns:1fr; align-items:center; }
+@media (min-width: 940px){ .setup-grid{ grid-template-columns:1.05fr .95fr; } }
+.rig-figure{
+  background:linear-gradient(165deg, #EAF2EC 0%, #DCE9E0 100%);
+  border:1px solid var(--paper-3); border-radius:4px;
+  padding:clamp(1rem,2.5vw,1.75rem);
+}
+.rig-figure svg{ width:100%; height:auto; display:block; }
+.rig-figure figcaption{
+  margin-top:1rem; padding-top:.9rem; border-top:1px solid rgba(21,40,28,.14);
+  font-family:var(--mono); font-size:.66rem; color:var(--on-paper-2); letter-spacing:-.01em;
+}
+.specs{ list-style:none; margin:0 0 1.6rem; padding:0; display:grid; gap:0; border-top:1px solid var(--paper-3); }
+.specs li{ display:flex; justify-content:space-between; align-items:baseline; gap:1rem; padding:.75rem 0; border-bottom:1px solid var(--paper-3); font-size:var(--step--1); }
+.specs .k{ color:var(--on-paper-2); }
+.specs .v{ font-family:var(--mono); font-size:.78rem; color:var(--on-paper); text-align:right; letter-spacing:-.03em; }
+.where{ display:grid; gap:.9rem; }
+.where div{ display:flex; gap:.85rem; align-items:flex-start; }
+.where .pip{
+  flex:none; width:26px; height:26px; border-radius:50%; margin-top:.1rem;
+  display:grid; place-items:center; background:var(--turf); color:#FFF;
+  font-family:var(--mono); font-size:.6rem; font-weight:700;
+}
+.where h4{ margin:0 0 .15rem; font-family:var(--disp); font-stretch:108%; font-weight:700; font-size:1.0625rem; }
+.where p{ margin:0; color:var(--on-paper-2); font-size:var(--step--1); }
+
+/* ============ EVENTS — natural photography, no tint ============ */
+.events{ display:grid; gap:1.25rem; grid-template-columns:1fr; }
+@media (min-width: 700px){ .events{ grid-template-columns:1fr 1fr; } }
+@media (min-width: 1060px){ .events{ grid-template-columns:repeat(4,1fr); } }
+.ev{
+  background:var(--card); border:1px solid var(--paper-3); border-radius:4px;
+  overflow:hidden; display:flex; flex-direction:column;
+  transition:border-color .25s ease, transform .25s ease, box-shadow .25s ease;
+}
+.ev:hover{ border-color:var(--turf); transform:translateY(-3px); box-shadow:0 18px 36px -24px rgba(21,40,28,.45); }
+@media (prefers-reduced-motion: reduce){ .ev:hover{ transform:none; } }
+.ev-media{ position:relative; aspect-ratio:4/3; overflow:hidden; background:var(--paper-2); }
+.ev-media img{
+  width:100%; height:100%; object-fit:cover;
+  /* a whisper of warmth only — no colour cast on faces */
+  filter:saturate(1.02) contrast(1.02);
   transition:transform .7s cubic-bezier(.2,.7,.3,1);
 }
-.fmt:hover .fmt-media img{ transform:scale(1.045); }
-@media (prefers-reduced-motion: reduce){ .fmt:hover .fmt-media img{ transform:none; } }
-.fmt-media::after{
-  content:''; position:absolute; inset:0; pointer-events:none;
-  background:linear-gradient(180deg, rgba(6,24,15,.15) 0%, transparent 38%, rgba(11,36,23,.92) 100%);
-}
-.fmt-body{
-  padding:clamp(1.5rem,3vw,2.2rem);
-  display:flex; flex-direction:column; gap:1.35rem; flex:1;
-}
-.fmt-top{ display:flex; align-items:flex-start; justify-content:space-between; gap:1rem; }
-.fmt h3{ font-family:var(--disp); font-stretch:112%; font-weight:800; font-size:var(--step-3); margin:0 0 .5rem; letter-spacing:-.02em; }
-.fmt .kicker{ color:var(--grass); }
-.fmt p{ margin:0; color:var(--sage); font-size:var(--step--1); line-height:1.6; }
-.fmt-num{ font-family:var(--mono); font-size:.7rem; color:var(--sage-dim); border:1px solid var(--line); padding:.3rem .5rem; border-radius:2px; flex:none; }
-
-.specs{ list-style:none; margin:0; padding:0; display:grid; gap:0; border-top:1px solid var(--line-soft); }
-.specs li{ display:flex; justify-content:space-between; align-items:baseline; gap:1rem; padding:.7rem 0; border-bottom:1px solid var(--line-soft); font-size:var(--step--1); }
-.specs dt, .specs .k{ color:var(--sage-dim); }
-.specs .v{ font-family:var(--mono); font-size:.78rem; color:var(--on-ink); text-align:right; letter-spacing:-.03em; }
-
-.fits{ display:flex; flex-wrap:wrap; gap:.4rem; }
-.fits span{
-  font-size:.72rem; color:var(--sage); border:1px solid var(--line-soft);
-  padding:.3rem .6rem; border-radius:99px; background:rgba(255,255,255,.02);
-}
-
-/* ============ FIT CHECKER ============ */
-.fitcheck{ background:var(--ink-2); border-block:1px solid var(--line-soft); }
-.fit-grid{ display:grid; gap:clamp(2rem,4vw,3.5rem); grid-template-columns:1fr; align-items:start; }
-@media (min-width: 940px){ .fit-grid{ grid-template-columns:1.05fr .95fr; } }
-
-.seg{ display:inline-flex; border:1px solid var(--line); border-radius:2px; overflow:hidden; margin-bottom:1.6rem; }
-.seg button{
-  appearance:none; background:transparent; border:0; cursor:pointer;
-  font-family:var(--disp); font-stretch:78%; font-weight:700; text-transform:uppercase;
-  letter-spacing:.1em; font-size:.7rem; color:var(--sage-dim);
-  padding:.7rem 1.1rem; transition:background .2s ease, color .2s ease;
-}
-.seg button[aria-pressed="true"]{ background:var(--turf-3); color:#FFF; }
-
-.chips{ display:flex; flex-wrap:wrap; gap:.45rem; margin-bottom:1.9rem; }
-.chip{
-  appearance:none; cursor:pointer; background:transparent;
-  border:1px solid var(--line); color:var(--sage);
-  font-family:var(--sans); font-size:.78rem; padding:.42rem .8rem; border-radius:99px;
-  transition:border-color .2s ease, color .2s ease;
-}
-.chip:hover{ border-color:var(--grass); color:var(--grass); }
-
-.sliders{ display:grid; gap:1.5rem; }
-.slider label{ display:flex; justify-content:space-between; align-items:baseline; margin-bottom:.55rem; }
-.slider .label{ color:var(--sage-dim); }
-.slider output{ font-family:var(--mono); font-weight:700; font-size:1rem; color:var(--on-ink); letter-spacing:-.04em; }
-.slider input[type=range]{
-  -webkit-appearance:none; appearance:none; width:100%; height:2px;
-  background:var(--line); border-radius:2px; outline-offset:8px;
-}
-.slider input[type=range]::-webkit-slider-thumb{
-  -webkit-appearance:none; appearance:none; width:20px; height:20px; border-radius:50%;
-  background:var(--grass); border:3px solid var(--ink-2); cursor:grab;
-  box-shadow:0 0 0 1px var(--grass);
-}
-.slider input[type=range]::-moz-range-thumb{
-  width:16px; height:16px; border-radius:50%; background:var(--grass);
-  border:3px solid var(--ink-2); cursor:grab; box-shadow:0 0 0 1px var(--grass);
-}
-
-.verdict{
-  border:1px solid var(--line); border-radius:3px; background:var(--ink);
-  padding:clamp(1.5rem,3vw,2.2rem); position:relative; overflow:hidden;
-}
-.verdict::before{ content:''; position:absolute; inset:0 auto 0 0; width:3px; background:var(--vc, var(--grass)); }
-.verdict .label{ color:var(--vc, var(--grass)); margin-bottom:1rem; display:block; }
-.verdict h3{ font-family:var(--disp); font-stretch:112%; font-weight:800; font-size:var(--step-3); margin:0 0 .8rem; line-height:1.05; letter-spacing:-.02em; }
-.verdict p{ margin:0 0 1.4rem; color:var(--sage); font-size:var(--step--1); }
-.verdict .vspecs{ border-top:1px solid var(--line-soft); padding-top:1rem; display:grid; gap:.55rem; }
-.verdict .vspecs div{ display:flex; justify-content:space-between; gap:1rem; font-size:.78rem; }
-.verdict .vspecs .k{ color:var(--sage-dim); }
-.verdict .vspecs .v{ font-family:var(--mono); letter-spacing:-.03em; color:var(--on-ink); }
-
-/* ============ EVENTS ============ */
-.events{ display:grid; gap:1.1rem; grid-template-columns:1fr; }
-@media (min-width: 720px){ .events{ grid-template-columns:1fr 1fr; } }
-@media (min-width: 1080px){ .events{ grid-template-columns:repeat(4,1fr); } }
-/* Photo cards. The stock comes from four different shoots, so a hard
-   greyscale + turf-green `color` blend forces them into one palette —
-   hovering relaxes the treatment and lets the real colour back in. */
-.ev{
-  position:relative; isolation:isolate; overflow:hidden; border-radius:3px;
-  border:1px solid var(--line-soft); background:var(--ink-2);
-  min-height:clamp(340px, 42vw, 400px);
-  padding:clamp(1.4rem,2.6vw,1.9rem);
-  display:flex; flex-direction:column; justify-content:flex-end; gap:.7rem;
-  transition:border-color .25s ease, transform .25s ease;
-}
-.ev:hover{ border-color:var(--grass); transform:translateY(-3px); }
-@media (prefers-reduced-motion: reduce){ .ev:hover{ transform:none; } }
-.ev-img{
-  position:absolute; inset:0; z-index:-3; width:100%; height:100%;
-  object-fit:cover; display:block;
-  filter:grayscale(1) contrast(1.12) brightness(.78);
-  transition:transform .8s cubic-bezier(.2,.7,.3,1), filter .45s ease;
-}
-.ev:hover .ev-img{ filter:grayscale(.35) contrast(1.06) brightness(.85); transform:scale(1.05); }
-@media (prefers-reduced-motion: reduce){ .ev:hover .ev-img{ transform:none; } }
-.ev-duo{
-  position:absolute; inset:0; z-index:-2; pointer-events:none;
-  background:var(--turf); mix-blend-mode:color; opacity:.9;
-  transition:opacity .45s ease;
-}
-.ev:hover .ev-duo{ opacity:.55; }
-.ev-shade{
-  position:absolute; inset:0; z-index:-1; pointer-events:none;
-  background:linear-gradient(180deg, rgba(6,24,15,.2) 0%, rgba(6,24,15,.72) 52%, rgba(6,24,15,.96) 100%);
-}
-.ev .label{ color:var(--signal); font-size:.62rem; }
-.ev h3{ font-family:var(--disp); font-stretch:112%; font-weight:800; font-size:var(--step-2); margin:0; line-height:1.05; letter-spacing:-.02em; }
-.ev p{ margin:0; color:#CBDDD0; font-size:var(--step--1); line-height:1.58; }
-.ev .hook{ padding-top:.9rem; border-top:1px solid rgba(255,255,255,.16); color:var(--sage-dim); font-size:.75rem; font-family:var(--mono); letter-spacing:-.02em; }
+.ev:hover .ev-media img{ transform:scale(1.04); }
+@media (prefers-reduced-motion: reduce){ .ev:hover .ev-media img{ transform:none; } }
+.ev-body{ padding:clamp(1.2rem,2.4vw,1.6rem); display:flex; flex-direction:column; gap:.7rem; flex:1; }
+.ev .label{ color:var(--turf); font-size:.6rem; }
+.ev h3{ font-family:var(--disp); font-stretch:112%; font-weight:800; font-size:1.35rem; margin:0; line-height:1.08; letter-spacing:-.02em; }
+.ev p{ margin:0; color:var(--on-paper-2); font-size:var(--step--1); line-height:1.55; }
+.ev .hook{ margin-top:auto; padding-top:.85rem; border-top:1px solid var(--paper-3); color:var(--turf); font-size:.72rem; font-family:var(--mono); letter-spacing:-.02em; }
 
 /* ============ STEPS ============ */
-.steps{ display:grid; gap:0; grid-template-columns:1fr; border-top:1px solid var(--line-soft); }
+.steps{ display:grid; gap:0; grid-template-columns:1fr; border-top:1px solid var(--paper-3); }
 @media (min-width: 900px){ .steps{ grid-template-columns:repeat(3,1fr); } }
-.step{ padding:clamp(1.8rem,3.4vw,2.6rem) 0; border-bottom:1px solid var(--line-soft); }
+.step{ padding:clamp(1.6rem,3vw,2.4rem) 0; border-bottom:1px solid var(--paper-3); }
 @media (min-width: 900px){
-  .step{ padding:clamp(1.8rem,3.4vw,2.6rem) clamp(1.4rem,2.4vw,2.2rem); border-bottom:0; border-right:1px solid var(--line-soft); }
+  .step{ padding:clamp(1.6rem,3vw,2.4rem) clamp(1.4rem,2.4vw,2.2rem); border-bottom:0; border-right:1px solid var(--paper-3); }
   .step:first-child{ padding-left:0; }
   .step:last-child{ border-right:0; padding-right:0; }
 }
-.step .n{ font-family:var(--mono); font-weight:700; font-size:.8rem; color:var(--grass); display:block; margin-bottom:1rem; letter-spacing:-.02em; }
-.step h3{ font-family:var(--disp); font-stretch:112%; font-weight:800; font-size:var(--step-2); margin:0 0 .7rem; letter-spacing:-.02em; line-height:1.1; }
-.step p{ margin:0; color:var(--sage); font-size:var(--step--1); }
+.step .n{ font-family:var(--mono); font-weight:700; font-size:.78rem; color:var(--turf); display:block; margin-bottom:.9rem; letter-spacing:-.02em; }
+.step h3{ font-family:var(--disp); font-stretch:112%; font-weight:800; font-size:1.4rem; margin:0 0 .6rem; letter-spacing:-.02em; line-height:1.1; }
+.step p{ margin:0; color:var(--on-paper-2); font-size:var(--step--1); }
 
-/* ============ FULL-BLEED BAND ============ */
-.band{
-  position:relative; isolation:isolate; overflow:hidden;
-  padding-block:clamp(5rem,11vw,9rem);
+/* ============ DARK BAND ============ */
+.band{ position:relative; isolation:isolate; overflow:hidden; background:var(--ink); color:var(--on-ink); padding-block:clamp(4rem,9vw,7rem); }
+.band::before{
+  content:''; position:absolute; inset:0; z-index:-1;
+  background:radial-gradient(60% 70% at 82% 50%, rgba(26,122,73,.36), transparent 70%);
 }
-.band-img{
-  position:absolute; inset:0; z-index:-3; width:100%; height:100%;
-  object-fit:cover; object-position:center 58%; display:block;
-  filter:saturate(.95) contrast(1.05) brightness(1.06);
-}
-/* light hand here: a `color` blend keeps the image's luminosity, and the
-   fairway is luminance-flat, so a heavy shade on top erases it entirely */
-.band-duo{ position:absolute; inset:0; z-index:-2; background:var(--turf); mix-blend-mode:color; opacity:.4; pointer-events:none; }
-.band-shade{
-  position:absolute; inset:0; z-index:-1; pointer-events:none;
-  background:
-    linear-gradient(95deg, rgba(6,24,15,.95) 0%, rgba(6,24,15,.88) 40%, rgba(6,24,15,.45) 64%, rgba(6,24,15,.18) 100%),
-    linear-gradient(180deg, rgba(6,24,15,.6) 0%, transparent 28%, transparent 70%, rgba(6,24,15,.85) 100%);
-}
-@media (max-width: 860px){
-  .band-shade{ background:linear-gradient(180deg, rgba(6,24,15,.86) 0%, rgba(6,24,15,.9) 60%, var(--ink) 100%); }
-}
-.band-inner{ max-width:840px; }
-.band .label{ color:var(--signal); margin-bottom:1.3rem; }
-.band h2{ font-size:var(--step-5); margin:0 0 1.3rem; max-width:19ch; }
-.band p{ color:#D2E6D8; margin:0; max-width:52ch; font-size:clamp(1.0625rem,1.5vw,1.15rem); }
-.band-stats{ display:flex; flex-wrap:wrap; gap:2.5rem; margin-top:2.6rem; padding-top:2rem; border-top:1px solid rgba(255,255,255,.2); }
-.band-stats div{ display:grid; gap:.3rem; }
-.band-stats .n{ font-family:var(--mono); font-weight:700; font-size:clamp(1.5rem,3vw,2rem); color:var(--signal); letter-spacing:-.06em; line-height:1; }
-.band-stats .t{ font-size:var(--step--1); color:#BDD4C4; }
+.band-grid{ display:grid; gap:clamp(2rem,4vw,3.5rem); grid-template-columns:1fr; align-items:center; }
+@media (min-width: 900px){ .band-grid{ grid-template-columns:1.1fr .9fr; } }
+.band .label{ color:var(--signal); margin-bottom:1.2rem; }
+.band h2{ font-size:var(--step-5); margin:0 0 1.2rem; }
+.band p{ color:var(--sage); margin:0; max-width:50ch; }
+.compare{ display:grid; gap:1px; background:var(--ink-line); border:1px solid var(--ink-line); border-radius:4px; overflow:hidden; }
+.compare div{ background:var(--ink-2); padding:1.2rem 1.3rem; display:grid; gap:.3rem; }
+.compare .t{ font-family:var(--disp); font-stretch:70%; font-weight:700; text-transform:uppercase; letter-spacing:.14em; font-size:.6rem; color:var(--sage-dim); }
+.compare .n{ font-family:var(--mono); font-weight:700; font-size:1.35rem; letter-spacing:-.05em; color:var(--on-ink); }
+.compare .n.good{ color:var(--signal); }
+.compare .d{ font-size:var(--step--1); color:var(--sage); }
 
-/* ============ PACKAGES (bone) ============ */
-.bone{ background:var(--bone); color:var(--on-bone); }
-.bone .sec-head h2{ color:var(--on-bone); }
-.bone .sec-head p{ color:var(--on-bone-2); }
-.bone .eyebrow{ color:var(--turf); }
-.bone .eyebrow::before{ background:var(--turf); }
-
+/* ============ PRICING ============ */
 .cards{ display:grid; gap:1.1rem; grid-template-columns:1fr; align-items:stretch; }
 @media (min-width: 900px){ .cards{ grid-template-columns:repeat(3,1fr); } }
-
 .card{
-  background:#FBF9F4; border:1px solid var(--bone-3); border-radius:3px;
-  padding:clamp(1.6rem,3vw,2.2rem); display:flex; flex-direction:column; gap:1.2rem;
-  position:relative;
+  background:var(--card); border:1px solid var(--paper-3); border-radius:4px;
+  padding:clamp(1.5rem,3vw,2.1rem); display:flex; flex-direction:column; gap:1.1rem; position:relative;
 }
-.card.featured{ border-color:var(--on-bone); box-shadow:0 22px 44px -28px rgba(20,35,30,.55); }
+.card.featured{ border-color:var(--turf); border-width:2px; box-shadow:0 20px 40px -28px rgba(20,102,61,.5); }
 .card .tag{
-  position:absolute; top:-1px; right:-1px;
-  background:var(--on-bone); color:var(--bone);
+  position:absolute; top:-1px; right:-1px; background:var(--turf); color:#FFF;
   font-family:var(--disp); font-stretch:70%; font-weight:700; text-transform:uppercase;
-  letter-spacing:.14em; font-size:.58rem; padding:.4rem .7rem;
+  letter-spacing:.14em; font-size:.56rem; padding:.4rem .7rem;
 }
-.card h3{ font-family:var(--disp); font-stretch:118%; font-weight:900; text-transform:uppercase; font-size:var(--step-2); margin:0; letter-spacing:-.02em; line-height:1; }
-.card .who{ color:var(--on-bone-2); font-size:var(--step--1); margin:.5rem 0 0; }
-.price{ display:flex; align-items:baseline; gap:.4rem; border-block:1px solid var(--bone-3); padding-block:1.1rem; }
-.price .amt{ font-family:var(--mono); font-weight:700; font-size:clamp(1.8rem,3.6vw,2.3rem); letter-spacing:-.07em; color:var(--on-bone); }
-.price .per{ font-size:.78rem; color:var(--on-bone-2); }
-.incl{ list-style:none; margin:0; padding:0; display:grid; gap:.6rem; }
-.incl li{ display:flex; gap:.65rem; font-size:var(--step--1); line-height:1.5; color:var(--on-bone); }
+.card h3{ font-family:var(--disp); font-stretch:118%; font-weight:900; text-transform:uppercase; font-size:1.4rem; margin:0; letter-spacing:-.02em; line-height:1; }
+.card .who{ color:var(--on-paper-2); font-size:var(--step--1); margin:.45rem 0 0; }
+.price{ display:flex; align-items:baseline; gap:.4rem; border-block:1px solid var(--paper-3); padding-block:1rem; }
+.price .amt{ font-family:var(--mono); font-weight:700; font-size:clamp(1.7rem,3.4vw,2.1rem); letter-spacing:-.07em; }
+.price .per{ font-size:.78rem; color:var(--on-paper-2); }
+.incl{ list-style:none; margin:0; padding:0; display:grid; gap:.55rem; }
+.incl li{ display:flex; gap:.6rem; font-size:var(--step--1); line-height:1.5; }
 .incl li::before{ content:''; flex:none; width:7px; height:7px; margin-top:.5rem; background:var(--turf); border-radius:50%; }
 .card .btn{ margin-top:auto; }
-
-.addons{ margin-top:2.5rem; border-top:1px solid var(--bone-3); padding-top:2rem; }
-.addons h4{ margin:0 0 1.2rem; }
+.addons{ margin-top:2.2rem; border-top:1px solid var(--paper-3); padding-top:1.8rem; }
+.addons h4{ margin:0 0 1.1rem; color:var(--on-paper-2); }
 .addon-grid{ display:grid; gap:0 2.5rem; grid-template-columns:1fr; }
 @media (min-width: 720px){ .addon-grid{ grid-template-columns:1fr 1fr; } }
-.addon{ display:flex; justify-content:space-between; align-items:baseline; gap:1rem; padding:.7rem 0; border-bottom:1px solid var(--bone-2); font-size:var(--step--1); }
+.addon{ display:flex; justify-content:space-between; align-items:baseline; gap:1rem; padding:.65rem 0; border-bottom:1px solid var(--paper-3); font-size:var(--step--1); }
 .addon .v{ font-family:var(--mono); font-size:.78rem; letter-spacing:-.03em; white-space:nowrap; }
-.note{ margin-top:1.8rem; color:var(--on-bone-2); font-size:var(--step--1); font-style:italic; }
+.note{ margin-top:1.6rem; color:var(--on-paper-2); font-size:var(--step--1); font-style:italic; }
 
-/* ============ SERVICE AREA ============ */
+/* ============ AREA ============ */
 .area-grid{ display:grid; gap:clamp(2rem,4vw,3.5rem); grid-template-columns:1fr; align-items:start; }
 @media (min-width: 940px){ .area-grid{ grid-template-columns:.85fr 1.15fr; } }
-.towns{ display:grid; grid-template-columns:1fr; gap:0; border-top:1px solid var(--line-soft); }
+.towns{ display:grid; grid-template-columns:1fr; border-top:1px solid var(--paper-3); }
 @media (min-width: 560px){ .towns{ grid-template-columns:1fr 1fr; column-gap:2.5rem; } }
-.town{ display:flex; justify-content:space-between; align-items:baseline; gap:1rem; padding:.7rem 0; border-bottom:1px solid var(--line-soft); }
+.town{ display:flex; justify-content:space-between; align-items:baseline; gap:1rem; padding:.65rem 0; border-bottom:1px solid var(--paper-3); }
 .town .nm{ font-size:var(--step--1); }
-.town .di{ font-family:var(--mono); font-size:.75rem; color:var(--sage-dim); letter-spacing:-.03em; }
-.town.home .nm{ color:var(--grass); font-weight:600; }
-.town.home .di{ color:var(--grass); }
+.town .di{ font-family:var(--mono); font-size:.74rem; color:var(--on-paper-2); letter-spacing:-.03em; }
+.town.home .nm, .town.home .di{ color:var(--turf); font-weight:600; }
 
-/* ============ REVIEW PLACEHOLDER ============ */
-.reviews{ background:var(--ink-2); border-block:1px solid var(--line-soft); }
-.placeholder-flag{
-  display:inline-flex; align-items:center; gap:.6rem;
-  border:1px dashed var(--apricot); color:var(--apricot);
-  padding:.5rem .85rem; border-radius:2px; margin-bottom:1.4rem;
-  font-family:var(--mono); font-size:.68rem; letter-spacing:-.01em;
-}
-.quotes{ display:grid; gap:1.1rem; grid-template-columns:1fr; }
-@media (min-width: 860px){ .quotes{ grid-template-columns:repeat(3,1fr); } }
-.quote{
-  border:1px dashed var(--line); border-radius:3px; padding:clamp(1.4rem,2.6vw,1.9rem);
-  background:rgba(255,255,255,.015); display:flex; flex-direction:column; gap:1.1rem;
-}
-.quote .ex{ font-family:var(--mono); font-size:.6rem; color:var(--sage-dim); letter-spacing:.06em; text-transform:uppercase; }
-.quote blockquote{ margin:0; font-size:var(--step-1); line-height:1.45; color:var(--on-ink); font-family:var(--disp); font-stretch:105%; font-weight:500; letter-spacing:-.015em; }
-.quote .by{ margin-top:auto; color:var(--sage-dim); font-size:.78rem; }
-
-/* ============ FAQ ============ */
-.faq{ border-top:1px solid var(--line-soft); }
-details{ border-bottom:1px solid var(--line-soft); }
+/* ============ FAQ + FIT CALCULATOR ============ */
+.faq{ border-top:1px solid var(--paper-3); }
+details{ border-bottom:1px solid var(--paper-3); }
 summary{
-  cursor:pointer; list-style:none; padding:1.4rem 3rem 1.4rem 0; position:relative;
-  font-family:var(--disp); font-stretch:108%; font-weight:600; font-size:var(--step-1);
+  cursor:pointer; list-style:none; padding:1.3rem 3rem 1.3rem 0; position:relative;
+  font-family:var(--disp); font-stretch:108%; font-weight:600; font-size:1.15rem;
   letter-spacing:-.015em; transition:color .2s ease;
 }
 summary::-webkit-details-marker{ display:none; }
-summary:hover{ color:var(--grass); }
-summary::after{
-  content:''; position:absolute; right:8px; top:50%; width:12px; height:2px;
-  background:var(--grass); transform:translateY(-50%);
-}
-summary::before{
-  content:''; position:absolute; right:13px; top:50%; width:2px; height:12px;
-  background:var(--grass); transform:translateY(-50%); transition:opacity .2s ease;
-}
+summary:hover{ color:var(--turf); }
+summary::after{ content:''; position:absolute; right:8px; top:50%; width:12px; height:2px; background:var(--turf); transform:translateY(-50%); }
+summary::before{ content:''; position:absolute; right:13px; top:50%; width:2px; height:12px; background:var(--turf); transform:translateY(-50%); transition:opacity .2s ease; }
 details[open] summary::before{ opacity:0; }
-details p{ margin:0 0 1.5rem; color:var(--sage); max-width:66ch; font-size:var(--step--1); }
+details .body{ padding-bottom:1.5rem; }
+details p{ margin:0 0 1rem; color:var(--on-paper-2); max-width:66ch; font-size:var(--step--1); }
+details p:last-child{ margin-bottom:0; }
 
-/* ============ BOOK ============ */
-.book{ background:var(--bone); color:var(--on-bone); }
-.book-grid{ display:grid; gap:clamp(2.5rem,5vw,4rem); grid-template-columns:1fr; align-items:start; }
+/* the calculator, living inside its FAQ answer */
+.calc{
+  margin-top:1.2rem; background:var(--card); border:1px solid var(--paper-3);
+  border-radius:4px; padding:clamp(1.2rem,2.6vw,1.75rem);
+  display:grid; gap:1.5rem; grid-template-columns:1fr;
+}
+@media (min-width: 780px){ .calc{ grid-template-columns:1.05fr .95fr; } }
+.seg{ display:inline-flex; border:1px solid var(--paper-3); border-radius:2px; overflow:hidden; margin-bottom:1.2rem; }
+.seg button{
+  appearance:none; background:transparent; border:0; cursor:pointer;
+  font-family:var(--disp); font-stretch:78%; font-weight:700; text-transform:uppercase;
+  letter-spacing:.1em; font-size:.68rem; color:var(--on-paper-2);
+  padding:.65rem 1rem; transition:background .2s ease, color .2s ease;
+}
+.seg button[aria-pressed="true"]{ background:var(--turf); color:#FFF; }
+.chips{ display:flex; flex-wrap:wrap; gap:.4rem; margin-bottom:1.5rem; }
+.chip{
+  appearance:none; cursor:pointer; background:transparent; border:1px solid var(--paper-3);
+  color:var(--on-paper-2); font-family:var(--sans); font-size:.76rem;
+  padding:.38rem .75rem; border-radius:99px; transition:border-color .2s ease, color .2s ease;
+}
+.chip:hover{ border-color:var(--turf); color:var(--turf); }
+.sliders{ display:grid; gap:1.25rem; }
+.slider label{ display:flex; justify-content:space-between; align-items:baseline; margin-bottom:.5rem; }
+.slider .label{ color:var(--on-paper-2); font-size:.66rem; }
+.slider output{ font-family:var(--mono); font-weight:700; font-size:.95rem; letter-spacing:-.04em; }
+.slider input[type=range]{ -webkit-appearance:none; appearance:none; width:100%; height:2px; background:var(--paper-3); border-radius:2px; outline-offset:8px; }
+.slider input[type=range]::-webkit-slider-thumb{
+  -webkit-appearance:none; appearance:none; width:20px; height:20px; border-radius:50%;
+  background:var(--turf); border:3px solid var(--card); cursor:grab; box-shadow:0 0 0 1px var(--turf);
+}
+.slider input[type=range]::-moz-range-thumb{
+  width:16px; height:16px; border-radius:50%; background:var(--turf);
+  border:3px solid var(--card); cursor:grab; box-shadow:0 0 0 1px var(--turf);
+}
+.verdict{ border:1px solid var(--paper-3); border-radius:3px; background:var(--paper); padding:clamp(1.2rem,2.5vw,1.6rem); position:relative; overflow:hidden; align-self:start; }
+.verdict::before{ content:''; position:absolute; inset:0 auto 0 0; width:3px; background:var(--vc, var(--turf)); }
+.verdict .label{ color:var(--vc, var(--turf)); margin-bottom:.8rem; display:block; font-size:.62rem; }
+.verdict h3{ font-family:var(--disp); font-stretch:112%; font-weight:800; font-size:1.35rem; margin:0 0 .6rem; line-height:1.08; letter-spacing:-.02em; }
+.verdict p{ margin:0 0 1.1rem; color:var(--on-paper-2); font-size:var(--step--1); }
+.verdict .vspecs{ border-top:1px solid var(--paper-3); padding-top:.9rem; display:grid; gap:.5rem; }
+.verdict .vspecs div{ display:flex; justify-content:space-between; gap:1rem; font-size:.76rem; }
+.verdict .vspecs .k{ color:var(--on-paper-2); }
+.verdict .vspecs .v{ font-family:var(--mono); letter-spacing:-.03em; }
+
+/* ============ REVIEWS placeholder ============ */
+.placeholder-flag{
+  display:inline-flex; align-items:center; gap:.6rem;
+  border:1px dashed var(--apricot); color:var(--apricot);
+  padding:.45rem .8rem; border-radius:2px; margin-bottom:1.2rem;
+  font-family:var(--mono); font-size:.66rem;
+}
+.quotes{ display:grid; gap:1rem; grid-template-columns:1fr; }
+@media (min-width: 860px){ .quotes{ grid-template-columns:repeat(3,1fr); } }
+.quote{ border:1px dashed var(--paper-3); border-radius:4px; padding:1.4rem; background:var(--card); display:flex; flex-direction:column; gap:.9rem; }
+.quote .ex{ font-family:var(--mono); font-size:.58rem; color:var(--on-paper-2); text-transform:uppercase; letter-spacing:.06em; }
+.quote blockquote{ margin:0; font-size:1.0625rem; line-height:1.45; font-family:var(--disp); font-stretch:105%; font-weight:500; letter-spacing:-.015em; }
+.quote .by{ margin-top:auto; color:var(--on-paper-2); font-size:.75rem; }
+
+/* ============ BOOK (dark) ============ */
+.book{ background:var(--ink); color:var(--on-ink); }
+.book .eyebrow{ color:var(--grass); }
+.book .eyebrow::before{ background:var(--grass); }
+.book-grid{ display:grid; gap:clamp(2.2rem,4.5vw,3.5rem); grid-template-columns:1fr; align-items:start; }
 @media (min-width: 940px){ .book-grid{ grid-template-columns:.9fr 1.1fr; } }
-.book h2{ font-size:var(--step-5); margin:0 0 1.2rem; }
-.book-img{ width:100%; height:auto; aspect-ratio:16/10; object-fit:cover; object-position:center 62%;
-  border-radius:3px; display:block; margin:0 0 2rem; }
-.book .lead{ color:var(--on-bone-2); margin:0 0 2rem; max-width:42ch; }
-.contact-line{ display:flex; flex-direction:column; gap:.3rem; padding:1rem 0; border-top:1px solid var(--bone-3); }
-.contact-line .label{ color:var(--on-bone-2); font-size:.6rem; }
-.contact-line .v{ font-family:var(--mono); font-size:1rem; letter-spacing:-.04em; }
-
-form{ display:grid; gap:1rem; }
-.row{ display:grid; gap:1rem; grid-template-columns:1fr; }
+.book h2{ font-size:var(--step-5); margin:0 0 1.1rem; }
+.book .lead{ color:var(--sage); margin:0 0 1.8rem; max-width:40ch; }
+.contact-line{ display:flex; flex-direction:column; gap:.25rem; padding:.9rem 0; border-top:1px solid var(--ink-line); }
+.contact-line:last-of-type{ border-bottom:1px solid var(--ink-line); }
+.contact-line .label{ color:var(--sage-dim); font-size:.58rem; }
+.contact-line .v{ font-family:var(--mono); font-size:.98rem; letter-spacing:-.04em; }
+form{ display:grid; gap:.9rem; }
+.row{ display:grid; gap:.9rem; grid-template-columns:1fr; }
 @media (min-width: 620px){ .row{ grid-template-columns:1fr 1fr; } }
-.field{ display:flex; flex-direction:column; gap:.45rem; }
-.field .label{ color:var(--on-bone-2); }
+.field{ display:flex; flex-direction:column; gap:.4rem; }
+.field .label{ color:var(--sage-dim); font-size:.6rem; }
 .field input, .field select, .field textarea{
-  font-family:var(--sans); font-size:var(--step-0); color:var(--on-bone);
-  background:#FBF9F4; border:1px solid var(--bone-3); border-radius:2px;
-  padding:.8rem .9rem; width:100%;
+  font-family:var(--sans); font-size:var(--step-0); color:var(--on-ink);
+  background:rgba(255,255,255,.05); border:1px solid var(--ink-line);
+  border-radius:2px; padding:.75rem .85rem; width:100%;
 }
-.field textarea{ resize:vertical; min-height:110px; }
-.field input:focus, .field select:focus, .field textarea:focus{ border-color:var(--turf); outline:none; box-shadow:0 0 0 3px rgba(19,94,56,.18); }
-.form-note{ color:var(--on-bone-2); font-size:var(--step--1); margin:0; }
-.confirm{
-  border:1px solid var(--on-bone); background:#FBF9F4; border-radius:2px;
-  padding:1.1rem 1.2rem; font-size:var(--step--1); color:var(--on-bone);
-}
-.confirm strong{ display:block; font-family:var(--disp); font-stretch:108%; font-weight:800; margin-bottom:.3rem; }
+.field textarea{ resize:vertical; min-height:104px; }
+.field input::placeholder, .field textarea::placeholder{ color:#6E8C79; }
+.field input:focus, .field select:focus, .field textarea:focus{ border-color:var(--grass); outline:none; box-shadow:0 0 0 3px rgba(63,162,104,.22); }
+.field select option{ background:var(--ink-2); color:var(--on-ink); }
+.form-note{ color:var(--sage-dim); font-size:var(--step--1); margin:0; }
+.confirm{ border:1px solid var(--grass); background:rgba(63,162,104,.1); border-radius:2px; padding:1rem 1.1rem; font-size:var(--step--1); color:var(--on-ink); }
+.confirm strong{ display:block; font-family:var(--disp); font-stretch:108%; font-weight:800; margin-bottom:.25rem; }
 [hidden]{ display:none !important; }
 
 /* ============ FOOTER ============ */
-footer{ padding-block:clamp(3rem,5vw,4.5rem) 2.5rem; border-top:1px solid var(--line-soft); }
-.foot-grid{ display:flex; flex-wrap:wrap; gap:2rem; justify-content:space-between; align-items:flex-start; margin-bottom:3rem; }
-.foot-mark .wordmark{ font-family:var(--disp); font-stretch:118%; font-weight:900; font-size:clamp(2.2rem,6vw,3.4rem); text-transform:uppercase; letter-spacing:-.035em; line-height:.9; display:block; }
-.foot-mark p{ color:var(--sage-dim); font-size:var(--step--1); margin:.9rem 0 0; max-width:32ch; }
+footer{ background:var(--ink); color:var(--on-ink); padding-block:clamp(2.5rem,5vw,3.5rem) 2rem; border-top:1px solid var(--ink-line); }
+.foot-grid{ display:flex; flex-wrap:wrap; gap:2rem; justify-content:space-between; align-items:flex-start; margin-bottom:2.5rem; }
+.foot-mark .wordmark{ font-family:var(--disp); font-stretch:118%; font-weight:900; font-size:clamp(2rem,5vw,3rem); text-transform:uppercase; letter-spacing:-.035em; line-height:.9; display:block; }
+.foot-mark p{ color:var(--sage-dim); font-size:var(--step--1); margin:.8rem 0 0; max-width:32ch; }
 .foot-cols{ display:flex; flex-wrap:wrap; gap:3rem; }
-.foot-col{ display:grid; gap:.6rem; align-content:start; }
-.foot-col .label{ color:var(--sage-dim); margin-bottom:.3rem; }
+.foot-col{ display:grid; gap:.55rem; align-content:start; }
+.foot-col .label{ color:var(--sage-dim); margin-bottom:.25rem; font-size:.6rem; }
 .foot-col a, .foot-col span{ color:var(--sage); text-decoration:none; font-size:var(--step--1); }
-.foot-col a:hover{ color:var(--grass); }
-.foot-base{ display:flex; flex-wrap:wrap; gap:1rem; justify-content:space-between; border-top:1px solid var(--line-soft); padding-top:1.5rem; color:var(--sage-dim); font-size:var(--step--2); font-family:var(--mono); }
+.foot-col a:hover{ color:var(--signal); }
+.foot-base{ display:flex; flex-wrap:wrap; gap:1rem; justify-content:space-between; border-top:1px solid var(--ink-line); padding-top:1.4rem; color:var(--sage-dim); font-size:var(--step--2); font-family:var(--mono); }
 </style>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Pin High Golf Co.",
-  "description": "Mobile golf simulator rentals for corporate events, weddings, fundraisers and private parties across Northern Colorado.",
-  "address": { "@type": "PostalAddress", "addressLocality": "Loveland", "addressRegion": "CO", "addressCountry": "US" },
-  "areaServed": [
-    "Loveland CO", "Fort Collins CO", "Greeley CO", "Windsor CO", "Berthoud CO",
-    "Longmont CO", "Boulder CO", "Estes Park CO", "Denver CO", "Cheyenne WY"
-  ],
-  "telephone": "+1-970-555-0142",
-  "email": "hello@pinhighgolf.co",
-  "priceRange": "$$$"
-}
-</script>
 </head>
 <body>
+
+<!-- One definition of the rig, used by the hero and the setup figure. -->
+<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+  <symbol id="rig" viewBox="0 0 900 680">
+    <defs>
+      <linearGradient id="rgTube" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#FFFFFF"/><stop offset=".36" stop-color="#EEF3ED"/>
+        <stop offset=".72" stop-color="#C7D6CB"/><stop offset="1" stop-color="#96AC9E"/>
+      </linearGradient>
+      <linearGradient id="rgTubeV" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#FFFFFF"/><stop offset=".36" stop-color="#EEF3ED"/>
+        <stop offset=".72" stop-color="#C7D6CB"/><stop offset="1" stop-color="#96AC9E"/>
+      </linearGradient>
+      <linearGradient id="rgSky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#6FB0DC"/><stop offset=".62" stop-color="#BFDFF0"/>
+        <stop offset="1" stop-color="#E4F1F7"/>
+      </linearGradient>
+      <linearGradient id="rgGreen" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#5FAE6D"/><stop offset="1" stop-color="#266B39"/>
+      </linearGradient>
+      <linearGradient id="rgMatSolid" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#3D9A59"/><stop offset="1" stop-color="#175730"/>
+      </linearGradient>
+      <linearGradient id="rgBeam" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#FFFFFF" stop-opacity=".30"/>
+        <stop offset="1" stop-color="#FFFFFF" stop-opacity=".04"/>
+      </linearGradient>
+    </defs>
+
+    <ellipse cx="450" cy="632" rx="340" ry="24" fill="#0C1F14" opacity=".13"/>
+
+    <!-- interior: walls converge on a screen that fills the whole back wall -->
+    <polygon points="152,112 235,148 235,476 152,510" fill="#14241B"/>
+    <polygon points="748,112 665,148 665,476 748,510" fill="#1D3025"/>
+    <polygon points="152,112 235,148 665,148 748,112" fill="#0E1B14"/>
+    <polygon points="152,510 235,476 665,476 748,510" fill="#23352A"/>
+
+    <!-- the impact screen — edge to edge, no bezel -->
+    <rect x="235" y="148" width="430" height="328" fill="url(#rgSky)"/>
+    <path d="M235 336 Q345 302 452 322 Q560 342 665 312 L665 476 L235 476 Z" fill="url(#rgGreen)"/>
+    <path d="M235 336 Q345 302 452 322 Q560 342 665 312" fill="none" stroke="#2A6B3B" stroke-opacity=".45" stroke-width="2"/>
+    <ellipse cx="470" cy="416" rx="118" ry="22" fill="#78C186" opacity=".45"/>
+    <line x1="492" y1="352" x2="492" y2="412" stroke="#F7FAF6" stroke-width="3"/>
+    <path d="M492 352 L522 362 L492 372 Z" fill="#D9661F"/>
+    <path d="M235 324 l14-22 14 22 z M264 328 l11-17 11 17 z M614 310 l14-22 14 22 z M642 316 l10-15 10 15 z" fill="#2F6B45" opacity=".62"/>
+
+    <!-- projector beam: this is a projection rig, not a television -->
+    <polygon points="442,124 468,124 665,166 665,452 235,452 235,166" fill="url(#rgBeam)"/>
+    <rect x="430" y="104" width="50" height="26" rx="5" fill="#2C4038"/>
+    <circle cx="455" cy="130" r="7" fill="#C9F24D" opacity=".85"/>
+
+
+
+    <!-- inflated frame: slimmer tubes so the opening dominates -->
+    <rect x="80"  y="40"  width="740" height="76" rx="38" fill="url(#rgTube)"/>
+    <rect x="80"  y="40"  width="76"  height="490" rx="38" fill="url(#rgTubeV)"/>
+    <rect x="744" y="40"  width="76"  height="490" rx="38" fill="url(#rgTubeV)"/>
+    <rect x="80"  y="506" width="740" height="52" rx="26" fill="url(#rgTube)"/>
+
+    <g stroke="#A3B8AB" stroke-opacity=".8" stroke-width="2.5" stroke-linecap="round">
+      <line x1="248" y1="46" x2="248" y2="110"/><line x1="392" y1="46" x2="392" y2="110"/>
+      <line x1="508" y1="46" x2="508" y2="110"/><line x1="652" y1="46" x2="652" y2="110"/>
+      <line x1="86" y1="196" x2="150" y2="196"/><line x1="86" y1="300" x2="150" y2="300"/>
+      <line x1="86" y1="410" x2="150" y2="410"/>
+      <line x1="750" y1="196" x2="814" y2="196"/><line x1="750" y1="300" x2="814" y2="300"/>
+      <line x1="750" y1="410" x2="814" y2="410"/>
+      <line x1="300" y1="512" x2="300" y2="552"/><line x1="600" y1="512" x2="600" y2="552"/>
+    </g>
+    <rect x="126" y="52"  width="648" height="13" rx="6.5" fill="#FFFFFF" opacity=".8"/>
+    <rect x="92"  y="100" width="14"  height="380" rx="7" fill="#FFFFFF" opacity=".75"/>
+    <rect x="756" y="100" width="14"  height="380" rx="7" fill="#FFFFFF" opacity=".4"/>
+    <rect x="126" y="514" width="648" height="10" rx="5" fill="#FFFFFF" opacity=".55"/>
+
+    <!-- blower: the reason it stands up -->
+    <path d="M820 486 q44 8 44 44" fill="none" stroke="#3A5145" stroke-width="12" stroke-linecap="round"/>
+    <rect x="832" y="528" width="60" height="42" rx="8" fill="#33483C"/>
+    <circle cx="862" cy="549" r="13" fill="#22332A"/><circle cx="862" cy="549" r="4" fill="#7EA089"/>
+
+    <!-- hitting mat, ball, shot -->
+    <polygon points="272,558 628,558 706,626 194,626" fill="url(#rgMatSolid)"/>
+    <polygon points="272,558 628,558 638,566 262,566" fill="#55B571" opacity=".5"/>
+    <ellipse cx="424" cy="600" rx="58" ry="11" fill="#0B1A12" opacity=".22"/>
+    <!-- the golfer, standing in it. Scale is what stops it reading as a screen. -->
+    <g fill="#0B1A12">
+      <path d="M404 466 q-10 62 -16 116 l30 4 q10 -60 16 -114 z"/>
+      <path d="M446 466 q12 60 26 112 l-30 8 q-16 -58 -22 -112 z"/>
+      <path d="M382 578 q-10 8 -2 16 h44 l2 -16 z"/>
+      <path d="M440 582 h44 q10 8 0 16 h-46 z"/>
+      <path d="M396 382 q34 -12 68 2 l10 92 q-42 14 -84 -2 z"/>
+      <circle cx="430" cy="356" r="23"/>
+      <path d="M405 350 q25 -15 50 -2 q-25 -8 -50 2 z"/>
+      <path d="M462 388 q44 -16 66 -50 l-22 -16 q-20 30 -56 44 z"/>
+      <path d="M402 392 q40 -22 62 -52 l-20 -14 q-20 28 -52 46 z"/>
+      <circle cx="521" cy="322" r="14"/>
+    </g>
+    <line x1="524" y1="318" x2="602" y2="250" stroke="#0B1A12" stroke-width="7" stroke-linecap="round"/>
+    <path d="M598 244 q23 -14 31 4 q-10 17 -33 8 z" fill="#0B1A12"/>
+    <circle cx="524" cy="586" r="8" fill="#FFFFFF"/>
+    <path d="M524 578 Q584 470 660 400" fill="none" stroke="#D9661F" stroke-width="3.5"
+          stroke-linecap="round" stroke-dasharray="8 10" opacity=".95"/>
+  </symbol>
+</svg>
+
 
 <div class="draftbar">
   CONCEPT DRAFT — placeholder name, sample rates, real structure. <b>Everything here is yours to change.</b>
@@ -692,10 +668,9 @@ footer{ padding-block:clamp(3rem,5vw,4.5rem) 2.5rem; border-top:1px solid var(--
     <span class="tail">Golf Co.</span>
   </a>
   <div class="navlinks">
-    <a href="#rig">The Setup</a>
-    <a href="#fit">Will It Fit</a>
+    <a href="#setup">The Setup</a>
     <a href="#events">Events</a>
-    <a href="#packages">Packages</a>
+    <a href="#pricing">Pricing</a>
     <a href="#faq">FAQ</a>
   </div>
   <a class="btn btn-primary" href="#book">Check a date</a>
@@ -705,43 +680,47 @@ footer{ padding-block:clamp(3rem,5vw,4.5rem) 2.5rem; border-top:1px solid var(--
 
   <!-- ================= HERO ================= -->
   <header class="hero">
-    <div class="hero-bg" role="img" aria-label="A golf simulator bay: dark enclosure, hitting turf, and a course projected on the impact screen."></div>
-    <div class="hero-scrim"></div>
     <div class="wrap hero-grid">
       <div>
-        <p class="label eyebrow">Loveland, Colorado — Mobile Simulator Golf</p>
-        <h1 class="display">Bring the<br>back nine <em>indoors.</em></h1>
+        <p class="label eyebrow">Loveland, Colorado — Inflatable Golf Simulator Rental</p>
+        <h1 class="display">A golf course that fits in a <em>van.</em></h1>
         <p class="hero-sub">
-          A tour-grade golf simulator, delivered and run by us — in your ballroom, your
-          warehouse, your barn, your driveway. Northern Colorado, all twelve months of
-          the year.
+          We bring an inflatable simulator to your event, stand it up in about
+          forty-five minutes, and run it all night — inside a ballroom or out on the
+          grass. Northern Colorado.
         </p>
         <div class="hero-cta">
           <a class="btn btn-primary btn-lg" href="#book">Check your date</a>
-          <a class="btn btn-ghost btn-lg" href="#fit">See if your space works</a>
+          <a class="btn btn-ghost-dark btn-lg" href="#setup">See how it works</a>
         </div>
         <div class="hero-micro">
-          <span>Set up in under 90 minutes</span>
+          <span>Indoors or outdoors</span>
           <span>400+ courses</span>
           <span>We staff it start to finish</span>
         </div>
       </div>
 
-      <div class="monitor">
-        <div class="monitor-top">
-          <span class="label" id="shot-club">Driver — Shot 01</span>
-          <span class="live"><i></i> TRACKING</span>
-        </div>
-        <canvas id="flight" width="720" height="380" role="img"
-                aria-label="Animated ball-flight trace showing simulated shot data."></canvas>
-        <div class="readout">
-          <div><span class="label">Ball Speed</span><span class="val" id="m-speed">0</span><span class="unit">mph</span></div>
-          <div><span class="label">Launch</span><span class="val" id="m-launch">0</span><span class="unit">deg</span></div>
-          <div><span class="label">Spin</span><span class="val" id="m-spin">0</span><span class="unit">rpm</span></div>
-          <div><span class="label">Carry</span><span class="val" id="m-carry">0</span><span class="unit">yds</span></div>
-        </div>
-        <div class="monitor-foot">
-          Altitude <b>ON</b> — your Loveland carry numbers, not sea level.
+      <div class="stage">
+        <!-- Illustration, not a photo: no inflatable simulator exists in any
+             free-licensed stock library, and a competitor's rig is not ours to use. -->
+        <svg class="stage-rig" viewBox="0 0 900 680" role="img"
+             aria-label="Diagram of the inflatable golf simulator: an inflated frame around a projection screen, with a hitting mat, ball and blower.">
+          <use href="#rig"/>
+        </svg>
+
+        <div class="monitor">
+          <div class="monitor-top">
+            <span class="label" id="shot-club">Driver — Shot 01</span>
+            <span class="live"><i></i> TRACKING</span>
+          </div>
+          <canvas id="flight" width="720" height="300" role="img"
+                  aria-label="Animated ball-flight trace showing simulated shot data."></canvas>
+          <div class="readout">
+            <div><span class="label">Ball Speed</span><span class="val" id="m-speed">0</span><span class="unit">mph</span></div>
+            <div><span class="label">Launch</span><span class="val" id="m-launch">0</span><span class="unit">deg</span></div>
+            <div><span class="label">Spin</span><span class="val" id="m-spin">0</span><span class="unit">rpm</span></div>
+            <div><span class="label">Carry</span><span class="val" id="m-carry">0</span><span class="unit">yds</span></div>
+          </div>
         </div>
       </div>
     </div>
@@ -750,146 +729,115 @@ footer{ padding-block:clamp(3rem,5vw,4.5rem) 2.5rem; border-top:1px solid var(--
   <!-- ================= SPEC BAR ================= -->
   <div class="specbar">
     <div class="specbar-grid">
-      <div class="spec">
-        <span class="big">90<s>min</s></span>
-        <p>From the van pulling up to the first tee shot.</p>
-      </div>
-      <div class="spec">
-        <span class="big">400<s>+</s></span>
-        <p>Courses on the menu, from Pebble Beach to St Andrews.</p>
-      </div>
-      <div class="spec">
-        <span class="big">50<s>/hr</s></span>
-        <p>Guests through the bay per hour on a party rotation.</p>
-      </div>
-      <div class="spec">
-        <span class="big">60<s>mi</s></span>
-        <p>Radius from Loveland — Cheyenne to Denver, Estes to Greeley.</p>
-      </div>
+      <div class="spec"><span class="big">45<s>min</s></span><p>From the van pulling up to the first tee shot.</p></div>
+      <div class="spec"><span class="big">400<s>+</s></span><p>Courses on the menu, from Pebble Beach to St Andrews.</p></div>
+      <div class="spec"><span class="big">50<s>/hr</s></span><p>Guests through the bay per hour on a party rotation.</p></div>
+      <div class="spec"><span class="big">60<s>mi</s></span><p>Radius from Loveland — Cheyenne to Denver, Estes to Greeley.</p></div>
     </div>
   </div>
 
-  <!-- ================= THE SETUP ================= -->
-  <section id="rig">
-    <div class="wrap">
-      <div class="sec-head rv">
-        <p class="label eyebrow">What actually shows up</p>
-        <h2 class="display">Two ways to put a<br>golf hole in your venue.</h2>
-        <p>Same launch monitor, same course library, same host running it. The only question
-           is whether we build inside your room or park the whole thing in your lot.</p>
+
+  <!-- ================= COURSE TICKER ================= -->
+  <section class="ticker" aria-label="Courses you can play, and where">
+    <p class="label ticker-lead">Four hundred courses. Your room.</p>
+    <div class="ticker-inner">
+      <div class="ticker-row fwd">
+        <div class="ticker-track">
+          <span class="tick"><b>Pebble Beach</b> for the bachelor party</span><span class="tick-sep">&#9971;</span>
+          <span class="tick"><b>St Andrews</b> at the company retreat</span><span class="tick-sep">&#9971;</span>
+          <span class="tick"><b>Whistling Straits</b> at the wedding</span><span class="tick-sep">&#9971;</span>
+          <span class="tick"><b>Torrey Pines</b> in the parking lot</span><span class="tick-sep">&#9971;</span>
+          <span class="tick"><b>Bandon Dunes</b> in the driveway</span><span class="tick-sep">&#9971;</span>
+          <span class="tick"><b>Kiawah Island</b> at the holiday party</span><span class="tick-sep">&#9971;</span>
+        </div>
+        <div class="ticker-track" aria-hidden="true">
+          <span class="tick"><b>Pebble Beach</b> for the bachelor party</span><span class="tick-sep">&#9971;</span>
+          <span class="tick"><b>St Andrews</b> at the company retreat</span><span class="tick-sep">&#9971;</span>
+          <span class="tick"><b>Whistling Straits</b> at the wedding</span><span class="tick-sep">&#9971;</span>
+          <span class="tick"><b>Torrey Pines</b> in the parking lot</span><span class="tick-sep">&#9971;</span>
+          <span class="tick"><b>Bandon Dunes</b> in the driveway</span><span class="tick-sep">&#9971;</span>
+          <span class="tick"><b>Kiawah Island</b> at the holiday party</span><span class="tick-sep">&#9971;</span>
+        </div>
       </div>
-
-      <div class="formats">
-        <article class="fmt rv">
-          <div class="fmt-media">
-            <img src="img/bay.jpg" width="1920" height="1280" loading="lazy" decoding="async"
-                 alt="An indoor golf simulator bay with a course projected on the impact screen and a bag of clubs on the turf.">
-          </div>
-          <div class="fmt-body">
-            <div class="fmt-top">
-              <div>
-                <p class="label kicker">Indoors</p>
-                <h3>The Bay</h3>
-              </div>
-              <span class="fmt-num">01</span>
-            </div>
-            <p>A free-standing enclosure, impact screen, hitting turf and full lighting rig that
-               we build inside your space and strike the same night. Ballrooms, gyms, lobbies,
-               shops, event barns.</p>
-            <ul class="specs">
-              <li><span class="k">Footprint</span><span class="v">13′ W × 15′ D</span></li>
-              <li><span class="k">Ceiling needed</span><span class="v">10′ min</span></li>
-              <li><span class="k">Power</span><span class="v">1 × 110V outlet</span></li>
-              <li><span class="k">Build time</span><span class="v">75–90 min</span></li>
-            </ul>
-            <div class="fits">
-              <span>Hotel ballrooms</span><span>Church gyms</span><span>Office lobbies</span>
-              <span>Event barns</span><span>Warehouses</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="fmt rv">
-          <div class="fmt-media">
-            <img src="img/fairway.jpg" width="1920" height="1280" loading="lazy" decoding="async"
-                 alt="A golfer finishing a swing on an open fairway in low evening light.">
-          </div>
-          <div class="fmt-body">
-            <div class="fmt-top">
-              <div>
-                <p class="label kicker">Outdoors</p>
-                <h3>The Rig</h3>
-              </div>
-              <span class="fmt-num">02</span>
-            </div>
-            <p>The simulator lives in a climate-controlled trailer. It parks, levels, opens, and
-               it is a golf bay fifteen minutes later — in July heat or a February wind, which in
-               Colorado is the whole point.</p>
-            <ul class="specs">
-              <li><span class="k">Pavement needed</span><span class="v">45′ × 20′</span></li>
-              <li><span class="k">Overhead clear</span><span class="v">14′ min</span></li>
-              <li><span class="k">Power</span><span class="v">Onboard — none needed</span></li>
-              <li><span class="k">Build time</span><span class="v">15 min</span></li>
-            </ul>
-            <div class="fits">
-              <span>Festivals</span><span>Tailgates</span><span>Dealership lots</span>
-              <span>Tournaments</span><span>Neighborhood blocks</span>
-            </div>
-          </div>
-        </article>
+      <div class="ticker-row rev">
+        <div class="ticker-track">
+          <span class="tick alt"><b>Spyglass Hill</b> for Dad's 60th</span><span class="tick-sep">&#9971;</span>
+          <span class="tick alt"><b>Harbour Town</b> at the grand opening</span><span class="tick-sep">&#9971;</span>
+          <span class="tick alt"><b>Royal Troon</b> in the church gym</span><span class="tick-sep">&#9971;</span>
+          <span class="tick alt"><b>Bethpage Black</b> at the tailgate</span><span class="tick-sep">&#9971;</span>
+          <span class="tick alt"><b>Wolf Creek</b> at the class reunion</span><span class="tick-sep">&#9971;</span>
+          <span class="tick alt"><b>Valderrama</b> on the back lawn</span><span class="tick-sep">&#9971;</span>
+        </div>
+        <div class="ticker-track" aria-hidden="true">
+          <span class="tick alt"><b>Spyglass Hill</b> for Dad's 60th</span><span class="tick-sep">&#9971;</span>
+          <span class="tick alt"><b>Harbour Town</b> at the grand opening</span><span class="tick-sep">&#9971;</span>
+          <span class="tick alt"><b>Royal Troon</b> in the church gym</span><span class="tick-sep">&#9971;</span>
+          <span class="tick alt"><b>Bethpage Black</b> at the tailgate</span><span class="tick-sep">&#9971;</span>
+          <span class="tick alt"><b>Wolf Creek</b> at the class reunion</span><span class="tick-sep">&#9971;</span>
+          <span class="tick alt"><b>Valderrama</b> on the back lawn</span><span class="tick-sep">&#9971;</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ================= FIT CHECK ================= -->
-  <section id="fit" class="fitcheck">
+  <!-- ================= THE SETUP ================= -->
+  <section id="setup">
     <div class="wrap">
       <div class="sec-head rv">
-        <p class="label eyebrow">The question everybody asks first</p>
-        <h2 class="display">Will it fit in my room?</h2>
-        <p>Move the sliders, or pick the room you actually have. This is the honest answer —
-           including the times the answer is “not indoors, but here’s what we’d do instead.”</p>
+        <p class="label eyebrow">What actually shows up</p>
+        <h2 class="display">One unit. Inside or out.</h2>
+        <p>It arrives folded in the back of a van, inflates in a few minutes, and holds
+           its shape on a blower that runs quietly all night. There is no trailer to park
+           and no crew of four.</p>
       </div>
 
-      <div class="fit-grid">
+      <div class="setup-grid">
+        <figure class="rig-figure rv" style="margin:0;">
+          <svg viewBox="0 0 900 720" role="img"
+               aria-label="Dimensioned diagram of the inflatable simulator: 15 feet wide by 10 feet tall, with a hitting mat and blower.">
+            <use href="#rig"/>
+            <g font-family="Martian Mono, monospace" font-size="22" fill="#15281C">
+              <g stroke="#15281C" stroke-width="2" opacity=".7">
+                <line x1="80" y1="676" x2="820" y2="676"/>
+                <line x1="80" y1="666" x2="80" y2="686"/>
+                <line x1="820" y1="666" x2="820" y2="686"/>
+                <line x1="44"  y1="40"  x2="44"  y2="558"/>
+                <line x1="34"  y1="40"  x2="54"  y2="40"/>
+                <line x1="34"  y1="558" x2="54"  y2="558"/>
+              </g>
+              <text x="450" y="669" text-anchor="middle">15 ft</text>
+              <text x="44" y="299" text-anchor="middle" transform="rotate(-90 44 299)">10 ft</text>
+            </g>
+          </svg>
+          <figcaption>Illustration — the client's own rig photos replace this.</figcaption>
+        </figure>
+
         <div class="rv">
-          <div class="seg" role="group" aria-label="Where the setup would go">
-            <button type="button" id="seg-in"  aria-pressed="true">Inside a room</button>
-            <button type="button" id="seg-out" aria-pressed="false">Outside on pavement</button>
-          </div>
+          <ul class="specs">
+            <li><span class="k">Footprint</span><span class="v">15′ W × 12′ D</span></li>
+            <li><span class="k">Height needed</span><span class="v">10′ ideal · 9′ works</span></li>
+            <li><span class="k">Power</span><span class="v">1 × 110V outlet</span></li>
+            <li><span class="k">Setup</span><span class="v">45 min, teardown 30</span></li>
+            <li><span class="k">Clubs &amp; balls</span><span class="v">We bring them</span></li>
+          </ul>
 
-          <div class="chips" id="chips">
-            <button class="chip" type="button" data-h="12" data-w="40" data-d="60">Hotel ballroom</button>
-            <button class="chip" type="button" data-h="20" data-w="50" data-d="84">Church gym</button>
-            <button class="chip" type="button" data-h="16" data-w="30" data-d="40">Warehouse</button>
-            <button class="chip" type="button" data-h="9"  data-w="30" data-d="22">3-car garage</button>
-            <button class="chip" type="button" data-h="8"  data-w="16" data-d="24">Finished basement</button>
-          </div>
-
-          <div class="sliders">
-            <div class="slider">
-              <label for="s-h"><span class="label">Ceiling height</span><output id="o-h">12 ft</output></label>
-              <input type="range" id="s-h" min="7" max="24" step="1" value="12">
+          <div class="where">
+            <div>
+              <span class="pip">IN</span>
+              <div>
+                <h4>Indoors</h4>
+                <p>Ballrooms, church gyms, warehouses, shops, event barns, big garages.
+                   Nothing anchors to your floor and nothing marks it.</p>
+              </div>
             </div>
-            <div class="slider">
-              <label for="s-w"><span class="label">Room width</span><output id="o-w">40 ft</output></label>
-              <input type="range" id="s-w" min="8" max="60" step="1" value="40">
+            <div>
+              <span class="pip">OUT</span>
+              <div>
+                <h4>Outdoors</h4>
+                <p>Staked on grass or weighted on pavement. Backyards, parking lots,
+                   festivals, tailgates, driveways. It handles a breeze; we call it in high wind.</p>
+              </div>
             </div>
-            <div class="slider">
-              <label for="s-d"><span class="label">Room depth</span><output id="o-d">60 ft</output></label>
-              <input type="range" id="s-d" min="10" max="90" step="1" value="60">
-            </div>
-          </div>
-        </div>
-
-        <div class="verdict rv" id="verdict" aria-live="polite">
-          <span class="label" id="v-tag">Good to go</span>
-          <h3 id="v-head">The Bay fits.</h3>
-          <p id="v-body">Driver and all. Full swings, every club in the bag.</p>
-          <div class="vspecs">
-            <div><span class="k">Recommended setup</span><span class="v" id="v-setup">The Bay</span></div>
-            <div><span class="k">Your clearance</span><span class="v" id="v-clear">+2′ overhead</span></div>
-            <div><span class="k">Clubs in play</span><span class="v" id="v-clubs">Driver → wedge</span></div>
           </div>
         </div>
       </div>
@@ -897,58 +845,70 @@ footer{ padding-block:clamp(3rem,5vw,4.5rem) 2.5rem; border-top:1px solid var(--
   </section>
 
   <!-- ================= EVENTS ================= -->
-  <section id="events">
+  <section id="events" class="alt-ground">
     <div class="wrap">
       <div class="sec-head rv">
         <p class="label eyebrow">Who books it</p>
-        <h2 class="display">Four rooms, four<br>completely different jobs.</h2>
-        <p>Golf is the excuse. What you're actually buying is the thing everyone gathers
+        <h2 class="display">Four rooms, four different jobs.</h2>
+        <p>Golf is the excuse. What you're actually renting is the thing everyone gathers
            around — and a reason for the quiet people to talk to each other.</p>
       </div>
 
       <div class="events">
         <article class="ev rv">
-          <img class="ev-img" src="img/ev-corporate.jpg" width="900" height="600" loading="lazy" decoding="async" alt="Colleagues raising glasses together at an indoor company party.">
-          <span class="ev-duo" aria-hidden="true"></span>
-          <span class="ev-shade" aria-hidden="true"></span>
-          <p class="label">01 — Corporate</p>
-          <h3>Company parties &amp; client days</h3>
-          <p>Closest-to-the-pin bracket with your logo on the screen and the leaderboard.
-             We run scoring, call the winner, and hand you the bracket for the follow-up email.</p>
-          <p class="hook">Holiday party season books first</p>
+          <div class="ev-media">
+            <img src="img/ev-corporate.jpg" width="900" height="600" loading="lazy" decoding="async"
+                 alt="Colleagues raising glasses together at an indoor company party.">
+          </div>
+          <div class="ev-body">
+            <p class="label">Corporate</p>
+            <h3>Company parties &amp; client days</h3>
+            <p>Closest-to-the-pin bracket with your logo on the screen. We run scoring,
+               call the winner, and hand you the bracket for the follow-up email.</p>
+            <p class="hook">Holiday season books first</p>
+          </div>
         </article>
 
         <article class="ev rv">
-          <img class="ev-img" src="img/ev-wedding.jpg" width="900" height="600" loading="lazy" decoding="async" alt="Guests celebrating on the floor at an indoor wedding reception.">
-          <span class="ev-duo" aria-hidden="true"></span>
-          <span class="ev-shade" aria-hidden="true"></span>
-          <p class="label">02 — Weddings</p>
-          <h3>Receptions &amp; the night before</h3>
-          <p>Solves cocktail hour and solves the guests who don't dance. Longest-drive
-             board for the groomsmen, closest-to-pin for everyone else, hands nowhere near the cake.</p>
-          <p class="hook">Also: rehearsal dinners, bachelor weekends</p>
+          <div class="ev-media">
+            <img src="img/ev-wedding.jpg" width="900" height="600" loading="lazy" decoding="async"
+                 alt="Guests celebrating on the floor at an indoor wedding reception.">
+          </div>
+          <div class="ev-body">
+            <p class="label">Weddings</p>
+            <h3>Receptions &amp; the night before</h3>
+            <p>Solves cocktail hour and solves the guests who don't dance. Longest-drive
+               board for the groomsmen, closest-to-pin for everyone else.</p>
+            <p class="hook">Also rehearsal dinners</p>
+          </div>
         </article>
 
         <article class="ev rv">
-          <img class="ev-img" src="img/ev-fundraiser.jpg" width="900" height="600" loading="lazy" decoding="async" alt="Guests holding sparklers at an evening charity event.">
-          <span class="ev-duo" aria-hidden="true"></span>
-          <span class="ev-shade" aria-hidden="true"></span>
-          <p class="label">03 — Fundraising</p>
-          <h3>Charity nights &amp; tournaments</h3>
-          <p>A hole-in-one contest that doesn't need a golf course, a tee time, or good
-             weather. Sponsor logo on the screen between every shot, all night.</p>
-          <p class="hook">Sponsorship sells the booking twice</p>
+          <div class="ev-media">
+            <img src="img/ev-fundraiser.jpg" width="900" height="600" loading="lazy" decoding="async"
+                 alt="Guests holding sparklers at an evening charity event.">
+          </div>
+          <div class="ev-body">
+            <p class="label">Fundraising</p>
+            <h3>Charity nights &amp; tournaments</h3>
+            <p>A hole-in-one contest that needs no course and no tee time. Sponsor logo on
+               the screen between every shot, all night.</p>
+            <p class="hook">Sponsorship often covers the rental</p>
+          </div>
         </article>
 
         <article class="ev rv">
-          <img class="ev-img" src="img/ev-private.jpg" width="900" height="600" loading="lazy" decoding="async" alt="A group of friends talking and laughing at an indoor party.">
-          <span class="ev-duo" aria-hidden="true"></span>
-          <span class="ev-shade" aria-hidden="true"></span>
-          <p class="label">04 — Private</p>
-          <h3>Birthdays, grads &amp; backyards</h3>
-          <p>Graduation parties, milestone birthdays, guys' weekends, the driveway in
-             January. Beginners and eight-year-olds included — nobody keeps a real score.</p>
-          <p class="hook">Three-hour minimum, any day of the week</p>
+          <div class="ev-media">
+            <img src="img/ev-private.jpg" width="900" height="600" loading="lazy" decoding="async"
+                 alt="A group of friends talking and laughing at an indoor party.">
+          </div>
+          <div class="ev-body">
+            <p class="label">Private</p>
+            <h3>Birthdays, grads &amp; backyards</h3>
+            <p>Graduation parties, milestone birthdays, guys' weekends, a Saturday on the
+               driveway. Beginners and eight-year-olds included.</p>
+            <p class="hook">Three-hour minimum, any day</p>
+          </div>
         </article>
       </div>
     </div>
@@ -959,20 +919,20 @@ footer{ padding-block:clamp(3rem,5vw,4.5rem) 2.5rem; border-top:1px solid var(--
     <div class="wrap">
       <div class="sec-head rv">
         <p class="label eyebrow">How a booking goes</p>
-        <h2 class="display">Three steps, and two<br>of them are ours.</h2>
+        <h2 class="display">Three steps, and two of them are ours.</h2>
       </div>
       <div class="steps">
         <div class="step rv">
           <span class="n">STEP 01</span>
-          <h3>Send us the date and the room</h3>
-          <p>We confirm the space works before you pay anything. If it doesn't, we tell you
-             which of the two setups does — or that we're not the right call for your venue.</p>
+          <h3>Send us the date and the space</h3>
+          <p>We confirm it works before you pay anything. If the room is too tight we say
+             so and suggest setting up outside instead.</p>
         </div>
         <div class="step rv">
           <span class="n">STEP 02</span>
-          <h3>We show up early and build it</h3>
-          <p>In and set before your guests arrive, out the same night. Clubs, balls, tees,
-             lighting and a left-handed set are all ours to bring.</p>
+          <h3>We show up early and stand it up</h3>
+          <p>Inflated and dialled in before your guests arrive, packed away the same
+             night. Clubs, balls, tees and a left-handed set are ours to bring.</p>
         </div>
         <div class="step rv">
           <span class="n">STEP 03</span>
@@ -984,45 +944,38 @@ footer{ padding-block:clamp(3rem,5vw,4.5rem) 2.5rem; border-top:1px solid var(--
     </div>
   </section>
 
-  <!-- ================= FULL-BLEED BAND ================= -->
+  <!-- ================= DARK BAND ================= -->
   <section class="band">
-    <img class="band-img" src="img/fairway.jpg" width="1920" height="1280" loading="lazy" decoding="async"
-         alt="A golfer finishing a swing on an open fairway in low evening light.">
-    <span class="band-duo" aria-hidden="true"></span>
-    <span class="band-shade" aria-hidden="true"></span>
-    <div class="wrap">
-      <div class="band-inner rv">
-        <p class="label">The season nobody plans for</p>
-        <h2 class="display">Colorado golf is a five-month sport. Your calendar isn't.</h2>
-        <p>Which is why the busiest thing we own is a trailer in February. Holiday parties,
-           winter weddings, sales kickoffs, February fundraisers — the months nobody in this
-           state can get on a course are the months this books out first. Reserve the room,
-           and we will bring the fairway to it.</p>
-        <div class="band-stats">
-          <div>
-            <span class="n">Nov–Feb</span>
-            <span class="t">Books first, six to eight weeks out</span>
-          </div>
-          <div>
-            <span class="n">72°</span>
-            <span class="t">Inside the trailer, whatever it is outside</span>
-          </div>
-          <div>
-            <span class="n">12</span>
-            <span class="t">Months a year we are taking dates</span>
-          </div>
+    <div class="wrap band-grid">
+      <div class="rv">
+        <p class="label">Why this beats a tee time</p>
+        <h2 class="display">A round of golf takes four people and five hours.</h2>
+        <p>This takes five minutes and includes everyone at the party — the ones who golf,
+           the ones who never have, and the eight-year-old who just wants to swing as hard
+           as they can. Nobody drives anywhere. Nobody sits out.</p>
+      </div>
+      <div class="compare rv">
+        <div>
+          <span class="t">A foursome at the course</span>
+          <span class="n">4 players · 5 hrs</span>
+          <span class="d">Tee times, a drive each way, and a scorecard most guests would rather not keep.</span>
+        </div>
+        <div>
+          <span class="t">The simulator at your event</span>
+          <span class="n good">50+ players · 1 hr</span>
+          <span class="d">Everyone rotates through, plays a few shots, and gets a number to brag about.</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ================= PACKAGES ================= -->
-  <section id="packages" class="bone">
+  <!-- ================= PRICING ================= -->
+  <section id="pricing">
     <div class="wrap">
       <div class="sec-head rv">
-        <p class="label eyebrow">Packages</p>
-        <h2 class="display">Priced by the hours<br>you actually need.</h2>
-        <p>Every package includes delivery inside 30 miles of Loveland, setup, teardown,
+        <p class="label eyebrow">Pricing</p>
+        <h2 class="display">Priced by the hours you actually need.</h2>
+        <p>Every package includes delivery inside 30 miles of Loveland, setup and teardown,
            clubs for righties and lefties, balls, and a host on site the whole time.</p>
       </div>
 
@@ -1032,15 +985,14 @@ footer{ padding-block:clamp(3rem,5vw,4.5rem) 2.5rem; border-top:1px solid var(--
             <h3>The Turn</h3>
             <p class="who">House parties, small offices, birthdays.</p>
           </div>
-          <div class="price"><span class="amt">$895</span><span class="per">/ 3 hours</span></div>
+          <div class="price"><span class="amt">$595</span><span class="per">/ 3 hours</span></div>
           <ul class="incl">
             <li>Three hours of play</li>
-            <li>The Bay or The Rig</li>
             <li>One host on site</li>
             <li>Closest-to-pin or open range</li>
             <li>Up to ~150 guests through the bay</li>
           </ul>
-          <a class="btn btn-ghost" href="#book" style="border-color:var(--bone-3); color:var(--on-bone);">Check a date</a>
+          <a class="btn btn-outline" href="#book">Check a date</a>
         </article>
 
         <article class="card featured rv">
@@ -1049,16 +1001,15 @@ footer{ padding-block:clamp(3rem,5vw,4.5rem) 2.5rem; border-top:1px solid var(--
             <h3>Full Eighteen</h3>
             <p class="who">Company parties, weddings, fundraisers.</p>
           </div>
-          <div class="price"><span class="amt">$1,450</span><span class="per">/ 5 hours</span></div>
+          <div class="price"><span class="amt">$895</span><span class="per">/ 5 hours</span></div>
           <ul class="incl">
             <li>Five hours of play</li>
             <li>Two hosts on site</li>
             <li>Your logo on screen and leaderboard</li>
             <li>Bracket or tournament scoring</li>
-            <li>Longest-drive board</li>
             <li>Results sheet emailed next morning</li>
           </ul>
-          <a class="btn btn-bone" href="#book">Check a date</a>
+          <a class="btn btn-turf" href="#book">Check a date</a>
         </article>
 
         <article class="card rv">
@@ -1066,26 +1017,26 @@ footer{ padding-block:clamp(3rem,5vw,4.5rem) 2.5rem; border-top:1px solid var(--
             <h3>All Day</h3>
             <p class="who">Festivals, conferences, multi-day activations.</p>
           </div>
-          <div class="price"><span class="amt">$2,600</span><span class="per">/ from, per day</span></div>
+          <div class="price"><span class="amt">$1,595</span><span class="per">/ from, per day</span></div>
           <ul class="incl">
             <li>Up to nine hours</li>
             <li>Rotating host team</li>
             <li>Full branding package</li>
             <li>Lead capture at the tee</li>
-            <li>Multi-day and multi-bay quoted</li>
+            <li>Multi-day quoted</li>
           </ul>
-          <a class="btn btn-ghost" href="#book" style="border-color:var(--bone-3); color:var(--on-bone);">Get a quote</a>
+          <a class="btn btn-outline" href="#book">Get a quote</a>
         </article>
       </div>
 
       <div class="addons rv">
         <h4 class="label">Add to any package</h4>
         <div class="addon-grid">
-          <div class="addon"><span>Additional hour</span><span class="v">$225</span></div>
+          <div class="addon"><span>Additional hour</span><span class="v">$165</span></div>
           <div class="addon"><span>On-screen branding &amp; custom leaderboard</span><span class="v">$150</span></div>
           <div class="addon"><span>Hole-in-one prize contest</span><span class="v">$300</span></div>
-          <div class="addon"><span>Second bay (double the throughput)</span><span class="v">$750</span></div>
           <div class="addon"><span>Putting green add-on</span><span class="v">$200</span></div>
+          <div class="addon"><span>Second bay (double the throughput)</span><span class="v">$550</span></div>
           <div class="addon"><span>Travel beyond 30 miles</span><span class="v">$2.50 / mi</span></div>
         </div>
         <p class="note">Sample rates shown for this draft — the real numbers are yours to set.</p>
@@ -1094,15 +1045,14 @@ footer{ padding-block:clamp(3rem,5vw,4.5rem) 2.5rem; border-top:1px solid var(--
   </section>
 
   <!-- ================= SERVICE AREA ================= -->
-  <section>
+  <section class="alt-ground">
     <div class="wrap area-grid">
       <div class="rv">
         <p class="label eyebrow">Where we go</p>
-        <h2 class="display" style="font-size:var(--step-5); margin-bottom:1rem;">Based in Loveland.<br>Happy to drive.</h2>
-        <p style="color:var(--sage); max-width:38ch;">
-          Anything inside 30 miles includes delivery. Past that we charge by the mile
-          and still show up early — Denver, Cheyenne and the mountain towns are all
-          regular runs.
+        <h2 class="display" style="font-size:var(--step-5); margin-bottom:.9rem;">Based in Loveland. Happy to drive.</h2>
+        <p style="color:var(--on-paper-2); max-width:38ch;">
+          Anything inside 30 miles includes delivery. Past that we charge by the mile and
+          still show up early — Denver, Cheyenne and the mountain towns are regular runs.
         </p>
       </div>
       <div class="towns rv">
@@ -1122,15 +1072,151 @@ footer{ padding-block:clamp(3rem,5vw,4.5rem) 2.5rem; border-top:1px solid var(--
     </div>
   </section>
 
+  <!-- ================= FAQ (calculator lives in here) ================= -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <p class="label eyebrow">Before you ask</p>
+        <h2 class="display">The questions we get every week.</h2>
+      </div>
+      <div class="faq rv">
+
+        <details open>
+          <summary>Will it fit in my space?</summary>
+          <div class="body">
+            <p>It wants 15 by 12 feet on the floor and about 10 feet of height. Nine feet
+               still works — we run irons and wedges instead of drivers, which is what most
+               guests want anyway. Below that we set up outside.</p>
+            <p>Move the sliders, or pick the room you actually have:</p>
+
+            <div class="calc">
+              <div>
+                <div class="seg" role="group" aria-label="Where the setup would go">
+                  <button type="button" id="seg-in" aria-pressed="true">Inside a room</button>
+                  <button type="button" id="seg-out" aria-pressed="false">Outside</button>
+                </div>
+
+                <div class="chips" id="chips">
+                  <button class="chip" type="button" data-h="12" data-w="40" data-d="60">Hotel ballroom</button>
+                  <button class="chip" type="button" data-h="20" data-w="50" data-d="84">Church gym</button>
+                  <button class="chip" type="button" data-h="16" data-w="30" data-d="40">Warehouse</button>
+                  <button class="chip" type="button" data-h="9"  data-w="30" data-d="22">3-car garage</button>
+                  <button class="chip" type="button" data-h="8"  data-w="16" data-d="24">Finished basement</button>
+                </div>
+
+                <div class="sliders">
+                  <div class="slider">
+                    <label for="s-h"><span class="label">Ceiling height</span><output id="o-h">12 ft</output></label>
+                    <input type="range" id="s-h" min="7" max="24" step="1" value="12">
+                  </div>
+                  <div class="slider">
+                    <label for="s-w"><span class="label">Width</span><output id="o-w">40 ft</output></label>
+                    <input type="range" id="s-w" min="8" max="60" step="1" value="40">
+                  </div>
+                  <div class="slider">
+                    <label for="s-d"><span class="label">Depth</span><output id="o-d">60 ft</output></label>
+                    <input type="range" id="s-d" min="10" max="90" step="1" value="60">
+                  </div>
+                </div>
+              </div>
+
+              <div class="verdict" id="verdict" aria-live="polite">
+                <span class="label" id="v-tag">Good to go</span>
+                <h3 id="v-head">It fits.</h3>
+                <p id="v-body">Full swings, every club in the bag, driver included.</p>
+                <div class="vspecs">
+                  <div><span class="k">Where we'd set up</span><span class="v" id="v-setup">Inside</span></div>
+                  <div><span class="k">Your clearance</span><span class="v" id="v-clear">+2′ overhead</span></div>
+                  <div><span class="k">Clubs in play</span><span class="v" id="v-clubs">Driver → wedge</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <details>
+          <summary>What do you need from us?</summary>
+          <div class="body">
+            <p>One standard 110V outlet within about fifty feet, and the footprint above.
+               The blower runs continuously to keep the frame up, so the outlet has to stay
+               live. That is genuinely it — we bring everything else.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Indoors or outdoors — does it matter?</summary>
+          <div class="body">
+            <p>Not much. Inside we set it on any flat floor; nothing anchors down and
+               nothing marks the surface. Outside we stake into grass or use water weights
+               on pavement. It shrugs off a breeze and light rain. Sustained high wind is
+               the one condition we will call, and we reschedule at no charge.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How many people can actually play?</summary>
+          <div class="body">
+            <p>On a party rotation, roughly fifty guests an hour cycle through — everyone
+               hits three or four shots and the leaderboard keeps them honest. For a
+               smaller group we'll run full nine-hole rounds instead.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Do we need to bring clubs?</summary>
+          <div class="body">
+            <p>Never. We bring right- and left-handed sets, balls, tees and gloves in a few
+               sizes. Anyone who wants to use their own is welcome to.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Nobody at our event golfs. Is this a bad idea?</summary>
+          <div class="body">
+            <p>It's usually the better idea. Beginners get real numbers and instant
+               feedback from a host standing right there, and the games we run — closest to
+               the pin, longest drive, target range — don't require a swing anyone's proud
+               of.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Can you put our branding on it?</summary>
+          <div class="body">
+            <p>Yes. Your logo sits on the simulator screen between shots, on the
+               leaderboard, and on the printed scorecards. Sponsors like this, which is why
+               fundraisers often cover the rental before doors open.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How far ahead should we book?</summary>
+          <div class="body">
+            <p>Holiday party season and summer Saturdays go first — six to eight weeks out
+               is safe for those. Midweek dates are usually open with two weeks' notice.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What does it cost to hold a date?</summary>
+          <div class="body">
+            <p>A deposit of 25% holds it, with the balance due the week of the event. Move
+               a date for weather or venue trouble at no charge, once.</p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
   <!-- ================= REVIEWS (marked placeholder) ================= -->
-  <section class="reviews">
+  <section class="alt-ground">
     <div class="wrap">
       <div class="sec-head rv">
         <span class="placeholder-flag">PLACEHOLDER — written examples, not real reviews</span>
-        <h2 class="display">Where the real<br>reviews will sit.</h2>
+        <h2 class="display">Where the real reviews will sit.</h2>
         <p>Nothing below is a customer quote — the business hasn't run its first event yet.
-           These are written to show length, tone and layout, so you know what to collect
-           after event one.</p>
+           These show length, tone and layout, so you know what to collect after event one.</p>
       </div>
       <div class="quotes">
         <article class="quote rv">
@@ -1147,74 +1233,10 @@ footer{ padding-block:clamp(3rem,5vw,4.5rem) 2.5rem; border-top:1px solid var(--
         </article>
         <article class="quote rv">
           <span class="ex">Example — fundraiser</span>
-          <blockquote>“We sold the sponsorship for more than the rental cost. The
-            simulator paid for itself before the doors opened.”</blockquote>
+          <blockquote>“We sold the sponsorship for more than the rental cost. It paid for
+            itself before the doors opened.”</blockquote>
           <span class="by">Event Chair · nonprofit gala, Greeley</span>
         </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= FAQ ================= -->
-  <section id="faq">
-    <div class="wrap">
-      <div class="sec-head rv">
-        <p class="label eyebrow">Before you ask</p>
-        <h2 class="display">The nine questions<br>we get every week.</h2>
-      </div>
-      <div class="faq rv">
-        <details>
-          <summary>What do you need from us?</summary>
-          <p>One standard 110V outlet within about fifty feet, and the footprint listed above.
-             That's genuinely it for The Bay. The Rig brings its own power and needs nothing
-             but a level place to park.</p>
-        </details>
-        <details>
-          <summary>Our ceiling is only nine feet. Are we out?</summary>
-          <p>No — you're out of drivers, not out of golf. At nine feet we run irons, wedges,
-             closest-to-the-pin and par-3 courses, which is what most guests want anyway. Under
-             about eight and a half feet we'd bring The Rig and set up outside instead.</p>
-        </details>
-        <details>
-          <summary>How many people can actually play?</summary>
-          <p>On a party rotation, roughly fifty guests an hour cycle through — everyone hits
-             three or four shots, the leaderboard keeps them honest, and nobody waits long.
-             For a smaller group we'll run full nine-hole rounds instead.</p>
-        </details>
-        <details>
-          <summary>Do we need to bring clubs?</summary>
-          <p>Never. We bring right- and left-handed sets, balls, tees, and gloves in a few
-             sizes. Anyone who wants to use their own is welcome to.</p>
-        </details>
-        <details>
-          <summary>Nobody at our event golfs. Is this a bad idea?</summary>
-          <p>It's usually the better idea. Beginners get real numbers and instant feedback
-             from a host standing right there, and the games we run — closest to the pin,
-             longest drive, target range — don't require a swing anyone's proud of.</p>
-        </details>
-        <details>
-          <summary>Can you put our branding on it?</summary>
-          <p>Yes. Your logo sits on the simulator screen between shots, on the leaderboard,
-             and on the printed scorecards. Sponsors love this, which is why fundraisers
-             often clear the rental cost before doors open.</p>
-        </details>
-        <details>
-          <summary>What happens if it rains or snows?</summary>
-          <p>Indoors, nothing. Outdoors, The Rig is enclosed and climate-controlled — a
-             February booking is genuinely one of the better ones, since it's the only golf
-             anyone in Colorado is playing that week.</p>
-        </details>
-        <details>
-          <summary>How far ahead should we book?</summary>
-          <p>November through February fills first — holiday parties book that window six to
-             eight weeks out. Summer Saturdays go early for weddings. Midweek dates are
-             usually open with two weeks' notice.</p>
-        </details>
-        <details>
-          <summary>What does it cost to hold a date?</summary>
-          <p>A deposit of 25% holds it, with the balance due the week of the event. Move a
-             date for weather or venue trouble at no charge, once.</p>
-        </details>
       </div>
     </div>
   </section>
@@ -1224,12 +1246,9 @@ footer{ padding-block:clamp(3rem,5vw,4.5rem) 2.5rem; border-top:1px solid var(--
     <div class="wrap book-grid">
       <div class="rv">
         <p class="label eyebrow">Check a date</p>
-        <h2 class="display">Tell us the day and<br>the room.</h2>
-        <p class="lead">We'll come back inside one business day with whether the date is open,
-           which setup fits your space, and a flat number — no phone tag required.</p>
-
-        <img class="book-img" src="img/turf.jpg" width="1000" height="1333" loading="lazy" decoding="async"
-             alt="A wedge resting behind a golf ball on bright hitting turf.">
+        <h2 class="display">Tell us the day and the space.</h2>
+        <p class="lead">We'll come back inside one business day with whether the date is
+           open, whether we'd set up inside or out, and a flat number — no phone tag.</p>
 
         <div class="contact-line">
           <span class="label">Call or text</span>
@@ -1239,7 +1258,7 @@ footer{ padding-block:clamp(3rem,5vw,4.5rem) 2.5rem; border-top:1px solid var(--
           <span class="label">Email</span>
           <span class="v">hello@pinhighgolf.co</span>
         </div>
-        <div class="contact-line" style="border-bottom:1px solid var(--bone-3);">
+        <div class="contact-line">
           <span class="label">Based in</span>
           <span class="v">Loveland, CO</span>
         </div>
@@ -1285,9 +1304,9 @@ footer{ padding-block:clamp(3rem,5vw,4.5rem) 2.5rem; border-top:1px solid var(--
         </div>
         <div class="field">
           <label class="label" for="f-msg">Tell us about the space</label>
-          <textarea id="f-msg" name="message" placeholder="Ballroom with 14-foot ceilings, or the parking lot out back, or honestly no idea — we'll figure it out."></textarea>
+          <textarea id="f-msg" name="message" placeholder="Ballroom with 14-foot ceilings, or the back lawn, or honestly no idea — we'll figure it out."></textarea>
         </div>
-        <button class="btn btn-bone btn-lg" type="submit">Send it over</button>
+        <button class="btn btn-primary btn-lg" type="submit">Send it over</button>
         <p class="form-note">We answer within one business day. No deposit until the date is confirmed.</p>
         <div class="confirm" id="confirm" hidden>
           <strong>This form isn't wired up yet.</strong>
@@ -1304,18 +1323,18 @@ footer{ padding-block:clamp(3rem,5vw,4.5rem) 2.5rem; border-top:1px solid var(--
     <div class="foot-grid">
       <div class="foot-mark">
         <span class="wordmark" data-brand>Pin High</span>
-        <p>Mobile simulator golf, built and run for events across Northern Colorado.</p>
+        <p>An inflatable golf simulator, delivered and run for events across Northern Colorado.</p>
       </div>
       <div class="foot-cols">
         <div class="foot-col">
           <span class="label">Book</span>
           <a href="#book">Check a date</a>
-          <a href="#packages">Packages</a>
-          <a href="#fit">Will it fit</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#faq">Will it fit</a>
         </div>
         <div class="foot-col">
           <span class="label">Learn</span>
-          <a href="#rig">The setup</a>
+          <a href="#setup">The setup</a>
           <a href="#events">Event types</a>
           <a href="#faq">FAQ</a>
         </div>
@@ -1340,7 +1359,7 @@ footer{ padding-block:clamp(3rem,5vw,4.5rem) 2.5rem; border-top:1px solid var(--
 
   /* ------------------------------------------------------------------
      BRAND — change this one string to rename the whole site.
-     (Also update the <title> tag at the top of the file.)
+     (Also update the <title> and the og:/twitter: tags in <head>.)
      ------------------------------------------------------------------ */
   var BRAND = 'Pin High';
   Array.prototype.forEach.call(document.querySelectorAll('[data-brand]'), function(el){
@@ -1349,9 +1368,13 @@ footer{ padding-block:clamp(3rem,5vw,4.5rem) 2.5rem; border-top:1px solid var(--
 
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ---------------- sticky nav ---------------- */
+  /* ---------------- nav: dark over the hero, paper past it ---------------- */
   var nav = document.getElementById('nav');
-  var onScroll = function(){ nav.classList.toggle('stuck', window.scrollY > 12); };
+  var hero = document.querySelector('.hero');
+  function onScroll(){
+    var past = window.scrollY > (hero ? hero.offsetHeight - 90 : 12);
+    nav.classList.toggle('stuck', past);
+  }
   window.addEventListener('scroll', onScroll, { passive:true });
   onScroll();
 
@@ -1368,16 +1391,16 @@ footer{ padding-block:clamp(3rem,5vw,4.5rem) 2.5rem; border-top:1px solid var(--
   }
 
   /* ================================================================
-     HERO — ball flight trace on canvas
+     HERO — ball flight trace
      ================================================================ */
   var cv = document.getElementById('flight');
   var ctx = cv.getContext('2d');
 
   var SHOTS = [
-    { club:'Driver',   speed:162, launch:13.4, spin:2410, carry:278 },
-    { club:'7 Iron',   speed:118, launch:18.2, spin:6750, carry:172 },
-    { club:'3 Wood',   speed:151, launch:11.8, spin:3140, carry:249 },
-    { club:'Gap Wedge',speed: 78, launch:29.5, spin:9400, carry:104 }
+    { club:'Driver',    speed:162, launch:13.4, spin:2410, carry:278 },
+    { club:'7 Iron',    speed:118, launch:18.2, spin:6750, carry:172 },
+    { club:'3 Wood',    speed:151, launch:11.8, spin:3140, carry:249 },
+    { club:'Gap Wedge', speed: 78, launch:29.5, spin:9400, carry:104 }
   ];
   var MAX_CARRY = 290;
 
@@ -1393,140 +1416,107 @@ footer{ padding-block:clamp(3rem,5vw,4.5rem) 2.5rem; border-top:1px solid var(--
   function size(){
     dpr = Math.min(window.devicePixelRatio || 1, 2);
     var rect = cv.getBoundingClientRect();
-    W = Math.max(rect.width, 320);
-    H = W * (380 / 720);
+    W = Math.max(rect.width, 300);
+    H = W * (300 / 720);
     cv.width  = Math.round(W * dpr);
     cv.height = Math.round(H * dpr);
     cv.style.height = H + 'px';
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
   }
 
-  var PAD_L = 26, PAD_R = 26, GROUND_OFF = 46, TOP_OFF = 26;
-
+  var PAD_L = 24, PAD_R = 24, GROUND_OFF = 38, TOP_OFF = 20;
   function ground(){ return H - GROUND_OFF; }
 
   function drawStage(){
     ctx.clearRect(0, 0, W, H);
-
     var gy = ground();
-
-    /* turf band */
     var turf = ctx.createLinearGradient(0, gy, 0, H);
-    turf.addColorStop(0, 'rgba(41,74,63,.55)');
-    turf.addColorStop(1, 'rgba(11,22,19,0)');
+    turf.addColorStop(0, 'rgba(36,81,58,.6)');
+    turf.addColorStop(1, 'rgba(12,31,20,0)');
     ctx.fillStyle = turf;
     ctx.fillRect(0, gy, W, H - gy);
 
-    /* horizon */
-    ctx.strokeStyle = 'rgba(35,64,58,.9)';
+    ctx.strokeStyle = 'rgba(36,81,58,.95)';
     ctx.lineWidth = 1;
-    ctx.beginPath();
-    ctx.moveTo(0, gy + .5);
-    ctx.lineTo(W, gy + .5);
-    ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(0, gy + .5); ctx.lineTo(W, gy + .5); ctx.stroke();
 
-    /* yardage ticks */
     ctx.font = '9px "Martian Mono", ui-monospace, monospace';
-    ctx.fillStyle = 'rgba(113,138,124,.85)';
+    ctx.fillStyle = 'rgba(130,167,142,.9)';
     ctx.textAlign = 'center';
     var usable = W - PAD_L - PAD_R;
     for (var y = 50; y <= 250; y += 50){
       var x = PAD_L + (y / MAX_CARRY) * usable;
-      ctx.strokeStyle = 'rgba(35,64,58,.55)';
-      ctx.beginPath();
-      ctx.moveTo(x, gy);
-      ctx.lineTo(x, gy - 7);
-      ctx.stroke();
-      ctx.fillText(String(y), x, gy + 17);
+      ctx.strokeStyle = 'rgba(36,81,58,.6)';
+      ctx.beginPath(); ctx.moveTo(x, gy); ctx.lineTo(x, gy - 6); ctx.stroke();
+      ctx.fillText(String(y), x, gy + 15);
     }
-
-    /* tee marker */
-    ctx.fillStyle = 'rgba(162,183,169,.6)';
+    ctx.fillStyle = 'rgba(169,197,178,.6)';
     ctx.fillRect(PAD_L - 1, gy - 5, 2, 5);
   }
 
   function pathPoint(shot, t){
     var usable = W - PAD_L - PAD_R;
     var span   = (shot.carry / MAX_CARRY) * usable;
-    var apexK  = 0.30 + (shot.launch / 45) * 0.85;      // launch angle -> arc height
+    var apexK  = 0.30 + (shot.launch / 45) * 0.85;
     var maxH   = (ground() - TOP_OFF) * Math.min(apexK, 1);
-    var x = PAD_L + span * t;
-    var y = ground() - Math.sin(Math.PI * t) * maxH * (1 - 0.16 * t); // slight descent skew
-    return { x:x, y:y };
+    return {
+      x: PAD_L + span * t,
+      y: ground() - Math.sin(Math.PI * t) * maxH * (1 - 0.16 * t)
+    };
   }
 
   function drawTrace(shot, t){
     drawStage();
+    var steps = 120, upto = Math.max(1, Math.floor(steps * t)), i, p;
 
-    var steps = 120;
-    var upto  = Math.max(1, Math.floor(steps * t));
-
-    /* glow pass */
     ctx.lineCap = 'round';
-    ctx.strokeStyle = 'rgba(233,127,60,.16)';
+    ctx.strokeStyle = 'rgba(217,102,31,.16)';
     ctx.lineWidth = 7;
     ctx.beginPath();
-    for (var i = 0; i <= upto; i++){
-      var p = pathPoint(shot, (i / steps) * t);
-      if (i === 0) ctx.moveTo(p.x, p.y); else ctx.lineTo(p.x, p.y);
-    }
+    for (i = 0; i <= upto; i++){ p = pathPoint(shot, (i / steps) * t); i ? ctx.lineTo(p.x, p.y) : ctx.moveTo(p.x, p.y); }
     ctx.stroke();
 
-    /* core trace */
     var grad = ctx.createLinearGradient(PAD_L, 0, W - PAD_R, 0);
-    grad.addColorStop(0, 'rgba(233,127,60,.15)');
-    grad.addColorStop(.55, 'rgba(233,127,60,.85)');
+    grad.addColorStop(0, 'rgba(217,102,31,.15)');
+    grad.addColorStop(.55, 'rgba(233,135,63,.9)');
     grad.addColorStop(1, 'rgba(201,242,77,.95)');
     ctx.strokeStyle = grad;
     ctx.lineWidth = 2;
     ctx.beginPath();
-    for (var j = 0; j <= upto; j++){
-      var q = pathPoint(shot, (j / steps) * t);
-      if (j === 0) ctx.moveTo(q.x, q.y); else ctx.lineTo(q.x, q.y);
-    }
+    for (i = 0; i <= upto; i++){ p = pathPoint(shot, (i / steps) * t); i ? ctx.lineTo(p.x, p.y) : ctx.moveTo(p.x, p.y); }
     ctx.stroke();
 
-    /* ball */
     var head = pathPoint(shot, t);
-    ctx.fillStyle = 'rgba(201,242,77,.20)';
-    ctx.beginPath(); ctx.arc(head.x, head.y, 9, 0, Math.PI * 2); ctx.fill();
-    ctx.fillStyle = '#F3EFE6';
-    ctx.beginPath(); ctx.arc(head.x, head.y, 3.4, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = 'rgba(201,242,77,.2)';
+    ctx.beginPath(); ctx.arc(head.x, head.y, 8, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = '#F0F4EB';
+    ctx.beginPath(); ctx.arc(head.x, head.y, 3.2, 0, Math.PI * 2); ctx.fill();
 
-    /* landing marker once it's down */
     if (t >= 1){
       ctx.strokeStyle = 'rgba(201,242,77,.55)';
       ctx.lineWidth = 1;
-      ctx.beginPath();
-      ctx.arc(head.x, ground(), 9, 0, Math.PI * 2);
-      ctx.stroke();
+      ctx.beginPath(); ctx.arc(head.x, ground(), 8, 0, Math.PI * 2); ctx.stroke();
     }
   }
 
   function setReadout(shot, t){
-    var e = t < 1 ? (t * t) : 1;
-    el.speed.textContent  = Math.round(shot.speed * Math.min(1, t * 3));
-    el.launch.textContent = (shot.launch * Math.min(1, t * 3)).toFixed(1);
-    el.spin.textContent   = Math.round(shot.spin * Math.min(1, t * 3)).toLocaleString('en-US');
+    var e = t < 1 ? (t * t) : 1, k = Math.min(1, t * 3);
+    el.speed.textContent  = Math.round(shot.speed * k);
+    el.launch.textContent = (shot.launch * k).toFixed(1);
+    el.spin.textContent   = Math.round(shot.spin * k).toLocaleString('en-US');
     el.carry.textContent  = Math.round(shot.carry * e);
   }
 
   var shotIx = 0, start = null, holding = false, holdUntil = 0;
-
-  function label(shot, ix){
-    el.club.textContent = shot.club + ' — Shot ' + String(ix + 1).padStart(2, '0');
-  }
+  function label(shot, ix){ el.club.textContent = shot.club + ' — Shot ' + String(ix + 1).padStart(2, '0'); }
 
   function frame(ts){
     if (start === null) start = ts;
     var shot = SHOTS[shotIx];
-    var dur = 1700;
-    var t = Math.min(1, (ts - start) / dur);
+    var t = Math.min(1, (ts - start) / 1700);
     var eased = 1 - Math.pow(1 - t, 1.6);
-
     drawTrace(shot, Math.max(eased, .001));
     setReadout(shot, eased);
-
     if (t >= 1){
       if (!holding){ holding = true; holdUntil = ts + 2200; }
       if (ts >= holdUntil){
@@ -1539,97 +1529,76 @@ footer{ padding-block:clamp(3rem,5vw,4.5rem) 2.5rem; border-top:1px solid var(--
   }
 
   function boot(){
-    size();
-    label(SHOTS[0], 0);
-    if (reduced){
-      drawTrace(SHOTS[0], 1);
-      setReadout(SHOTS[0], 1);
-    } else {
-      requestAnimationFrame(frame);
-    }
+    size(); label(SHOTS[0], 0);
+    if (reduced){ drawTrace(SHOTS[0], 1); setReadout(SHOTS[0], 1); }
+    else { requestAnimationFrame(frame); }
   }
-
   var rz;
   window.addEventListener('resize', function(){
     clearTimeout(rz);
-    rz = setTimeout(function(){
-      size();
-      if (reduced){ drawTrace(SHOTS[shotIx], 1); }
-    }, 140);
+    rz = setTimeout(function(){ size(); if (reduced) drawTrace(SHOTS[shotIx], 1); }, 140);
   });
-
   if (document.fonts && document.fonts.ready){ document.fonts.ready.then(boot); } else { boot(); }
 
   /* ================================================================
-     FIT CHECKER
+     FIT CALCULATOR — one inflatable unit, inside or outside
      ================================================================ */
-  var sH = document.getElementById('s-h'),
-      sW = document.getElementById('s-w'),
-      sD = document.getElementById('s-d'),
-      oH = document.getElementById('o-h'),
-      oW = document.getElementById('o-w'),
-      oD = document.getElementById('o-d'),
-      segIn = document.getElementById('seg-in'),
-      segOut = document.getElementById('seg-out'),
-      vBox = document.getElementById('verdict'),
-      vTag = document.getElementById('v-tag'),
-      vHead = document.getElementById('v-head'),
-      vBody = document.getElementById('v-body'),
-      vSetup = document.getElementById('v-setup'),
-      vClear = document.getElementById('v-clear'),
+  var sH = document.getElementById('s-h'), sW = document.getElementById('s-w'), sD = document.getElementById('s-d'),
+      oH = document.getElementById('o-h'), oW = document.getElementById('o-w'), oD = document.getElementById('o-d'),
+      segIn = document.getElementById('seg-in'), segOut = document.getElementById('seg-out'),
+      vBox = document.getElementById('verdict'), vTag = document.getElementById('v-tag'),
+      vHead = document.getElementById('v-head'), vBody = document.getElementById('v-body'),
+      vSetup = document.getElementById('v-setup'), vClear = document.getElementById('v-clear'),
       vClubs = document.getElementById('v-clubs');
 
   var outdoor = false;
 
   function verdict(){
     var h = +sH.value, w = +sW.value, d = +sD.value;
-    oH.textContent = h + ' ft';
-    oW.textContent = w + ' ft';
-    oD.textContent = d + ' ft';
+    oH.textContent = h + ' ft'; oW.textContent = w + ' ft'; oD.textContent = d + ' ft';
 
     if (outdoor){
-      var ok = (w >= 20 && d >= 45);
+      var ok = (w >= 15 && d >= 12);
       vBox.style.setProperty('--vc', ok ? 'var(--yes)' : 'var(--caution)');
       vTag.textContent = ok ? 'Good to go' : 'Tight — let’s talk';
-      vHead.textContent = ok ? 'The Rig parks here.' : 'Close on space.';
+      vHead.textContent = ok ? 'Plenty of room outside.' : 'Close on space.';
       vBody.textContent = ok
-        ? 'Fifteen minutes from arriving to the first shot, and it brings its own power.'
-        : 'The trailer wants about 45 by 20 feet of level pavement plus room to swing the tow vehicle. Send photos and we’ll tell you honestly.';
-      vSetup.textContent = 'The Rig';
-      vClear.textContent = '14′ overhead needed';
+        ? 'Staked into grass or weighted on pavement, with nothing overhead. Height stops being a question out here.'
+        : 'We need about 15 by 12 feet of flat ground clear of branches and wires. Send a photo and we will tell you honestly.';
+      vSetup.textContent = 'Outside';
+      vClear.textContent = 'Open sky — no limit';
       vClubs.textContent = 'Driver → wedge';
       return;
     }
 
-    if (h >= 10 && w >= 13 && d >= 15){
+    if (h >= 10 && w >= 15 && d >= 12){
       vBox.style.setProperty('--vc', 'var(--yes)');
       vTag.textContent = 'Good to go';
-      vHead.textContent = 'The Bay fits.';
-      vBody.textContent = 'Full swings, every club in the bag, driver included. We build it in about ninety minutes and strike it the same night.';
-      vSetup.textContent = 'The Bay';
+      vHead.textContent = 'It fits.';
+      vBody.textContent = 'Full swings, every club in the bag, driver included. Up in about forty-five minutes and away the same night.';
+      vSetup.textContent = 'Inside';
       vClear.textContent = '+' + (h - 10) + '′ overhead';
       vClubs.textContent = 'Driver → wedge';
-    } else if (h >= 9 && w >= 12 && d >= 14){
+    } else if (h >= 9 && w >= 13 && d >= 11){
       vBox.style.setProperty('--vc', 'var(--caution)');
       vTag.textContent = 'Workable';
       vHead.textContent = 'Fits — minus the driver.';
-      vBody.textContent = 'At ' + h + ' feet we run irons, wedges, closest-to-the-pin and par-3 courses. That is what most guests want anyway, and nobody puts a ball through your ceiling.';
-      vSetup.textContent = 'The Bay, short-game mode';
+      vBody.textContent = 'At ' + h + ' feet we run irons, wedges, closest-to-the-pin and par-3 courses. That is what most guests want anyway, and nothing goes through your ceiling.';
+      vSetup.textContent = 'Inside, short-game mode';
       vClear.textContent = h + '′ — under the 10′ ideal';
       vClubs.textContent = '5 iron → wedge';
     } else {
       vBox.style.setProperty('--vc', 'var(--alt)');
-      vTag.textContent = 'Not indoors — here’s the fix';
-      vHead.textContent = 'We’d park outside instead.';
-      vBody.textContent = 'This room is too tight for a real swing, and we would rather say so than break something. The Rig sets up in your lot with 45 by 20 feet of pavement and needs no power from you.';
-      vSetup.textContent = 'The Rig';
+      vTag.textContent = 'Not in this room';
+      vHead.textContent = 'We’d set up outside.';
+      vBody.textContent = 'This room is too tight for a real swing, and we would rather say so than break something. Outside needs about 15 by 12 feet of flat ground and no power beyond one outlet.';
+      vSetup.textContent = 'Outside';
       vClear.textContent = 'Room is ' + h + '′ — need 9′+';
       vClubs.textContent = 'Driver → wedge';
     }
   }
 
   [sH, sW, sD].forEach(function(s){ s.addEventListener('input', verdict); });
-
   function setMode(isOut){
     outdoor = isOut;
     segIn.setAttribute('aria-pressed', String(!isOut));
@@ -1638,14 +1607,12 @@ footer{ padding-block:clamp(3rem,5vw,4.5rem) 2.5rem; border-top:1px solid var(--
   }
   segIn.addEventListener('click', function(){ setMode(false); });
   segOut.addEventListener('click', function(){ setMode(true); });
-
   Array.prototype.forEach.call(document.querySelectorAll('#chips .chip'), function(c){
     c.addEventListener('click', function(){
       sH.value = c.dataset.h; sW.value = c.dataset.w; sD.value = c.dataset.d;
       setMode(false);
     });
   });
-
   verdict();
 
   /* ================================================================
@@ -1660,6 +1627,5 @@ footer{ padding-block:clamp(3rem,5vw,4.5rem) 2.5rem; border-top:1px solid var(--
   });
 })();
 </script>
-
 </body>
 </html>
