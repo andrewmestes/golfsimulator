@@ -191,10 +191,32 @@ the customer's outcome, rewrite it.
 
 ## The share card
 
-`img/og.jpg`, 1200×630, wired up with `og:image`, `twitter:image` and
-`summary_large_image`. It is generated, not hand-designed — the recipe is a
-small SVG (photo + scrim + type) run through `rsvg-convert` and then `sips` to
-JPEG. Regenerate it whenever the headline changes so the card and the page agree.
+`img/og.jpg`, 1200×630, wired to `og:image`, `twitter:image` and
+`summary_large_image`. Generated, not hand-placed: a small SVG (photo + scrim +
+type) through `rsvg-convert`, then `sips` to JPEG.
+
+**It is designed for a phone, because that is where links get shared.** Two
+constraints drove the layout, and both were verified by actually rendering them:
+
+- **Centred, inside a 600px-wide safe zone.** Chat apps centre-crop toward
+  square. The first version was left-aligned, and a 630×630 crop cut the brand
+  name off entirely and left the headline reading "g a golf simulator". Anything
+  that must survive belongs between roughly x=300 and x=900.
+- **Big type, very little of it.** iMessage renders the card about 300pt wide, so
+  a 23px label on the 1200px canvas lands near 6pt — invisible. Nothing below
+  about 27px earns its place. The old card had a two-line 23px standfirst.
+
+Check both before shipping a new card:
+
+```bash
+sips -c 630 630 img/og.jpg --out /tmp/sq.jpg      # square crop survives?
+sips -z 158 300 img/og.jpg --out /tmp/tiny.jpg    # legible in a message bubble?
+```
+
+**Bump `?v=` on the `og:image` URL whenever the card art changes.** iMessage,
+WhatsApp and Facebook cache the preview against the image URL, so a redesign
+with the same URL will keep serving the old picture to anyone who shared it
+before.
 
 **The URLs in `og:image` and `og:url` are absolute and hardcoded to the
 `golfsimulator-eight.vercel.app` domain.** They must be updated the day a custom
