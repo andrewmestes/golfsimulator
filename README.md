@@ -119,16 +119,36 @@ draft was dark throughout and read as heavy.
 word in the headline, and the draft notice. `--signal` chartreuse is data-only:
 launch-monitor numerals and the stat-band units. It is not a brand colour.
 
-## The copy is written customer-first
+## The copy is written for instant recognition
 
-StoryBrand rules apply: the host is the hero, we are the guide. The headline is
-**"Be the reason nobody leaves early."** — what the buyer gets, not what we own.
-An earlier draft ran "A golf course that fits in a van", which is a fact about
-our equipment and gives a prospective client nothing.
+This is a party-enhancing service. An event planner landing here has one
+question — *can I hire these people to bring a golf simulator to my event?* The
+page has to answer it before they scroll.
 
-Same test elsewhere: the setup section is "Nothing for you to set up", not "One
-unit, inside or out". If a heading describes the product rather than the
-customer's outcome, rewrite it.
+So the headline is literal: **"We bring a golf simulator to your event."** Two
+earlier attempts failed different halves of that test. "A golf course that fits
+in a van" was a fact about our equipment and gave the buyer nothing.
+"Be the reason nobody leaves early" was customer-centric but never said what the
+service *is* — clever, and confusing.
+
+StoryBrand still applies underneath: the host is the hero, we are the guide, and
+the subhead carries the outcome ("Nobody leaves early"). But clarity outranks
+cleverness in the H1, every time.
+
+Same test on section headings: the setup section is "Nothing for you to set up",
+not "One unit, inside or out". If a heading describes the product rather than
+the customer's outcome, rewrite it.
+
+## The share card
+
+`img/og.jpg`, 1200×630, wired up with `og:image`, `twitter:image` and
+`summary_large_image`. It is generated, not hand-designed — the recipe is a
+small SVG (photo + scrim + type) run through `rsvg-convert` and then `sips` to
+JPEG. Regenerate it whenever the headline changes so the card and the page agree.
+
+**The URLs in `og:image` and `og:url` are absolute and hardcoded to the
+`golfsimulator-eight.vercel.app` domain.** They must be updated the day a custom
+domain is attached, or link previews will break.
 
 ## Content notes that are easy to get wrong
 
