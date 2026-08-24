@@ -115,6 +115,35 @@ library, and the club is famously aggressive about its trademarks. Don't add it.
 
 Rows pause on hover and stop entirely under `prefers-reduced-motion`.
 
+## The fun is load-bearing
+
+This competes with Topgolf for the same feeling, so restraint past a point reads
+as dull. Four things carry it, and none of them should be quietly removed:
+
+- **The chartreuse stat bar.** `--zing` (`#C9F24D`) as a full-width ground with
+  dark figures on it. It used to be a muted turf gradient and it was the most
+  forgettable band on the page.
+- **Numbers that roll up** when the bar scrolls into view. A launch monitor
+  counts, so the stats do too.
+- **The highlighter.** `.hl` paints chartreuse behind a word in a heading. Only
+  ever as a *background* with dark text on top.
+- **The tilted MOST BOOKED sticker** and the round chartreuse step tokens.
+
+### One hard rule about chartreuse
+
+It scores about **1.5:1 as text on paper**. It is unreadable that way. Use it as
+a ground with `--ink` on top (13.3:1), or as text on a dark ground. Never
+`color: var(--zing)` on a light section.
+
+### The counters degrade to the truth
+
+`.specbar .n` carries the **real figure** in the markup, and the script sets it
+to zero only once it has decided to animate. Written the other way round — `0` in
+the HTML, filled in by JS — a missing IntersectionObserver, a never-firing
+callback or a paused `requestAnimationFrame` leaves "0 min / 0 courses" on a live
+page. Both failure modes were observed while building this. There is also a
+`setTimeout` that force-settles the final values if rAF stalls part-way.
+
 ## Colour and weight
 
 Paper-first: `--paper #F7F5EE` is the page. Dark is held back for three moments —

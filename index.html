@@ -67,8 +67,12 @@
   --apricot:  #D9661F;
   --apricot-2:#E9873F;
 
-  /* data only — launch-monitor numerals on dark */
+  /* zing — range-ball chartreuse. Was data-only; now the fun colour.
+     NEVER as text on paper (about 1.5:1). Dark grounds, or as a ground
+     with dark text on it. */
   --signal:   #C9F24D;
+  --zing:     #C9F24D;
+  --zing-lo:  #A9D62F;
 
   /* semantics */
   --yes:      #1A7A49;
@@ -257,17 +261,26 @@ h1.display em{ font-style:normal; color:var(--apricot-2); }
 .readout .unit{ font-family:var(--sans); font-size:.6rem; color:var(--sage-dim); margin-left:.2rem; letter-spacing:0; }
 
 /* ============ SPEC BAR (turf) ============ */
-.specbar{ background:linear-gradient(170deg, var(--turf) 0%, var(--turf-2) 100%); }
+.specbar{ background:var(--zing); }
 .specbar-grid{ display:grid; grid-template-columns:repeat(2,1fr); }
 @media (min-width: 820px){ .specbar-grid{ grid-template-columns:repeat(4,1fr); } }
-.spec{ padding:clamp(1.5rem,3vw,2.2rem) var(--gut); border-right:1px solid rgba(255,255,255,.15); border-bottom:1px solid rgba(255,255,255,.15); }
+.spec{ padding:clamp(1.5rem,3vw,2.2rem) var(--gut); border-right:1px solid rgba(12,31,20,.16); border-bottom:1px solid rgba(12,31,20,.16); }
 @media (min-width: 820px){ .spec{ border-bottom:0; } .spec:last-child{ border-right:0; } }
 @media (max-width: 819px){ .spec:nth-child(2n){ border-right:0; } .spec:nth-child(n+3){ border-bottom:0; } }
 /* these must out-specify nothing else, but keep the extra class as a guard */
-.specbar .spec .big{ font-family:var(--mono); font-weight:700; font-size:clamp(1.6rem,3.4vw,2.2rem); letter-spacing:-.06em; color:#FFF; display:block; line-height:1; }
-.specbar .spec .big s{ text-decoration:none; color:var(--signal); }
-.specbar .spec p{ margin:.65rem 0 0; color:#D5E9DC; font-size:var(--step--1); line-height:1.45; max-width:24ch; }
+.specbar .spec .big{ font-family:var(--mono); font-weight:700; font-size:clamp(1.9rem,4.2vw,2.9rem); letter-spacing:-.06em; color:var(--ink); display:block; line-height:1; }
+.specbar .spec .big s{ text-decoration:none; color:var(--turf); }
+.specbar .spec .n{ font-variant-numeric:tabular-nums; }
+.specbar .spec p{ margin:.7rem 0 0; color:#2B4634; font-size:var(--step--1); line-height:1.45; max-width:24ch; font-weight:500; }
 
+
+/* ============ PLAYFUL BITS ============ */
+/* chartreuse swiped behind a word, like a highlighter */
+.hl{
+  background-image:linear-gradient(180deg, transparent 56%, var(--zing) 56%, var(--zing) 93%, transparent 93%);
+  padding:0 .08em;
+}
+.bone-hl{ background-image:linear-gradient(180deg, transparent 56%, var(--zing) 56%, var(--zing) 93%, transparent 93%); }
 
 /* ============ COURSE TICKER ============
    The joke is the collision: a legendary course against an ordinary room.
@@ -354,9 +367,9 @@ section{ padding-block:var(--pad-sec); }
 .ev{
   background:var(--card); border:1px solid var(--paper-3); border-radius:4px;
   overflow:hidden; display:flex; flex-direction:column;
-  transition:border-color .25s ease, transform .25s ease, box-shadow .25s ease;
+  transition:border-color .25s ease, transform .3s cubic-bezier(.2,.9,.3,1.4), box-shadow .25s ease;
 }
-.ev:hover{ border-color:var(--turf); transform:translateY(-3px); box-shadow:0 18px 36px -24px rgba(21,40,28,.45); }
+.ev:hover{ border-color:var(--zing-lo); transform:translateY(-6px); box-shadow:0 22px 42px -22px rgba(21,40,28,.5); }
 @media (prefers-reduced-motion: reduce){ .ev:hover{ transform:none; } }
 .ev-media{ position:relative; aspect-ratio:4/3; overflow:hidden; background:var(--paper-2); }
 .ev-media img{
@@ -382,7 +395,13 @@ section{ padding-block:var(--pad-sec); }
   .step:first-child{ padding-left:0; }
   .step:last-child{ border-right:0; padding-right:0; }
 }
-.step .n{ font-family:var(--mono); font-weight:700; font-size:.78rem; color:var(--turf); display:block; margin-bottom:.9rem; letter-spacing:-.02em; }
+.step .n{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:46px; height:46px; border-radius:50%;
+  background:var(--zing); color:var(--ink);
+  font-family:var(--mono); font-weight:700; font-size:1.05rem;
+  letter-spacing:-.05em; margin-bottom:1.1rem;
+}
 .step h3{ font-family:var(--disp); font-stretch:112%; font-weight:800; font-size:1.4rem; margin:0 0 .6rem; letter-spacing:-.02em; line-height:1.1; }
 .step p{ margin:0; color:var(--on-paper-2); font-size:var(--step--1); }
 
@@ -413,9 +432,12 @@ section{ padding-block:var(--pad-sec); }
 }
 .card.featured{ border-color:var(--turf); border-width:2px; box-shadow:0 20px 40px -28px rgba(20,102,61,.5); }
 .card .tag{
-  position:absolute; top:-1px; right:-1px; background:var(--turf); color:#FFF;
+  position:absolute; top:-15px; right:-12px;
+  background:var(--zing); color:var(--ink);
   font-family:var(--disp); font-stretch:70%; font-weight:700; text-transform:uppercase;
-  letter-spacing:.14em; font-size:.56rem; padding:.4rem .7rem;
+  letter-spacing:.13em; font-size:.62rem; padding:.5rem .8rem; border-radius:3px;
+  transform:rotate(3.5deg);
+  box-shadow:0 8px 18px -8px rgba(12,31,20,.45);
 }
 .card h3{ font-family:var(--disp); font-stretch:118%; font-weight:900; text-transform:uppercase; font-size:1.4rem; margin:0; letter-spacing:-.02em; line-height:1; }
 .card .who{ color:var(--on-paper-2); font-size:var(--step--1); margin:.45rem 0 0; }
@@ -608,7 +630,7 @@ footer{ background:var(--ink); color:var(--on-ink); padding-block:clamp(2.5rem,5
         <div class="hero-micro">
           <span>Indoors or outdoors</span>
           <span>400+ courses</span>
-          <span>We run every game</span>
+          <span>Beginners welcome, ringers exposed</span>
         </div>
       </div>
 
@@ -640,17 +662,17 @@ footer{ background:var(--ink); color:var(--on-ink); padding-block:clamp(2.5rem,5
   <!-- ================= SPEC BAR ================= -->
   <div class="specbar">
     <div class="specbar-grid">
-      <div class="spec"><span class="big">45<s>min</s></span><p>From the van pulling up to the first tee shot.</p></div>
-      <div class="spec"><span class="big">400<s>+</s></span><p>Courses on the menu, from Pebble Beach to St Andrews.</p></div>
-      <div class="spec"><span class="big">50<s>/hr</s></span><p>Guests through the bay per hour on a party rotation.</p></div>
-      <div class="spec"><span class="big">60<s>mi</s></span><p>Radius from Loveland — Cheyenne to Denver, Estes to Greeley.</p></div>
+      <div class="spec"><span class="big"><span class="n" data-to="45">45</span><s>min</s></span><p>From the van pulling up to the first tee shot.</p></div>
+      <div class="spec"><span class="big"><span class="n" data-to="400">400</span><s>+</s></span><p>Courses on the menu, from Pebble Beach to St Andrews.</p></div>
+      <div class="spec"><span class="big"><span class="n" data-to="50">50</span><s>/hr</s></span><p>Guests through the bay per hour on a party rotation.</p></div>
+      <div class="spec"><span class="big"><span class="n" data-to="60">60</span><s>mi</s></span><p>Radius from Loveland — Cheyenne to Denver, Estes to Greeley.</p></div>
     </div>
   </div>
 
 
   <!-- ================= COURSE TICKER ================= -->
   <section class="ticker" aria-label="Courses you can play, and where">
-    <p class="label ticker-lead">Four hundred courses. Your room.</p>
+    <p class="label ticker-lead">Four hundred courses. Pick a fight with any of them.</p>
     <div class="ticker-inner">
       <div class="ticker-row fwd">
         <div class="ticker-track">
@@ -746,7 +768,7 @@ footer{ background:var(--ink); color:var(--on-ink); padding-block:clamp(2.5rem,5
     <div class="wrap">
       <div class="sec-head rv">
         <p class="label eyebrow">Events we show up for</p>
-        <h2 class="display">What are you throwing?</h2>
+        <h2 class="display">What are you <span class="hl">throwing?</span></h2>
         <p>Pick the one closest to yours. We tailor the games, the scoring and the on-screen
            branding to match — a bracket for the sales team isn't the same night as a
            longest-drive board at a wedding.</p>
@@ -792,7 +814,7 @@ footer{ background:var(--ink); color:var(--on-ink); padding-block:clamp(2.5rem,5
             <p class="label">Fundraising</p>
             <h3>Charity nights &amp; tournaments</h3>
             <p>A hole-in-one contest with no course, no tee time and no weather. Sell the
-               screen to a sponsor and the night pays for itself before the doors open.</p>
+               screen to a sponsor and the night pays for itself before anyone swings.</p>
             <p class="hook">Sponsorship often covers the rental</p>
           </div>
         </article>
@@ -823,19 +845,19 @@ footer{ background:var(--ink); color:var(--on-ink); padding-block:clamp(2.5rem,5
       </div>
       <div class="steps">
         <div class="step rv">
-          <span class="n">STEP 01</span>
-          <h3>Send us the date and the space</h3>
+          <span class="n">1</span>
+          <h3>Send us the date and the room</h3>
           <p>We confirm it works before you pay anything. If the room is too tight we say
              so and suggest setting up outside instead.</p>
         </div>
         <div class="step rv">
-          <span class="n">STEP 02</span>
-          <h3>We show up early and stand it up</h3>
+          <span class="n">2</span>
+          <h3>We show up early and blow it up</h3>
           <p>Inflated and dialled in before your guests arrive, packed away the same
              night. Clubs, balls, tees and a left-handed set are ours to bring.</p>
         </div>
         <div class="step rv">
-          <span class="n">STEP 03</span>
+          <span class="n">3</span>
           <h3>We run it while you host</h3>
           <p>A host manages the rotation, teaches the first-timers, keeps the leaderboard
              honest, and settles the arguments. You go be at your own party.</p>
@@ -875,7 +897,7 @@ footer{ background:var(--ink); color:var(--on-ink); padding-block:clamp(2.5rem,5
     <div class="wrap">
       <div class="sec-head rv">
         <p class="label eyebrow">Pricing</p>
-        <h2 class="display">Priced by the hours you actually need.</h2>
+        <h2 class="display">Priced by the hours you <span class="hl">actually need.</span></h2>
         <p>Every package includes delivery inside 30 miles of Loveland, setup and teardown,
            clubs for righties and lefties, balls, and a host on site the whole time.</p>
       </div>
@@ -1440,6 +1462,45 @@ footer{ background:var(--ink); color:var(--on-ink); padding-block:clamp(2.5rem,5
     rz = setTimeout(function(){ size(); if (reduced) drawTrace(SHOTS[shotIx], 1); }, 140);
   });
   if (document.fonts && document.fonts.ready){ document.fonts.ready.then(boot); } else { boot(); }
+
+  /* ================================================================
+     STAT BAR — numbers roll up when the bar arrives. A launch monitor
+     counts; so should this.
+     ================================================================ */
+  (function(){
+    var bar = document.querySelector('.specbar');
+    if (!bar) return;
+    var nums = [].slice.call(bar.querySelectorAll('.n'));
+    function settle(){ nums.forEach(function(n){ n.textContent = n.dataset.to; }); }
+    // The markup already carries the real figures. Roll-up is an enhancement,
+    // so a missing IntersectionObserver or a never-firing callback costs the
+    // animation, never the numbers.
+    if (reduced || !('IntersectionObserver' in window)) return;
+
+    var ran = false;
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (!e.isIntersecting || ran) return;
+        ran = true; obs.disconnect();
+        var t0 = null, DUR = 1100;
+        nums.forEach(function(n){ n.textContent = '0'; });
+        // requestAnimationFrame pauses when the page is not being painted, which
+        // would strand the numbers part-way. Guarantee the final value regardless.
+        setTimeout(settle, DUR + 500);
+        function step(ts){
+          if (t0 === null) t0 = ts;
+          var p = Math.min(1, (ts - t0) / DUR);
+          var eased = 1 - Math.pow(1 - p, 3);
+          nums.forEach(function(n){
+            n.textContent = Math.round(+n.dataset.to * eased);
+          });
+          if (p < 1) requestAnimationFrame(step); else settle();
+        }
+        requestAnimationFrame(step);
+      });
+    }, { threshold: 0.35 });
+    obs.observe(bar);
+  })();
 
   /* ================================================================
      FIT CALCULATOR — one inflatable unit, inside or outside
