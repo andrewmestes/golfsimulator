@@ -48,31 +48,25 @@ this at $298/hr, which put it in the wrong category. Current sample rates —
 $595/3hr, $895/5hr, $1,595/day — sit inside the inflatable band. Still sample
 numbers; the real ones are the client's to set.
 
-## The rig illustration
+## There is no rig illustration any more
 
-`<symbol id="rig">` near the top of `<body>`, used twice (hero and the setup
-figure) via `<use href="#rig">`. Edit it once.
+A hand-drawn SVG of the unit was tried twice — first as a white front-facing
+frame, then as a black three-quarter cube built from the client's reference
+photo. Both were cut. At hero size the drawn golfer and flat panels read as
+amateur work, which is worse than no image.
 
-It is drawn from a reference photo the client supplied, so keep these true:
+The hero now uses `bay.jpg`, a real photograph of a golf simulator.
 
-- **It is black**, not white. Matte dark vinyl with welded seams.
-- **It is a cube you walk into**, drawn in three-quarter perspective — a top
-  slab, a right wall receding, and an open front. An earlier draft drew a flat
-  white front-facing arch, which read as a picture frame.
-- **The golfer stands inside, silhouetted against the lit screen.** Against the
-  dark side wall they vanish. Scale is what stops the whole thing reading as a
-  television.
-- **Green turf wraps the front and right**, extending past the unit.
+**It is a rigid bay, not an inflatable.** That is a knowing compromise, and the
+setup figure carries a caption saying so. The search was exhausted first:
+Openverse has nothing for "inflatable golf simulator"; Pexels "inflatable
+screen" is all outdoor cinemas; the only on-concept public results (a US Army
+"Outdoor Golf Simulator" set) are **CC BY-NC-ND**, which forbids both commercial
+use and cropping. Competitors' photos are copyrighted and are their equipment.
 
-A halo ellipse sits behind the box so a black object still reads on the dark
-hero. Remove it and the hero illustration disappears.
-
-**Why an illustration and not a photo:** there is no photograph of an inflatable
-golf simulator in any free-licensed library. Openverse returns nothing; Pexels
-"inflatable screen" is all outdoor cinemas. Competitors' photos are copyrighted
-and are also *their* equipment. The illustration is legally clean and reads as a
-diagram, not a fake photo. It carries a caption saying the client's own rig
-photos replace it.
+So: a real, well-shot, commercially-licensed simulator beats a drawing that
+looks fake. Replace it the moment the client photographs their own unit — that
+single photo is the highest-value asset they can bring.
 
 ## Photography — where it came from
 
@@ -80,21 +74,22 @@ Four images, all from **Pexels** under the [Pexels License](https://www.pexels.c
 free for commercial use, no attribution required. Committed to `img/` rather than
 hotlinked.
 
-| File | Pexels ID |
-| --- | --- |
-| `ev-corporate.jpg` | 6405751 |
-| `ev-wedding.jpg` | 10408275 |
-| `ev-fundraiser.jpg` | 6405786 |
-| `ev-private.jpg` | 6405661 |
+| File | Pexels ID | Where |
+| --- | --- | --- |
+| `bay.jpg` | 31212256 | Hero |
+| `turf.jpg` | 34710413 | Setup figure |
+| `ev-corporate.jpg` | 6405751 | Events |
+| `ev-wedding.jpg` | 10408275 | Events |
+| `ev-fundraiser.jpg` | 6405786 | Events |
+| `ev-private.jpg` | 6405661 | Events |
 
 **No colour cast on people.** An earlier draft ran these through a turf-green
 `mix-blend-mode: color` duotone to unify four different shoots. It unified them
 and it also made everyone look ill. Green now lives on surfaces — bands, chips,
 bullets, the segmented control — and never on skin.
 
-Three golf-course photos were used and then dropped when the site moved to
-inflatable-specific imagery: `bay.jpg` (31212256), `fairway.jpg` (6256594),
-`turf.jpg` (34710413). Re-fetch by ID if wanted.
+`fairway.jpg` (6256594) was used and dropped — a golfer on a course sells golf,
+not this service. Re-fetch by ID if wanted.
 
 **Caveat for launch:** the Pexels License permits identifiable people
 commercially, but strangers beside event copy edges toward implied endorsement.
@@ -123,6 +118,17 @@ draft was dark throughout and read as heavy.
 `--turf #14663D` carries the category. `--apricot #D9661F` is CTAs, the accent
 word in the headline, and the draft notice. `--signal` chartreuse is data-only:
 launch-monitor numerals and the stat-band units. It is not a brand colour.
+
+## The copy is written customer-first
+
+StoryBrand rules apply: the host is the hero, we are the guide. The headline is
+**"Be the reason nobody leaves early."** — what the buyer gets, not what we own.
+An earlier draft ran "A golf course that fits in a van", which is a fact about
+our equipment and gives a prospective client nothing.
+
+Same test elsewhere: the setup section is "Nothing for you to set up", not "One
+unit, inside or out". If a heading describes the product rather than the
+customer's outcome, rewrite it.
 
 ## Content notes that are easy to get wrong
 

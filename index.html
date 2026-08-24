@@ -11,12 +11,12 @@
 <meta name="robots" content="noindex, nofollow">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="A golf course that fits in a van.">
-<meta property="og:description" content="An inflatable golf simulator we deliver, set up and run for your event — indoors or outdoors, anywhere in Northern Colorado.">
+<meta property="og:title" content="Be the reason nobody leaves early.">
+<meta property="og:description" content="We bring a full golf simulator to your event and run it all night — indoors or outdoors, anywhere in Northern Colorado.">
 <meta property="og:site_name" content="Pin High Golf Co.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="A golf course that fits in a van.">
-<meta name="twitter:description" content="An inflatable golf simulator we deliver, set up and run for your event — indoors or outdoors, anywhere in Northern Colorado.">
+<meta name="twitter:title" content="Be the reason nobody leaves early.">
+<meta name="twitter:description" content="We bring a full golf simulator to your event and run it all night — indoors or outdoors, anywhere in Northern Colorado.">
 
 <meta name="theme-color" content="#0C1F14">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>%E2%9B%B3</text></svg>">
@@ -75,7 +75,7 @@
   --step-2:  1.5rem;
   --step-3:  1.9375rem;
   --step-5:  clamp(2.2rem, 4.6vw, 3.4rem);
-  --hero:    clamp(2.7rem, 7.2vw, 5.4rem);
+  --hero:    clamp(2.4rem, 5.1vw, 4.4rem);
 
   --pad-sec: clamp(4rem, 8vw, 7rem);
   --gut:     clamp(1.25rem, 4vw, 2.75rem);
@@ -202,7 +202,7 @@ a{ color:inherit; }
   grid-template-columns:1fr; align-items:center;
   padding-top:clamp(2.5rem,5vw,4rem);
 }
-@media (min-width: 980px){ .hero-grid{ grid-template-columns:.92fr 1.08fr; } }
+@media (min-width: 980px){ .hero-grid{ grid-template-columns:1fr 1fr; } }
 
 .eyebrow{ display:flex; align-items:center; gap:.7rem; color:var(--grass); margin-bottom:1.4rem; }
 .eyebrow::before{ content:''; width:34px; height:1px; background:var(--grass); flex:none; }
@@ -313,14 +313,18 @@ section{ padding-block:var(--pad-sec); }
 .setup-grid{ display:grid; gap:clamp(2rem,4vw,3.5rem); grid-template-columns:1fr; align-items:center; }
 @media (min-width: 940px){ .setup-grid{ grid-template-columns:1.05fr .95fr; } }
 .rig-figure{
-  background:linear-gradient(165deg, #EAF2EC 0%, #DCE9E0 100%);
-  border:1px solid var(--paper-3); border-radius:4px;
-  padding:clamp(1rem,2.5vw,1.75rem);
+  background:var(--paper-2); border:1px solid var(--paper-3);
+  border-radius:4px; overflow:hidden;
 }
-.rig-figure svg{ width:100%; height:auto; display:block; }
+.rig-figure img{ width:100%; height:auto; aspect-ratio:4/3; object-fit:cover; object-position:center 60%; display:block; }
 .rig-figure figcaption{
-  margin-top:1rem; padding-top:.9rem; border-top:1px solid rgba(21,40,28,.14);
+  padding:.85rem 1.1rem; border-top:1px solid var(--paper-3);
   font-family:var(--mono); font-size:.66rem; color:var(--on-paper-2); letter-spacing:-.01em;
+}
+/* hero photo, with the launch monitor overlapping its lower edge */
+.stage-photo{
+  width:100%; height:auto; display:block; border-radius:4px;
+  box-shadow:0 34px 74px -36px rgba(0,0,0,.92);
 }
 .specs{ list-style:none; margin:0 0 1.6rem; padding:0; display:grid; gap:0; border-top:1px solid var(--paper-3); }
 .specs li{ display:flex; justify-content:space-between; align-items:baseline; gap:1rem; padding:.75rem 0; border-bottom:1px solid var(--paper-3); font-size:var(--step--1); }
@@ -555,118 +559,7 @@ footer{ background:var(--ink); color:var(--on-ink); padding-block:clamp(2.5rem,5
 </head>
 <body>
 
-<!-- One definition of the rig, used by the hero and the setup figure. -->
-<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
-  <symbol id="rig" viewBox="0 0 940 700">
-    <defs>
-      <linearGradient id="rgTop" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0" stop-color="#333B3F"/><stop offset="1" stop-color="#1D2427"/>
-      </linearGradient>
-      <linearGradient id="rgSide" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0" stop-color="#22292D"/><stop offset="1" stop-color="#0F1417"/>
-      </linearGradient>
-      <linearGradient id="rgFront" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stop-color="#2A3236"/><stop offset=".55" stop-color="#1C2326"/>
-        <stop offset="1" stop-color="#141A1D"/>
-      </linearGradient>
-      <linearGradient id="rgSky" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stop-color="#79B6DE"/><stop offset=".6" stop-color="#C3E1F1"/>
-        <stop offset="1" stop-color="#E6F2F8"/>
-      </linearGradient>
-      <linearGradient id="rgFairway" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stop-color="#63B271"/><stop offset="1" stop-color="#2A7040"/>
-      </linearGradient>
-      <linearGradient id="rgTurf" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stop-color="#3E9A58"/><stop offset="1" stop-color="#1F6538"/>
-      </linearGradient>
-      <radialGradient id="rgHalo" cx=".5" cy=".5" r=".5">
-        <stop offset="0" stop-color="#8FBFA2" stop-opacity=".38"/>
-        <stop offset="1" stop-color="#8FBFA2" stop-opacity="0"/>
-      </radialGradient>
-      <clipPath id="rgMouth"><rect x="148" y="168" width="408" height="338"/></clipPath>
-    </defs>
 
-    <!-- halo so a black box still reads on a dark ground -->
-    <ellipse cx="470" cy="330" rx="430" ry="300" fill="url(#rgHalo)"/>
-
-    <!-- turf, wrapping the front and right of the unit -->
-    <polygon points="80,568 620,568 850,513 930,600 700,662 10,662" fill="url(#rgTurf)"/>
-    <polygon points="80,568 620,568 850,513 856,527 622,582 80,582" fill="#57B06E" opacity=".38"/>
-
-    <!-- interior, seen through the opening -->
-    <g clip-path="url(#rgMouth)">
-      <polygon points="148,168 556,168 786,113 378,113" fill="#0A1013"/>
-      <polygon points="148,168 378,113 378,451 148,506" fill="#0D171A"/>
-      <polygon points="148,506 556,506 786,451 378,451" fill="#215536"/>
-      <rect x="378" y="113" width="408" height="338" fill="#060B0D"/>
-      <rect x="388" y="123" width="388" height="318" fill="url(#rgSky)"/>
-      <path d="M388 288 Q470 258 556 276 Q664 300 776 268 L776 441 L388 441 Z" fill="url(#rgFairway)"/>
-      <ellipse cx="560" cy="372" rx="104" ry="20" fill="#7FC68C" opacity=".45"/>
-      <line x1="584" y1="306" x2="584" y2="366" stroke="#F7FAF6" stroke-width="3"/>
-      <path d="M584 306 L614 316 L584 326 Z" fill="#D9661F"/>
-      <path d="M388 276 l14-22 14 22 z M418 280 l11-17 11 17 z" fill="#2F6B45" opacity=".6"/>
-      <!-- launch monitor sitting on the turf, and the ball -->
-      <rect x="336" y="472" width="34" height="13" rx="3" fill="#11181B"/>
-      <circle cx="516" cy="478" r="7" fill="#FFFFFF"/>
-    </g>
-
-    <!-- golfer, inside the box on the turf -->
-    <g clip-path="url(#rgMouth)" transform="translate(118,0)">
-      <ellipse cx="308" cy="496" rx="56" ry="11" fill="#04090B" opacity=".45"/>
-      <g fill="#0B1114">
-        <path d="M288 372 q-9 56 -14 106 l27 4 q9 -55 14 -104 z"/>
-        <path d="M326 372 q11 55 24 102 l-27 8 q-15 -53 -20 -102 z"/>
-        <path d="M268 484 q-9 8 -2 15 h40 l2 -15 z"/>
-        <path d="M320 488 h40 q9 8 0 15 h-42 z"/>
-        <path d="M282 296 q31 -11 62 2 l9 84 q-38 13 -77 -2 z"/>
-        <circle cx="313" cy="272" r="21"/>
-        <path d="M290 267 q23 -14 46 -2 q-23 -8 -46 2 z"/>
-        <path d="M342 302 q40 -15 60 -46 l-20 -15 q-18 28 -51 40 z"/>
-        <path d="M288 306 q36 -20 56 -48 l-18 -13 q-18 26 -47 42 z"/>
-        <circle cx="396" cy="240" r="13"/>
-      </g>
-      <line x1="399" y1="236" x2="470" y2="176" stroke="#0B1114" stroke-width="6.5" stroke-linecap="round"/>
-      <path d="M466 170 q21 -13 28 4 q-9 15 -30 7 z" fill="#0B1114"/>
-    </g>
-
-    <!-- the inflated black shell: top slab, right wall, front face -->
-    <polygon points="80,100 620,100 850,45 310,45" fill="url(#rgTop)"/>
-    <polygon points="620,100 850,45 850,513 620,568" fill="url(#rgSide)"/>
-    <path d="M80 100 H620 V568 H80 Z M148 168 V506 H556 V168 Z" fill="url(#rgFront)" fill-rule="evenodd"/>
-
-    <!-- welded seams: what makes it read as inflated vinyl -->
-    <g stroke="#49535A" stroke-opacity=".85" stroke-width="2" stroke-linecap="round" fill="none">
-      <line x1="80"  y1="134" x2="620" y2="134"/>
-      <line x1="310" y1="45"  x2="310" y2="100"/>
-      <line x1="580" y1="45"  x2="580" y2="100"/>
-      <line x1="114" y1="100" x2="114" y2="568"/>
-      <line x1="586" y1="100" x2="586" y2="568"/>
-      <line x1="620" y1="180" x2="850" y2="125"/>
-      <line x1="620" y1="330" x2="850" y2="275"/>
-      <line x1="620" y1="470" x2="850" y2="415"/>
-      <line x1="735" y1="72"  x2="735" y2="540"/>
-    </g>
-    <!-- rim light along the lit edges -->
-    <g stroke="#79868D" stroke-opacity=".75" stroke-width="2.5" stroke-linecap="round" fill="none">
-      <line x1="80" y1="101" x2="620" y2="101"/>
-      <line x1="620" y1="100" x2="850" y2="45"/>
-      <line x1="310" y1="46"  x2="850" y2="46"/>
-      <line x1="81" y1="100" x2="81" y2="568"/>
-    </g>
-    <!-- soft sheen on the top slab -->
-    <polygon points="150,92 560,92 700,58 330,58" fill="#FFFFFF" opacity=".07"/>
-
-    <!-- opening lip catches light -->
-    <g stroke="#5A666C" stroke-opacity=".7" stroke-width="2" fill="none">
-      <rect x="148" y="168" width="408" height="338"/>
-    </g>
-
-    <!-- blower on the turf, and the shot leaving the mat -->
-    <path d="M850 470 q40 10 40 40" fill="none" stroke="#2B3438" stroke-width="11" stroke-linecap="round"/>
-    <rect x="858" y="512" width="58" height="40" rx="7" fill="#252D31"/>
-    <circle cx="887" cy="532" r="12" fill="#171D20"/><circle cx="887" cy="532" r="4" fill="#6C7B82"/>
-  </symbol>
-</svg>
 
 
 <div class="draftbar">
@@ -694,11 +587,11 @@ footer{ background:var(--ink); color:var(--on-ink); padding-block:clamp(2.5rem,5
     <div class="wrap hero-grid">
       <div>
         <p class="label eyebrow">Loveland, Colorado — Inflatable Golf Simulator Rental</p>
-        <h1 class="display">A golf course that fits in a <em>van.</em></h1>
+        <h1 class="display">Be the reason nobody leaves <em>early.</em></h1>
         <p class="hero-sub">
-          We bring an inflatable simulator to your event, stand it up in about
-          forty-five minutes, and run it all night — inside a ballroom or out on the
-          grass. Northern Colorado.
+          We bring a full golf simulator to your event, set it up, and run it all
+          night — indoors or outside. Your guests play Pebble Beach. You get the
+          credit for booking it.
         </p>
         <div class="hero-cta">
           <a class="btn btn-primary btn-lg" href="#book">Check your date</a>
@@ -714,10 +607,9 @@ footer{ background:var(--ink); color:var(--on-ink); padding-block:clamp(2.5rem,5
       <div class="stage">
         <!-- Illustration, not a photo: no inflatable simulator exists in any
              free-licensed stock library, and a competitor's rig is not ours to use. -->
-        <svg class="stage-rig" viewBox="0 0 940 700" role="img"
-             aria-label="Diagram of the inflatable golf simulator: an inflated frame around a projection screen, with a hitting mat, ball and blower.">
-          <use href="#rig"/>
-        </svg>
+        <img class="stage-photo" src="img/bay.jpg" width="1920" height="1280"
+             decoding="async"
+             alt="A golf simulator bay with a course projected on the impact screen, hitting turf and a bag of clubs.">
 
         <div class="monitor">
           <div class="monitor-top">
@@ -796,31 +688,17 @@ footer{ background:var(--ink); color:var(--on-ink); padding-block:clamp(2.5rem,5
     <div class="wrap">
       <div class="sec-head rv">
         <p class="label eyebrow">What actually shows up</p>
-        <h2 class="display">One unit. Inside or out.</h2>
-        <p>It arrives folded in the back of a van, inflates in a few minutes, and holds
-           its shape on a blower that runs quietly all night. There is no trailer to park
-           and no crew of four.</p>
+        <h2 class="display">Nothing for you to set up.</h2>
+        <p>It arrives folded in the back of a van, stands up in about forty-five minutes,
+           and we run it from the first shot to the last. You point us at a room or a patch
+           of grass and then go host your event.</p>
       </div>
 
       <div class="setup-grid">
         <figure class="rig-figure rv" style="margin:0;">
-          <svg viewBox="0 0 940 748" role="img"
-               aria-label="Dimensioned diagram of the inflatable simulator: 15 feet wide by 10 feet tall, with a hitting mat and blower.">
-            <use href="#rig"/>
-            <g font-family="Martian Mono, monospace" font-size="22" fill="#15281C">
-              <g stroke="#15281C" stroke-width="2" opacity=".7">
-                <line x1="80" y1="716" x2="620" y2="716"/>
-                <line x1="80" y1="706" x2="80" y2="726"/>
-                <line x1="620" y1="706" x2="620" y2="726"/>
-                <line x1="44"  y1="100" x2="44"  y2="568"/>
-                <line x1="34"  y1="100" x2="54"  y2="100"/>
-                <line x1="34"  y1="568" x2="54"  y2="568"/>
-              </g>
-              <text x="350" y="709" text-anchor="middle">15 ft</text>
-              <text x="44" y="334" text-anchor="middle" transform="rotate(-90 44 334)">10 ft</text>
-            </g>
-          </svg>
-          <figcaption>Illustration — the client's own rig photos replace this.</figcaption>
+          <img src="img/turf.jpg" width="1200" height="1600" loading="lazy" decoding="async"
+               alt="A wedge resting behind a golf ball on bright hitting turf.">
+          <figcaption>Stand-in photo — replace with shots of the actual inflatable.</figcaption>
         </figure>
 
         <div class="rv">
